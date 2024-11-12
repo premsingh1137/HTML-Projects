@@ -1,0 +1,95 @@
+<section class="img-lib-detail-image mt-3">
+    <div class="img-box">
+
+        <div class="button-wrap">
+            <input type="radio" class="btn-check" name="options-base" id="option5" autocomplete="off" checked>
+            <label class="btn edit-btn" for="option5"><span>Edit</span></label>
+
+            <input type="radio" class="btn-check" name="options-base" id="option6" autocomplete="off">
+            <label class="btn move-folder" for="option6"><span>Move to Folder</span></label>
+
+            <input type="radio" class="btn-check" name="options-base" id="option7" autocomplete="off" disabled>
+            <label class="btn copy" for="option7"><span>Copy</span></label>
+
+            <input type="radio" class="btn-check" name="options-base" id="option8" autocomplete="off">
+            <label class="btn old" for="option8"><span>Old</span></label>
+            <input type="radio" class="btn-check" name="options-base" id="option8" autocomplete="off">
+            <label class="btn archive" for="option8"><span>Archive</span></label>
+            <input type="radio" class="btn-check" name="options-base" id="option8" autocomplete="off">
+            <label class="btn delete" for="option8"><span>Delete</span></label>
+        </div>
+
+        <div class="product-image image-zoom-container" id="img-container">
+            <img id="zoom-img" class="" src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3BmLXMxMDgtcG0tNDExMy1tb2NrdXAuanBn.jpg" alt="">
+            <div id="zoom-overlay"></div>
+        </div>        
+
+        <div class="img-footer">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="footer-box">
+                        <img src="https://htmlportfolio.siplsolutions.com/iapproveit/images/icons/message-icon.png" alt="">
+                        <p>Low Res File</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="footer-box">
+                        <img src="https://htmlportfolio.siplsolutions.com/iapproveit/images/icons/pdf-icon.png" alt="">
+                        <p>Low Res PDF</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="footer-box">
+                        <img src="https://htmlportfolio.siplsolutions.com/iapproveit/images/icons/cube-icon.png" alt="">
+                        <p>Main File</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="footer-box">
+                        <img src="https://htmlportfolio.siplsolutions.com/iapproveit/images/icons/setting-icon.png" alt="">
+                        <p>Repurpose</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="footer-box">
+                        <img src="https://htmlportfolio.siplsolutions.com/iapproveit/images/icons/link-icon.png" alt="">
+                        <p>Fast Link</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+</section>
+
+<script>
+$(document).ready(function() {
+  var $imgContainer = $('#img-container');
+  var $zoomOverlay = $('#zoom-overlay');
+  var containerWidth = $imgContainer.width();
+  var containerHeight = $imgContainer.height();
+  var zoomLevel = 2; // Adjust the zoom level as needed
+
+  $imgContainer.mousemove(function(e) {
+    var offsetX = e.pageX - $imgContainer.offset().left;
+    var offsetY = e.pageY - $imgContainer.offset().top;
+    var bgPosX = (offsetX / containerWidth * 100 * (zoomLevel - 1)) + '%';
+    var bgPosY = (offsetY / containerHeight * 100 * (zoomLevel - 1)) + '%';
+    
+    $zoomOverlay.css({
+      'display': 'block',
+      'background-position': bgPosX + ' ' + bgPosY
+    });
+  });
+
+  $imgContainer.mouseleave(function() {
+    $zoomOverlay.hide();
+  });
+});
+;
+
+</script>
+
+
+

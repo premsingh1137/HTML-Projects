@@ -1,0 +1,110 @@
+@using Umbraco.Cms.Web.Common.PublishedModels; @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+<ContentModels.AboutPartners>
+    @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels; @{ Layout = "Master.cshtml"; }
+
+    <!-- smart story -->
+    <section class="smart-way header-bg patners-header">
+        <div class="container">
+            <div class="smart-story max-w-900 text-center">
+                <div>
+                    <h1>@Model.PageTitlePartner</h1>
+                    @*
+                    <p class="pt-4 m-auto">@Model.BodyTextPartner</p>*@ @Html.Raw(Model.BodyTextPartner)
+                </div>
+                <div class="patners-how-it-work">
+                    <h3>@Model.HowItWorksTitle</h3>
+                    @*
+                    <p class="m-auto">Take these three simple steps to become our partner!</p>*@ @Html.Raw(Model.HowItWorksDescription)
+                </div>
+            </div>
+            <div class="partner-join-step-section">
+                <div class="partner-join-step">
+                    <div class="partners-team-box row">
+                        <div class="join-teams-setup-box col-sm-4">
+                            <span class="mr-auto"><strong>@Model.OneHowItWorks</strong></span>
+                            <h4 class="text-left">@Model.OneHowItWorksTitle</h4>
+                        </div>
+                        <div class="join-teams-setup-box col-sm-4">
+                            <span class="m-auto"><strong>@Model.TwoHowItWorks</strong></span>
+                            <h4 class="text-center">@Model.TwoHowItWorksTitle</h4>
+                        </div>
+                        <div class="join-teams-setup-box col-sm-4">
+                            <span class="ml-auto"><strong>@Model.ThreeHowItWorks</strong></span>
+                            <h4 class="text-right">@Model.ThreeHowItWorksTitle</h4>
+                        </div>
+                    </div>
+                </div>
+                @{ var joinOurTeambutton = Model.PartnerJoinTeamButtonUrl?.FirstOrDefault(); @if (joinOurTeambutton != null) {
+                <a href="@joinOurTeambutton.Url" target="@joinOurTeambutton.Target" class="btn common-btn bottom-common-btnbg" title="Join Our Team">@Model.PartnerJoinTeamButtonTitle</a> } }
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Partnership Network -->
+    <section>
+        <div class="container">
+            <div class="partnership-network partners-logos">
+                @if (Model.AboutPartnersItems != null && Model.AboutPartnersItems.Any()) {
+                <h2>@Model.PartnershipTitle</h2>
+                <div class="partnership-tab-section">
+                    <ul class="partnership-tab-nav">
+                        <li><button onclick="openTab('Allshow','button1')" id="button1" class="active showAll">All</button></li>
+                        @foreach (var item in Model.AboutPartnersItems) { var tabId = item.Name.Replace(" ", string.Empty); var id = item.Name.Replace(" ", string.Empty); var newId = id.Count();
+                        <li><button onclick="openTab('@tabId', '@newId')" id="@newId">@item.Name</button></li>
+                        }
+                    </ul>
+                    <div class="tabs-content pt-0">
+                        @foreach (var item in Model.AboutPartnersItems) { var tabId = item.Name.Replace(" ", string.Empty);
+                        <div class="tab-content-box">
+                            <div id="@tabId" class="tab">
+                                <div class="logo-section">
+                                    @if (item.Value
+                                    <IEnumerable<IPublishedContent>>("partnersLogo") != null) { foreach (var image in item.Value
+                                        <IEnumerable<IPublishedContent>>("partnersLogo")) { var mediaItem = Umbraco.Media(image.Key); if (mediaItem != null) { var imgUrl = ((Umbraco.Cms.Web.Common.PublishedModels.Image)mediaItem).UmbracoFile.Src;
+                                            <span class="logo-box">
+                            <img src="@imgUrl" />
+                          </span> } } }
+                                </div>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    @*@Html.Partial("PartnershipNetwork")*@
+
+    <!-- Dot Map Section -->
+    <section class="dot-map-section">
+        <div class="container">
+            <div class="dot-map-block">
+                <h2>@Model.TestimonialTitle</h2>
+                <div class="dot-map-slider">
+                    <div class="PartnersSaySlider">
+                        @if (Model.Value("commonTestimonialsContents") is IEnumerable
+                        <IPublishedContent> menuItems && menuItems.Any()) { foreach (var item in menuItems) {
+                            <div>
+                                <!-- <div class="quote-left"><img src="assets/images/quote-left.png" alt="Quote Left"></div> -->
+                                <div class="partner-say-content">
+                                    <p>@item.Value("testimonialBodyText")</p>
+                                </div>
+                                <div class="partner-info">
+                                    <h6 class="partner-name">@item.Value("authorName")</h6>
+                                    <span class="designation">@item.Value("authorDesignation")</span>
+                                    <div class="part-avtar">
+
+                                        @if (item.Value("authorImage") != null) { var testimonialmemberimage = item.Value("authorImage") as IPublishedContent; if (testimonialmemberimage != null) { var mediaItems = Umbraco.Media(testimonialmemberimage.Key); if (mediaItems != null) { var url
+                                        = mediaItems.Url();
+                                        <img src="@url" alt="@mediaItems.Name"> } } }
+                                    </div>
+                                </div>
+                            </div>
+                            } }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

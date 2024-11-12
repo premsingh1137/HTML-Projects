@@ -1,0 +1,102 @@
+
+  <!-- Header section -->
+<div class="nav-brand ">
+  <div class="container d-flex justify-content-end">
+  <img src="https://htmlportfolio.siplsolutions.com/iapproveit/images/brand-logo.jpg" alt="IapproverIt" /></div>
+</div>
+<section class='nav-main'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class='nav-list d-flex'>
+          <li class='list-items'>
+            <a href="https://htmlportfolio.siplsolutions.com/iapproveit/dashboard.html">
+              <span class="link-icon"><i class="fa-brands fa-microsoft"></i></span>
+              <span>
+                Dashboard
+              </span></a>
+          </li>
+          <li class='list-items'>
+            <a href="https://htmlportfolio.siplsolutions.com/iapproveit/image-library.html">
+              <span class="link-icon"><i class="fa-solid fa-image"></i></span>
+              <span>
+                Image Library</span></a>
+          </li>
+          <li class='list-items'>
+            <a href="https://htmlportfolio.siplsolutions.com/iapproveit/job-flow.html">
+              <span class="link-icon"><i class="fa-solid fa-file"></i></span>
+              <span>
+                Job Flow</span></a>
+          </li>
+          <li class='list-items'>
+            <a href="https://htmlportfolio.siplsolutions.com/iapproveit/contactus.html">
+              <span class="link-icon"><i class="fa-solid fa-headphones"></i></span>
+              <span>
+                Contact Us</span></a>
+          </li>
+          <!-- <li class='list-items'>
+            <a href="https://htmlportfolio.siplsolutions.com/iapproveit/report.html">
+              <span class="link-icon"><i class="fa-regular fa-calendar-check"></i></span>
+              <span>
+                Reports</span></a>
+          </li>
+          <li class='list-items'>
+            <a href="javascript:void(0)">
+              <span class="link-icon"><i class="fa-solid fa-user-plus"></i></span>
+              <span>
+                Invite User</span></a>
+          </li> -->
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul class='nav-list-right d-flex justify-content-end align-items-center'>
+          <li class='list-items-right'>
+            <a href="javascript:void(0)">
+              <img id="theme-icon" src="https://htmlportfolio.siplsolutions.com/iapproveit/images/layout/home.svg" alt="Light">
+              <!-- <i class="fa-solid fa-house"></i> -->
+            </a>
+          </li>
+          <li class='list-items-right'>
+            <a href="javascript:void(0)">
+              <i class="fa-regular fa-circle-question"></i>
+            </a>
+          </li>
+          <li class='list-items-right'>
+                        
+            <span> <img id="theme-icon" src="https://htmlportfolio.siplsolutions.com/iapproveit/images/layout/dark.png" alt="Light"></span>
+          
+             <!--<span><img src='https://htmlportfolio.siplsolutions.com/iapproveit/images/layout/dark.png' alt='Dark' /></span>
+            <img src='https://htmlportfolio.siplsolutions.com/iapproveit/images/layout/light.png' alt='light' /> -->
+          </li>
+          <li class='list-items-right'>
+            <a href="javascript:void(0)">
+              <i class="fa-solid fa-gear"></i>
+            </a>
+          </li>
+          <li class='list-items-right'>
+            <span class="block font-bold">Demo Marketer <strong> ABC Company P/L</strong></span>
+          </li>
+          <li class='list-items-right'>
+            <a href="javascript:void(0)">
+            <img src='https://htmlportfolio.siplsolutions.com/iapproveit/images/layout/union.png' alt='Logout' />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+ $(document).ready(function(){
+  // Get the current URL
+  var currentUrl = window.location.pathname;
+ 
+  // Add 'active' class to the anchor tag whose href matches the current URL
+  $('.nav-list a').each(function() {
+    var href = $(this).attr('href');
+    if (href === currentUrl) {
+      $(this).addClass('active');
+    }
+  });
+});
+  </script>

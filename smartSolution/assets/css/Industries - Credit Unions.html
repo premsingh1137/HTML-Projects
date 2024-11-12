@@ -1,0 +1,126 @@
+@using Umbraco.Cms.Web.Common.PublishedModels; @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+<ContentModels.IndustriesCreditUnions>
+    @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels; @{ Layout = "Master.cshtml"; }
+
+    <!-- smart way -->
+    <section class="smart-way header-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-12 smart-head credit-unions-content">
+                    <h1>@Model.CreditUnionsFirstSectionTitle</h1>
+                    @Model.CreditUnionsFirstSectionDescription @{ var FirstSectionButton = Model.CreditUnionsFirstSectionButton?.FirstOrDefault(); @if (FirstSectionButton != null) {
+                    <a href="@FirstSectionButton.Url" target="@FirstSectionButton.Target" class="btn get-started mt-0 mt-lg-0">@FirstSectionButton.Name</a> } }
+                </div>
+                <div class="col-lg-5 col-12 smart-image">
+
+                    @if (Model.CreditUnionsFirstSectionImage != null) { var FirstSectionImage = Model.CreditUnionsFirstSectionImage; var mediaItem = Umbraco.Media(FirstSectionImage.Key); if (mediaItem != null) { var url = mediaItem.Url();
+                    <img src="@url" alt="@mediaItem.Name"> } }
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- discover -->
+    <section class="discover pt-5 industries-discover industries-discover-credit">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-12 discover-head text-start pb-3 pb-lg-5">
+                    <h4>@Model.SecondSectionBenefitsTitle</h4>
+                    <h3>@Model.SecondSectionBenefitsSubTitle</h3>
+                </div>
+                @if (Model.SecondSectionBenefitsCardContent != null) { int itemCount = Model.SecondSectionBenefitsCardContent.Count(); foreach (var (item, index) in Model.SecondSectionBenefitsCardContent.Select((value, index) => (value, index))) {
+                <div class="col-lg-4 col-md-4 card-box credit-better">
+                    <div class="card-border @(index == 0 ? " benefits-first-block " : (index == itemCount - 1 ? "benefits-last-block " : " "))">
+                        @if (item.HasValue("universaCardImage")) { var cardImage = Umbraco.Media(item.Value
+                        <IPublishedContent>("universaCardImage").Id); if (cardImage != null) {
+                            <img src="@cardImage.Url()" class="card-img-top pb-5" alt="@cardImage.Name"> } }
+                            <div class="card-body p-0">
+                                <h5 class="card-title pb-3">@item.Value("universaCardTitle")</h5>
+                                <p class="card-text">@Html.Raw(item.Value("universaCardDescription"))</p>
+                            </div>
+                    </div>
+                </div>
+                } }
+            </div>
+        </div>
+    </section>
+    <!-- Commitment to Sustainability -->
+    <section class="our-comitments ss-core-system">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    @if (Model.CreditUnionThirdSectionImage != null) { var ThirdSectionImage = Model.CreditUnionThirdSectionImage; var mediaItem = Umbraco.Media(ThirdSectionImage.Key); if (mediaItem != null) { var url = mediaItem.Url();
+                    <img src="@url" alt="@mediaItem.Name"> } }
+                </div>
+                <div class="col-md-6">
+                    <div class="discover-head ss-core-system-pl pt-5">
+                        <h3 class="pb-2 pb-lg-4">@Model.CreditUnionThirdSectionTitle</h3>
+                        @Model.CreditUnionThirdSectionDescription
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Commitment to Sustainability -->
+    <section class="our-comitment ss-core-system">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 order-1 order-lg-0">
+                    <div class="discover-head">
+                        <h3 class="pb-2 pb-lg-4">@Model.CreditUnionFourthSectionTitle</h3>
+                        @Model.CreditUnionFourthSectionDescription
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    @if (Model.CreditUnionFourthSectionImage != null) { var FourthSectionImage = Model.CreditUnionFourthSectionImage; var mediaItem = Umbraco.Media(FourthSectionImage.Key); if (mediaItem != null) { var url = mediaItem.Url();
+                    <img src="@url" alt="@mediaItem.Name" class="pt-2"> } }
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Commitment to Sustainability -->
+    <section class="our-comitment  ss-core-system">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    @if (Model.CreditUnionFifthSectionImage != null) { var FifthSectionImage = Model.CreditUnionFifthSectionImage; var mediaItem = Umbraco.Media(FifthSectionImage.Key); if (mediaItem != null) { var url = mediaItem.Url();
+                    <img src="@url" alt="@mediaItem.Name"> } }
+                </div>
+                <div class="col-lg-6">
+                    <div class="discover-head ss-core-system-pl pt-4">
+                        <h3 class="mt-5 mt-lg-0 pb-2 pb-lg-4">@Model.CreditUnionFifthSectionTitle</h3>
+
+                        @Model.CreditUnionFifthSectionDescription
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- vertical tabs -->
+    @Html.Partial("RetailBankingInsights")
+    <!-- Partnership Network -->
+    @Html.Partial("PartnershipNetwork")
+    <section class="ready-to-start">
+        <div class="container">
+            <div class="ready-content-section">
+                <h2 class="ready-content-heading">@Model.ReadyToGetStartedTitleCommon</h2>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="ready-content-inner">
+                            <p>@Model.ReadyToGetStartedDescriptionCommon</p>
+                            @{ var ContactUs = Model.ContactSalesButtonUrlCommon?.FirstOrDefault(); @if (ContactUs != null) {
+                            <a href="@ContactUs.Url" target="@ContactUs.Target" class="btn explore-products bottom-common-btnbg common-btn" title="Contact Sales">@Model.ContactSalesButtonTitleCommon</a> } }
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="ready-content-inner ready-content-inner-right">
+                            <h3>@Model.CreditUnionContactUsTitle</h3>
+                            <p>@Model.CreditUnionContactUsDescription</p>
+                            @{ var CreditUnionContactUs = Model.CreditUnionContactUsButtonUrl?.FirstOrDefault(); @if (CreditUnionContactUs != null) {
+                            <a href="@CreditUnionContactUs.Url" target="@CreditUnionContactUs.Target" class="btn view-product bottom-common-btnbg common-btn mt-lg-2 mt-3" title="About us">@Model.CreditUnionContactUsButtonTitle</a> } }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

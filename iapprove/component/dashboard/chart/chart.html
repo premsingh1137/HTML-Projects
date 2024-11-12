@@ -1,0 +1,155 @@
+<style>
+  .circular-progress {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* Added position relative */
+  }
+
+  .inner-circle {
+    position: absolute;
+    width: calc(88px - 15px);
+    /* Corrected width calculation */
+    height: calc(88px - 15px);
+    /* Corrected height calculation */
+    border-radius: 50%;
+  }
+
+  .percentage {
+    position: relative;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.8);
+    /* Corrected rgba syntax */
+  }
+
+  .circular-progress::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 15px solid var(--progress-color);
+    /* Use border instead of background */
+    border-top-color: transparent;
+    /* Hide top border to create a circle */
+    border-right-color: transparent;
+    /* Hide right border to create a circle */
+    transform: rotate(calc(var(--percentage) * 1deg));
+    /* Rotate based on percentage */
+    z-index: 1;
+    /* Ensure the border is above inner circle */
+    box-sizing: border-box;
+    /* Ensure border is included in the element's size */
+  }
+</style>
+<div class="row">
+  <div class="col-md-4 col-sm-6">
+    <div class='chart'>
+      <canvas id="myLineChart"></canvas>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-6">
+    <div class='chart'>
+      <div class="chart-heading d-flex justify-content-between align-items-center">
+        <div></div>
+        <div class="chart-head-right">
+          <div class="brand-filter">
+            <span>Brand</span>
+            <img src="https://htmlportfolio.siplsolutions.com/iapproveit/images/chart/filter.png">
+          </div>
+          <div class="year d-flex">
+            <button class="active">Week</button>
+            <button>Month</button>
+            <button>Year</button>
+          </div>
+        </div>
+      </div>
+      <canvas id="myBarChart"></canvas>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-6">
+    <div class='chart'>
+      <div class="chart-heading d-flex justify-content-between align-items-start">
+        <div class="chart-head-left">
+          <h3>Brand Activity</h3>
+          <h5>Lorem ipsum dolor sit amet consectetur.</h5>
+        </div>
+        <div class="chart-head-right text-align-end">
+          <img src='https://htmlportfolio.siplsolutions.com/iapproveit/images/chart/menu.png' alt='InviteUser' />
+        </div>
+      </div>
+      <div class='progress-type d-flex justify-content-around align-items-center'>
+        <ul>
+          <li class='packaging'>Packaging</li>
+          <li class='line_extension'>Line Extension</li>
+          <li class='cartons'>Cartons</li>
+          <li class='tray'>Tray</li>
+        </ul>
+      </div>
+      <!-- <canvas id="progressBarsChart"></canvas>    -->
+      <!-- <div id="jQueryPluginProgressbar"></div> 
+      <iframe src="./component/dashboard/chart/jQuery-plugin-progressbar.html"></iframe> -->
+      <div class="circular-bar d-flex justify-content-evenly align-items-center mt-3">
+        <div class="circular-progress" data-inner-circle-color="#fff4dc" data-percentage="80"
+          data-progress-color="#FFB200" data-bg-color="#fff4dc">
+          <div class="inner-circle"></div>
+          <p class="percentage">0%</p>
+        </div>
+
+        <div class="circular-progress" data-inner-circle-color="#f5edff" data-percentage="17"
+          data-progress-color="#4339F2" data-bg-color="#f5edff">
+          <div class="inner-circle"></div>
+          <p class="percentage">0%</p>
+        </div>
+
+        <div class="circular-progress" data-inner-circle-color="#e2fbd7" data-percentage="65"
+          data-progress-color="#34B53A" data-bg-color="#e2fbd7">
+          <div class="inner-circle"></div>
+          <p class="percentage">0%</p>
+        </div>
+
+        <div class="circular-progress" data-inner-circle-color="#ffe5d3" data-percentage="20"
+          data-progress-color="#FF3A29" data-bg-color="#ffe5d3">
+          <div class="inner-circle"></div>
+          <p class="percentage">0%</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const circularProgress = document.querySelectorAll(".circular-progress");
+
+  Array.from(circularProgress).forEach((progressBar) => {
+    const progressValue = progressBar.querySelector(".percentage");
+    const innerCircle = progressBar.querySelector(".inner-circle");
+    let startValue = 0, // Initialize startValue correctly
+      endValue = Number(progressBar.getAttribute("data-percentage")),
+      speed = 50,
+      progressColor = progressBar.getAttribute("data-progress-color");
+
+    const progress = setInterval(() => {
+      progressValue.textContent = `${startValue}%`;
+      progressValue.style.color = `${progressColor}`;
+
+      innerCircle.style.backgroundColor = `${progressBar.getAttribute(
+        "data-inner-circle-color"
+      )}`;
+
+      progressBar.style.background = `conic-gradient(${progressColor} ${startValue * 3.6
+        }deg,${progressBar.getAttribute("data-bg-color")} 0deg)`;
+      if (startValue === endValue) {
+        clearInterval(progress);
+      } else {
+        startValue++; // Increment startValue
+      }
+    }, speed);
+  });
+
+</script>
+<script src="https://htmlportfolio.siplsolutions.com/iapproveit/js/chartCustom.js"></script>

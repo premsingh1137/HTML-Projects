@@ -1,0 +1,165 @@
+/*----------------------------------------------------*/
+/*	1100px
+/*----------------------------------------------------*/
+@media only screen and (max-width:1100px){
+#header{ background:url(../img/header-bg-mobile.png) no-repeat left top;}
+.wrap{padding:0 2%;width:96%;}	
+#header.sticky .after{display:none;}
+#header li.center{display:none;}
+#mobile{display:block;float:left;margin:0;background:url("../img/logo-bg1.png") no-repeat scroll 7px top;padding:14px 40px 0 0}
+.sticky #mobile{background-position: 9% top;}
+.sticky #mobile a{display: block;margin: 0 auto;padding-top:0;width: 56%;transition: all 250ms ease-in-out 0s;}
+.navigation li.home a{padding:25px 20px 23px}
+.navigation li a{padding:31px 19px}
+.about-italy .main-heading{font-size:5.5em;}
+.services-box{padding:15px 4.2% 90px 0;}
+.services-box-heading h1{width:56%;padding:16px 0 5px 10%;font-size:20px;}
+.last-tour-slider-inner{width:75.5%;}
+.select-travel-box-top h1,.select-travel-box2 .select-travel-box-top h1{width:76%;font-size:20px;}
+.red-box{padding:20px 9px;width:26%;}
+.select-travel-box2 .red-box{width:31%;}
+.more-info-left{margin-right:10px;padding:0 10px 18px 0;width:24%;}
+.more-info-right{width:69%;}
+.flag-section{font-size:26px;padding:15px 22px 12px 107px;}
+.contact-left-section{width:59.5%}
+.tab-content .services-box-heading h1{width:81.3%;}
+}
+/*----------------------------------------------------*/
+/*	1023px
+/*----------------------------------------------------*/
+@media only screen and (max-width:1023px){
+/* mobile navigation menu */
+.mobile-menu{display:block;}
+.navigation.browser-menu{display:none;}
+.navigation{left:auto !important;background-color:#252525;padding-top:5px;}
+.navigation.visible{right:0%;}
+.navigation li{width:100%;float:left;padding:0 0 1px 0;background:none;}
+.navigation li a{padding:15px 10px;text-align:center;color:#fff!important;background:#252525;}
+.navigation li.home a{padding:10px 24px 10px}
+.navigation li.parent{display:none;}
+#nav-mobile ,.nav-mobile{display:block;float:right;width:60px;height:60px;background:#252525 url(../img/sprite.png) no-repeat 21px -245px;cursor:pointer;margin-top:18px;border:none;}
+.navigation li.parent-menu a.setting-icon span{ margin:0 auto}
+.navigation li a.setting-icon {padding:9px 25px 9px 24px;}
+.navigation ul.sub-menu a{ width:84%;}
+#core .core-values li{width:50%;}
+#core .core-values li .fa{left:44%;top:45px;}
+.navigation li a.active{background-color:#535353;color:#fff;}
+.navigation li a.active:hover{background-color:#fff;color:#000;}
+.navigation li a span.border{display:none!important;}
+.navigation li a:hover{background-color:#000!important;}
+.about-italy .main-heading{font-size:4.8em;}
+.about-italy{background:url(../img/about-bg.png) repeat left -32px}
+.main-heading{font-size:4.8em;}
+.callbacks_tabs{top:-28px;left:5px;}
+.callbacks_tabs li{float:left;border-radius:5px 5px 0 0;box-shadow:2px -2px 1px rgba(0, 0, 0, 0.4);margin-right:5px;}
+.callbacks_tabs li a{padding:7px 30px 9px 30px;margin:0 2px 0 2px;}
+}
+/*----------------------------------------------------*/
+/*	979px
+/*----------------------------------------------------*/
+@media only screen and (max-width:979px){
+.civitavecchia-left,.civitavecchia-right{width:100%;float:none;clear:both;}
+/*.last-tour-slider .rslides{max-width:80% !important}*/
+.last-tour-slider-inner{width:83%;}
+.select-travel-box-top h1,.select-travel-box2 .select-travel-box-top h1{width:82%;font-size:24px;}
+.contact-info-details{width:71.5%;}
+.contact-info-details{font-size:15px;}
+.main-text{text-align:center;left:0;margin:0;width:96%;padding:0 2%;}
+.main-text h1{color:#FFFFFF;font-size:0.7em;text-transform:uppercase;}
+.main-text h1 span{display:block;font-size:0.4em;text-transform:lowercase;}
+.prev{left:2%;}
+.next{right:2%;}
+.prev,.next{background-size:100%;width:5%;height:45%;}
+}
+/*----------------------------------------------------
+	767px
+----------------------------------------------------*/
+@media only screen and (max-width:767px){	
+#header{background:rgba(256, 256, 256, 0.5);padding:5px 0 25px 0;}
+#mobile ,.sticky #mobile{width:135px;background:none;position:absolute;left:50%;margin:0 0 0 -68px;padding:0;}
+.sticky #mobile a{ width:100%;}
+#nav-mobile,.nav-mobile{width:50px;height:50px;background:#252525 url(../img/sprite.png) no-repeat 16px -248px;margin-top:27px;}
+.social{padding:35px 0 0;}
+.about-italy{background:url(../img/about-mobile-bg.jpg) repeat left -32px;border-bottom:2px solid #890010;padding-top:2%;}
+.about-italy .main-heading{font-size:3em;line-height:43px;}
+.about-italy .about-italy-inner h2{font-size:22px;line-height:23px;margin:0;padding:3.5% 0% 2%;}
+.about-italy .about-italy-inner{padding:0 6% 2%;}
+.over-services .wrap{padding:0;width:100%;}
+.services-box-section{padding:0 0 4% 0;}
+.main-heading{font-size:4em;}
+.services-box,.services-box.last-child{background:url(../img/services-box-mobile-bg.png) repeat-x scroll right bottom;clear:both;float:none;padding:0 2% 30px 2%;width:96%;margin:0 0 15px 0;}
+.last-tour-slider-inner{width:98.5%;float:none;margin:0 0 4% 0;}
+.last-tour-slider .rslides_tabs{float:none;clear:both;}
+.last-tour-slider .rslides_tabs li{float:left;margin:2% 2% 2% 0;}
+.services-box-heading h1{font-size:25px;padding:10px 0 5px 6%;width:70%;}
+.tab-content .services-box-heading h1{width:68%;}
+.civitav-slider-section{padding:20px 0 5%;}
+.reviews-box-content{width:100%;margin:10px 0 15px 0}
+.contact-left-section{width:100%;float:none;clear:both;}
+.contact-right-section{width:100%;max-width:442px;margin:0 auto;float:none;clear:both;}
+/* login form */
+#login-box{top:-76px;width:100%;}
+.login-box{background-position:left top;background-size:100% 100%;height:auto;max-width:540px;min-height:20px;padding-bottom:28px;width:94%;float:right;}
+.login-form{margin-right:10px;width:57%;padding:0 15px 0 0;}
+.login-heading{background-size:25px;margin:20px 0 15px;padding:2px 0 0 36px;}
+.login-heading span{font-size:20px;background-position:left center;}
+.login-form input{padding:10px 8px;margin:0 0 15px;width:92%;}
+.remember-section{margin:0;}
+.login-form .button-section{margin:20px 0 0;}
+.login-form .button-section input.login-btn{padding:5px 0;width:75px;font-size:13px;margin:0 5px 0 0;}
+.login-right{padding:10% 0 0;font-size:15px;}
+.login-right span{font-size:20px;}
+.login-right .fb-btn{margin:5% 0 0;}
+.forget-password .button-section input.login-btn{ width:135px;}
+.signupform-section .form-fild label, #generateNewPassword .form-item label{ padding:0;}
+.signupform-section .form-fild, #generateNewPassword .form-item,.signupform-section .form-fild label, #generateNewPassword .form-item label,.signupform-section .form-fild input[type="text"], .signupform-section .form-fild input[type="password"], #generateNewPassword .form-item input[type="password"]{ width:98%; float:none; clear:both; margin:0 0 10px 0}
+#generateNewPassword{ margin-bottom:15px;} 
+.signupform-section .form-fild.where-do-u label{width:98%;}
+}
+/*----------------------------------------------------*/
+/*	600px
+/*----------------------------------------------------*/
+@media only screen and (max-width:600px){
+.expect-top-right{float:left;width:72%;}
+.expect-top-section{margin-top:-15.2%;font-size:16px;}
+.expect-top-right h1{margin:9% 0 8%;}
+.expect-content-section{padding:3% 24px 13px;}
+.inlineMainContentBlock.fl{ float:none; margin-right:0; width:100%; clear:both; border-bottom:1px dashed #3B0007; margin-bottom:10px; padding-bottom:10px;}
+#profileDetails .clr{ display:none;}
+#profileImage{ width:53% !important;}
+}
+/*----------------------------------------------------*/
+/*	480px
+/*----------------------------------------------------*/
+@media only screen and (max-width:480px){
+.last-tour-slider .rslides_tabs li{float:left;margin:2% 2% 2% 0;width:82px;}
+#slider3-pager a{display:block;height:65px;max-width:100%;}
+#slider3-pager img{max-width:100%;min-height:66px;}
+.last-tours-pic .view-all ,.customers-reviews .view-all{bottom:-24px}
+.usd-top-section p{margin:80px 0 0 22px;}
+.from-us-inner{padding-bottom:28px;}
+.from-us-inner h1{font-size:50px;}
+.select-travel-box-top h1{width:69%;}
+.select-travel-box-top h1, .select-travel-box2 .select-travel-box-top h1{font-size:16px;width:71%;}
+.select-travel-box-inner select.month{width:58%;}
+.red-box{clear:both;float:none;margin:10px auto;max-width:150px;width:37%;}
+.select-travel-box2 .red-box{width:47%;float:none;margin:0 auto;}
+.num-pers{float:none;margin:10px 10px;width:80%;}
+.clr-mobile{display:block;clear:both;height:0px;margin:0;padding:0;}
+.add-to-cart{width:53%;}
+.more-info-left, .more-info-right{float:none;margin:0 auto;background:none;text-align:center;}
+.more-info-left{width:38%;}
+.more-info-right{width:100%;padding:0;}
+.main-heading{font-size:2.2em;line-height:50px;}
+#contacts .main-heading{padding-bottom:5px;}
+.contect-sub-hed{font-size:21px;line-height:22px;}
+.contect-main-hed{font-size:40px;}
+.ancient-text{font-size:20px;padding:0;}
+.ancient-text span{font-size:25px;}
+.contact-info-details{font-size:12px;width:64.5%;padding:35px 0 15px 20px;}
+.contact-info-fax-box .contact-info-details{padding:35px 20px 15px 0;}
+.contact-info-details strong{display:block;}
+#civitavecchia,#livorno,#napoli,#contacts,#whychoose{padding-top:14%;}
+.whychoose-top-contant{margin:0 0 29px;font-size:18px;}
+.whychoose-icon{float:none;margin:0 auto;clear:both;display:block;}
+}

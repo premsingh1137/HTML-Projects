@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>EliteCarBuyers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no,  user-scalable=no">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity crossorigin="anonymous"></script> -->
+</head>
+
+<body>
+    <!-- Navigation Section -->
+    <nav class="navbar navbar-expand-md">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./images/Elite-Logo.png" height="30" alt="image">
+            </a>
+            <button class="navbar-toggler"
+      type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"> <span
+        class="navbar-toggler-icon"></span> </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./images/Elite-Logo.png" height="30" alt="image">
+                </a> <button type="button" class="btn-close"
+                data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./valuation.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./faq.html">FAQ'S</a>
+                </li>
+                
+              </ul>
+              
+            </div>
+          </div>
+            
+        </div>
+    </nav>
+    <!-- Elite Banner Section -->
+    <section class="bg-dark position-relative elite-banner-section">
+        <div class="bg-overlay"></div>
+        <img src="./images/banner-one.jpeg" alt="" style="width: 100%;" />
+        <div class="container banner-info-section">
+            <div class="row d-flex justify-content-between align-items-center">
+                <div class="col-xl-5 col-lg-6 col-md-7  text-lg-left ">
+                    <div class="banner-left-wrap">
+                        <h1 class="display-3 sell-us-text font-weight-bold text-start text-white aos-init">Sell Us Your
+                            Premium Car</h1>
+                        <div class="input-group input-group-lg input-wrap">
+                            <span class="input-group-text" id="inputGroup-sizing-lg">
+                                <img src="./images/icons/flag-icon.png" alt="">
+                                <p class="fw-medium">UK</p>
+                            </span>
+                            <input type="text" class="form-control" aria-label="Sizing example input"
+                                placeholder="Enter your reg"  onfocus="handleFocus(this)" onblur="handleBlur(this)">
+                        </div>
+                        <div class="input-wrap mileage-input">
+                            <label>Mileage</label>
+                            <input type="number" inputmode="numeric" class="form-control"
+                                aria-label="Sizing example input" id="numberInput" placeholder="e.g. 32000"  onfocus="handleFocus(this)" onblur="handleBlur(this)">
+                        </div>
+                        <button type="button" class="btn btn-primary value-btn" title="Value My Car"
+                            onclick="location.href = 'valuation.html'">Value My Car</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Guranter Section -->
+    <section class="guranter-section">
+        <div class="container">
+            <ul>
+                <li>
+                    <p>Guaranteed valuation</p>
+                </li>
+                <li>
+                    <p>Free collection</p>
+                </li>
+                <li>
+                    <p>No admin fees</p>
+                </li>
+                <li>
+                    <p>No auctions</p>
+                </li>
+                <li>
+                    <p>No dealers</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- How Does It Work Section -->
+    <section class="bg-light elite-video-section home-video-section">
+        <div class="container pt-5 pb-5">
+            <div class="row d-flex justify-content-between">
+                <div class="col-md-7 left-wrap">
+                    <h3 class="display-4 font-weight-bold aos-init section-head">How Does It Work?
+                    </h3>
+                    <p class="lead aos-init">3 easy Steps</p>
+
+                </div>
+                <div class="col-md-5 text-end aos-init">
+                    <button type="button" class="btn btn-primary value-btn watch-btn">Watch Video</button>
+                </div>
+            </div>
+            <div class="stepper">
+                <div class="line"></div>
+                <div class="step">1</div>
+                <div class="step">2</div>
+                <div class="step">3</div>
+            </div>
+            <div class="card-section e3step">
+                <div class="box text-center">
+                    <div class="step one">1</div>
+                    <div class="top-img">
+                        <img src="./images/icons/registration-icon.png" alt="">
+                    </div>
+                    <div class="content-wrap">
+                        <h3>Enter Registration</h3>
+                        <p>Enter your registration and answer a few basic questions to get your valuation today.</p>
+                    </div>
+                </div>
+                <div class="box text-center">
+                    <div class="step two">2</div>
+                    <div class="top-img">
+                        <img src="./images/icons/receive-icon.png" alt="">
+                    </div>
+                    <div class="content-wrap">
+                        <div class="content-wrap">
+                            <h3>Receive your tailored valuation</h3>
+                            <p>Our expert buyers and bespoke valuation tools don’t just provide you with a random
+                                computer generated quote. We understand spec matters! Therefore we price your car on its
+                                individual merits to ensure you're getting the most for your vehicle.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box text-center">
+                    <div class="step three">3</div>
+                    <div class="top-img">
+                        <img src="./images/icons/arrange-icon.png" alt="">
+                    </div>
+                    <div class="content-wrap">
+                        <div class="content-wrap">
+                            <h3>Arrange Collection</h3>
+                            <p>With an instant payment upon collection you can sit back and enjoy our tailored, home
+                                collection service. We’ll travel nationwide at a time and date that suits you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <span class="elite-video-footer"><label class="exce-label">Excellent!</label><img
+                    src="./images/icons/star-group.png" alt=""> <label class="rating-text rating-text ms-2 me-2">5
+                    Rating out of 5.0 Based On 2348 Reviews</label> <img src="./images/icons/star-icon.png"
+                    alt="">
+                </span> -->
+        </div>
+        </div>
+    </section>
+    <!-- Why Choose Us Section-->
+    <section class="elite-car-buyers-section pt-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col col-md-12 text-center aos-init top-section">
+                    <h2 class="font-weight-bold head">Why Choose Elite car buyers?</h2>
+                    <p class="">Selling your pride and joy can be a laborious, problematic and sometimes
+                        challenging process... but not with us! We offer a ‘White Glove, Red Carpet’ service to all of
+                        our customers and clients. Think of us as your own personal car selling concierge service,
+                        taking care of everything from initial valuation down to change of ownership. Here’s why our
+                        customers are motivated to sell to us;
+                    </p>
+                </div>
+                <div class="card-section">
+
+                    <div class="box">
+                        <div class="top-section">
+                            <span><img class="me-3" src="./images/icons/personal-touch-icon.png"
+                                    alt="Personal Touch">Personal Touch</span>
+                        </div>
+                        <div class="content-wrap">
+                            <p>Unlike the majority of the industry, we aren’t governed by computer systems that only
+                                care about your reg and miles. At elite car buyers our experts are industry leading.
+                                We
+                                understand it’s the small details that count. From colour combinations and bigger
+                                wheels
+                                to upgraded factory packs, low owners and full-service history. We appreciate every
+                                car
+                                can be different so we like to value each vehicle on its own merits. Therefore, one
+                                of
+                                our dedicated specialists may contact you to discuss your vehicle in greater detail
+                                ensuring we get you the best price possible. If it’s worth more, we’ll pay more!</p>
+                        </div>
+                    </div>
+
+                    <div class="box fix-height">
+                        <div class="top-section">
+                            <span><img class="me-3" src="./images/icons/payment-promise-icon.png"
+                                    alt="payment-promise">Payment Promise</span>
+                        </div>
+                        <div class="content-wrap">
+                            <div class="content-wrap">
+                                <p>We offer hassle free, safe and secure payments. Once we agree the purchase of
+                                    your
+                                    vehicle, funds are instantly and electronically transferred direct to your bank
+                                    account. We won’t leave until your happy funds are in the bank! No Cash, No
+                                    Faff!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box fix-height">
+                        <div class="top-section">
+                            <span><img class="me-3" src="./images/icons/nation-wide-icon.png" alt="nation-wide">Free
+                                Nationwide Collection</span>
+                        </div>
+                        <div class="content-wrap">
+                            <div class="content-wrap">
+                                <p>Operating all over the UK, we’ll travel almost anywhere for the right vehicle! No
+                                    need to stress about taking days off work, we’ll meet you home or away. Truly
+                                    taking
+                                    the stress out of selling your vehicle.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Always Help Section -->
+    <section class="pt-5 pb-5 elite-always-help-section">
+        <div class="container">
+            <div class="left-wrap mt-3">
+                <h3>We are always here to help you.</h3>
+                <h2><img class="ms-2 me-2" src="./images/icons/phone-icon.png" alt="Phone-Icon">Call Now:<span
+                        class="ms-3">0123 4567 8901</span></h2>
+                <div class="sell-btn">
+                    <button type="button" class="btn btn-primary value-btn">Sell Your car</button>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Prestige brands Section -->
+    <section class="prestigebrands-section">
+        <div class="container">
+            <h3 class="main-heading"><span>Prestige brands we buy</span></h3>
+            <div class="prestigebrands">
+                <div><img src="./images/brands/Brand_1.png" alt="" /></div>
+                <div><img src="./images/brands/Brand_2.png" alt="" /></div>
+                <div><img src="./images/brands/Brand_3.png" alt="" /></div>
+                <div><img src="./images/brands/Brand_4.png" alt="" /></div>
+                <div><img src="./images/brands/Brand_5.png" alt="" /></div>
+                <div><img src="./images/brands/Brand_6.png" alt="" /></div>
+                <div><img src="./images/brands/Brand_7.png" alt="" /></div>
+                <div><img src="./images/brands/Brand_8.png" alt="" /></div>
+                <div><img src="./images/brands/Brand_9.png" alt="" /></div>
+                <div><img src="./images/brands/Brand_10.png" alt="" /></div>
+                <div><img src="./images/brands/Brand_11.png" alt="" /></div>
+                <div><img src="./images/brands/Brand_12.png" alt="" /></div>
+                <div><img src="./images/brands/Brand_13.png" alt="" /></div>
+                <div><img src="./images/brands/Brand_14.png" alt="" /></div>
+            </div>
+        </div>
+    </section>
+    <!-- Latest News Section -->
+    <section class="pt-5 pb-5 elite-latest-news-setion">
+        <div class="container">
+            <div class="elite-latest-news-top text-center">
+                <h2>The Latest News Car & Bids</h2>
+                <p>Elitecarbuyerst for a seamless and superior car-selling experience.</p>
+            </div>
+
+            <div class="card-section mt-5">
+                <div class="box text-center">
+                    <div class="latest-card-img">
+                        <img src="./images/latest-news-card-img-1.png" alt="Image">
+                    </div>
+                    <div class="content-wrap">
+                        <h3>The Future of Electric Cars What to Expect in the Next Decade Shafiqul</h3>
+                    </div>
+                    <div class="latest-news-footer">
+                        <p>Posted by: <span class="ms-1">Thomas deo </span> <label>/ September 24, 2023</label> </p>
+                    </div>
+                </div>
+                <div class="box text-center">
+                    <div class="latest-card-img">
+                        <img src="./images/latest-news-card-img-2.png" alt="Image">
+                    </div>
+                    <div class="content-wrap">
+                        <h3>How to Maintain Your Vehicle’s Resale Value: Expert Insights Lorem Ipsum has been the
+                            industry's</h3>
+                    </div>
+                    <div class="latest-news-footer">
+                        <p>Posted by: <span class="ms-1">Thomas deo </span> <label>/ September 24, 2023</label> </p>
+                    </div>
+                </div>
+                <div class="box text-center">
+                    <div class="latest-card-img">
+                        <img src="./images/latest-news-card-img-3.png" alt="Image">
+                    </div>
+                    <div class="content-wrap">
+                        <h3>SUV vs. Sedan Choosing the Right Vehicle for Your Lifestyle It has survived not only five
+                            centuries</h3>
+                    </div>
+                    <div class="latest-news-footer">
+                        <p>Posted by: <span class="ms-1">Thomas deo </span> <label>/ September 24, 2023</label> </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Instant payment Section-->
+    <section class="instant-payment-section">
+        <div class="container">
+            <div class="instant-payment">
+                <h2>Instant Payment. No Admin Fees</h2>
+                <p>Payment in your account before we've driven away</p>
+                <div class="car-value-section">
+                    <div class="input-group input-group-lg input-wrap">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">
+                            <img src="./images/icons/flag-icon.png" alt="">
+                            <p class="fw-medium">UK</p>
+                        </span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" onfocus="handleFocus(this)" onblur="handleBlur(this)"
+                            aria-describedby="inputGroup-sizing-lg" placeholder="Enter your reg">
+                    </div>
+                    <button class="btn btn-lg btn-value-car" title="Value My Car" onclick="window.location.href='valuation.html'">Value My Car</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <section class="mb-0 mt-0">
+        <div class="footer text-white">
+            <div class=" pt-5">
+                <div class="container be-vietnam-pro-light">
+                    <!--  -->
+                    <div class="footer-box">
+                        <div class="col-first col" style="overflow:hidden">
+                            <div class="footer-logo-section">
+                                <a href="./index.html">
+                                    <img src="./images/Elite-Logo.png" />
+                                </a>                               
+                                <div class="social-link mt-5">
+                                    <h4 class="hedding-medium">Follow On</h4>
+                                    <ul class="social-link-list">
+                                        <li>
+                                            <a href="javascript:viod(0)">
+
+                                                <i class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:viod(0)"><i class="fab fa-instagram"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:viod(0)"><i class="fab fa-linkedin-in"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:viod(0)"><i class="fab fa-twitter"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-second col">
+                            <h4 class="main-heading">About Company</h4>
+                            <ul class="footer-link-section">                               
+                                <li>
+                                    <a href="./faq.html">FAQ’s</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:viod(0)">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-three col">
+                            <h4 class="main-heading">Contact Us</h4>
+                            <ul class="footer-contact-section">
+                                <li class="call-icon">
+                                    <span>call Us</span>
+                                    <a href="tel:0123 4567 8901">0123 4567 8901</a>
+                                </li>
+                                <li class="email-icon">
+                                    <span>Email us</span>
+                                    <a href="mailto:elitecarbuyers@mail.com">elitecarbuyers@mail.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="copy-right-section">
+                    <p class="text-white"> Copyright &copy; 2024 Elite Car Buyers
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="what-up-link">
+        <span><i class="fab fa-whatsapp"></i></span>
+    </div>
+    <!-- jQuery is required -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/custom.js"></script>
+<script>
+    document.getElementById('numberInput').addEventListener('input', function (e) {
+        // Remove any non-numeric characters
+        this.value = this.value.replace(/[^0-9]/g, '');
+    });
+    
+    function handleFocus(input) {
+            input.dataset.placeholder = input.placeholder;
+            input.placeholder = '';
+        }
+
+        function handleBlur(input) {
+            if (input.value === '') {
+                input.placeholder = input.dataset.placeholder;
+            }
+        }
+</script>
+</body>
+
+</html>

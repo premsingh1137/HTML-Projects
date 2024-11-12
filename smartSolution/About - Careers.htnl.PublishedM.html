@@ -1,0 +1,233 @@
+@using Umbraco.Cms.Web.Common.PublishedModels; @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+<ContentModels.AboutCareers>
+    @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels; @using Umbraco.Forms.Web @{ Layout = "Master.cshtml"; List
+    <string> urlList = new List
+        <string>(); } @{ var selection = Umbraco.Content(Guid.Parse("e27ae88a-1233-41b2-abe6-093426d1a54e")) .Children() .Where(x => x.IsVisible()); } @Html.RenderUmbracoFormDependencies()
+
+            <!-- smart way -->
+            <section class="smart-way header-bg patners-header">
+                <div class="container">
+                    <div class="smart-story max-w-660 text-center">
+                        <div>
+                            <h1>@Model.AboutCareersFirstSectionTitle</h1>
+                            @Model.AboutCareersFirstSectionDescription
+                            <a href="@Model.CurrentOpeningsSectionRedirection" class="btn get-started text-center">@Model.CurrentOpeningsButtonTitle</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- product -->
+            <section class="product-onboarding recoup">
+                <div class="container">
+                    <div class=" about-careers-hed">
+                        <h2 class="pb-5 text-center">@Model.WhatWeDoTitle</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                @Model.WhatWeDoLeftFirstParaDesc
+                            </div>
+                            <div class="col-md-6">
+                                <h3 class="pb-4 pe-5">
+                                    @Model.TrainingAndMentorshipTitle
+                                </h3>
+                                @Model.TrainingAndMentorshipDesc
+                            </div>
+                            <div class="col-md-6 mt-5">
+                                <h3 class="pb-4 pe-5 mb-4">
+                                    @Model.SupportToDoYourBestWorkTitle
+                                </h3>
+
+                                @Model.SupportToDoYourBestWorkDesc @{ var LearnMoreAboutLink = Model.LearnMoreAboutUsButtonUrl?.FirstOrDefault(); @if (LearnMoreAboutLink != null) {
+                                <a href="@LearnMoreAboutLink.Url" target="@LearnMoreAboutLink.Target" class="btn learn-about text-center bottom-common-btnbg" title="Learn More About Us">@Model.LearnMoreAboutUsButtonTitle</a> } }
+
+                            </div>
+                            <div class="col-md-6 mt-5">
+                                <div class="row mt-4 pt-2">
+                                    <div class="col-8">
+                                        @if (Model.SupportToDoYourBestWorkImage != null) { var countryimage = Model.SupportToDoYourBestWorkImage; var mediaItems = Umbraco.Media(countryimage.Key); if (mediaItems != null) {
+                                        <img src="@mediaItems.Url()" alt="@mediaItems.Name"> } }
+                                    </div>
+                                    <div class="col-4 mt-5">
+                                        @if (Model.SupportToDoYourBestWorkImage2 != null) { var countryimage = Model.SupportToDoYourBestWorkImage2; var mediaItems = Umbraco.Media(countryimage.Key); if (mediaItems != null) {
+                                        <img src="@mediaItems.Url()" alt="@mediaItems.Name"> } }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- smart story -->
+            <section class="benifits-perks">
+                <div class="container">
+                    <div class="patners-how-it-work text-center">
+                        <h3>@Model.BenefitsAndPerksTitle</h3>
+                    </div>
+                    <div class="about-career-partners-box">
+                        <div class="partner-join-step">
+                            <div class="partners-team-box row">
+                                <div class="join-teams-setup-box col-sm-3">
+                                    <span class="mr-auto"><strong>@Model.BenefitsAndPerksImage1</strong></span>
+                                    <h4 class="text-left">@Model.BenefitsAndPerksFirstTitle</h4>
+                                    @Model.BenefitsAndPerksFirstDesc
+                                </div>
+                                <div class="join-teams-setup-box col-sm-3">
+                                    <span class="mr-auto"><strong>@Model.BenefitsAndPerksImage2</strong></span>
+                                    <h4 class="text-left">@Model.BenefitsAndPerksSecondTitle</h4>
+                                    @Model.BenefitsAndPerksSecondDesc
+                                </div>
+                                <div class="join-teams-setup-box col-sm-3">
+                                    <span class="mr-auto"><strong>@Model.BenefitsAndPerksImage3</strong></span>
+                                    <h4 class="text-left">@Model.BenefitsAndPerksThirdTitle</h4>
+                                    @Model.BenefitsAndPerksThirdDesc
+                                </div>
+                                <div class="join-teams-setup-box col-sm-3">
+                                    <span class="mr-auto"><strong>@Model.BenefitsAndPerksImage4</strong></span>
+                                    <h4 class="text-left">@Model.BenefitsAndPerksFourthTitle</h4>
+                                    @Model.BenefitsAndPerksFourthDesc
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <!-- Leadership -->
+            <section class="leadership about-leadership">
+                <div class="container">
+                    <div class="discover-head text-center">
+                        <h3 class="pb-0 pb-lg-4">@Model.MeetTheExecutivesTitle</h3>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="about-slider">
+                        <div class="slider__wrap swiper-wrapper">
+                            @if (Model.MeetTheExecutivesMembers != null) { var teamMembers = Model.MeetTheExecutivesMembers; foreach (var item in teamMembers) {
+                            <div class="swiper-slide">
+                                <div class="row item">
+                                    <div class="col-md-4">
+                                        <div class="about-leadership-content-bottom ">
+                                            <h5>@item.Value("MemberName")</h5>
+                                            @item.Value("MemberDesignation")
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        @{ var teamimage = item.Value("aboutTeamMembersImage"); var mediaItem = teamimage != null ? Umbraco.Media(((Umbraco.Cms.Core.Models.PublishedContent.PublishedContentWrapped)teamimage).Key) : null; } @if (mediaItem != null) {
+                                        <div class="leader-main">
+                                            <img src="@mediaItem.Url()" class="card-img-top" alt="Team" />
+                                        </div>
+                                        }
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="about-leadership-content-top">
+                                            <h5>@item.Value("MemberBriefTitle")</h5>
+                                            <p class="mb-0 pt-5">@item.Value("MemberLongBrief")</p>
+                                            <p class="mb-0 pt-3">@item.Value("MemberShortBrief")</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            } }
+                        </div>
+                        <div class="slider__controls">
+                            <div class="slider__pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- we support -->
+            <section class="mainsection">
+                <div class="we-support-section about-career-leadership">
+                    <div class="container">
+                        <div class="we-support-block">
+                            <h2 class="text-center pb-4">@Model.MeetTheTeamTitle</h2>
+                            <div class="we-support-slider">
+                                <div class="WeSupportSlider">
+                                    @if (Model.MeetTheTeamMembers != null) { var teamMembers = Model.MeetTheTeamMembers; foreach (var item in teamMembers) { var teamimage = @item.Value("aboutTeamMembersImage"); if (teamimage != null) { var key = ((Umbraco.Cms.Core.Models.PublishedContent.PublishedContentWrapped)teamimage).Key;
+                                    var mediaItem = Umbraco.Media(key); if (mediaItem != null) {
+                                    <div class="card ac-card">
+                                        <img src="@mediaItem.Url()" class="card-img-top" alt="Team" />
+                                        <div class="wesupport-card-body">
+                                            <h5>@item.Value("MemberName")</h5>
+                                            @item.Value("MemberDesignation")
+                                        </div>
+                                    </div>
+                                    } } } }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- we support -->
+                <div class="we-support-section about-career-leadership">
+                    <div class="container">
+                        <div class="we-support-block">
+                            <h2 class="text-center pb-4">@Model.FormerCoOpStudentsTitle</h2>
+                            <div class="we-support-slider">
+                                <div class="WeSupportSlider">
+                                    @if (Model.FormerCoOpStudentsDetails != null) { var teamMembers = Model.FormerCoOpStudentsDetails; foreach (var item in teamMembers) { var teamimage = @item.Value("aboutTeamMembersImage"); if (teamimage != null) { var key = ((Umbraco.Cms.Core.Models.PublishedContent.PublishedContentWrapped)teamimage).Key;
+                                    var mediaItem = Umbraco.Media(key); if (mediaItem != null) {
+                                    <div class="card ac-card">
+                                        <img src="@mediaItem.Url()" class="card-img-top" alt="Team" />
+                                        <div class="wesupport-card-body">
+                                            <h5>@item.Value("MemberName")</h5>
+                                            @item.Value("MemberDesignation")
+                                        </div>
+                                    </div>
+                                    } } } }
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- current openings -->
+                <div class="current-opening" id="currentOpenings">
+                    <div class="container">
+                        <h3 class="text-center pt-5">@Model.CurrentOpeningsTitle</h3>
+                        <div class="current-table">
+                            @foreach (var item in selection) {
+                            <div class="current-opening-list">
+                                <span class="current-first">@item.Value("jobTitle")</span>
+                                <span class="current-two">@item.Value("jobDesignation")</span>
+                                <span class="current-three"><a href="@item.Url()" class="btn visit-btn p-0">@item.Value("applyNowButtonTitle") <i class="bi bi-arrow-right"></i></a></span>
+                            </div>
+                            }
+                        </div>
+                        @*
+                        <table class="current-table">
+
+                            @foreach (var item in selection) {
+                            <tr>
+                                <th>@item.Value("jobTitle")</th>
+                                <td>@item.Value("jobDesignation")</td>
+                                <td>
+                                    <a href="@item.Url()" class="btn visit-btn p-0">@item.Value("applyNowButtonTitle") <i class="bi bi-arrow-right"></i></a>
+
+                                </td>
+                            </tr>
+                            }
+                        </table>*@
+                    </div>
+                </div>
+            </section>
+            <!-- form team -->
+            <section class="form-team">
+                <div class="container">
+                    <div class="d-flex flex-wrap">
+                        <div class="form-team-content">
+                            <h5>@Model.FirstDescriptionForm</h5>
+                            @Model.SecondDescriptionForm
+                        </div>
+                        <div class="form-right">
+                            <div class="form-right-inner">
+                                <div id="careerform">
+                                    @Model.Value("careerForm")
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>

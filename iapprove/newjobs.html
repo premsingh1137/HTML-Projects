@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Table</title>
+  <style>
+    .job-details {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <table class="job-table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Job rows will be dynamically generated here -->
+    </tbody>
+  </table>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Sample job data (replace this with your actual data)
+      var jobs = [
+        { title: "Job 1", description: "Description for Job 1" },
+        { title: "Job 2", description: "Description for Job 2" },
+        // Add more job objects as needed
+      ];
+
+      // Populate the table with job data
+      var tbody = $('.job-table tbody');
+      jobs.forEach(function(job) {
+        var row = $('<tr>');
+        row.append('<td class="job-title">' + job.title + '</td>');
+        row.append('<td>' + job.description + '</td>');
+        tbody.append(row);
+
+        // Add corresponding job details row
+        var detailsRow = $('<tr>');
+        detailsRow.append('<td colspan="2" class="job-details">' +
+          '<div>' + job.description + '</div>' +
+          '</td>');
+        tbody.append(detailsRow);
+      });
+
+      // Hide job details initially
+      $('.job-details').hide();
+
+      // Toggle job details on title click
+      $('.job-title').click(function() {
+        // Find the next tr after the one containing the clicked job title,
+        // then find .job-details within that row
+        $(this).closest('tr').next('tr').find('.job-details').toggle();
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="909" height="547.644" viewBox="0 0 909 547.644">
+  <g id="Group_157" data-name="Group 157" transform="translate(-78.432 -1501.82)">
+    <rect id="Rectangle_101" data-name="Rectangle 101" width="148" height="148" rx="10" transform="translate(419.432 1646.679)" fill="#f2f3fd"/>
+    <g id="Rectangle_102" data-name="Rectangle 102" transform="translate(372.432 1601.679)" fill="none" stroke="#6462fb" stroke-width="2" stroke-dasharray="5">
+      <rect width="243" height="243" rx="10" stroke="none"/>
+      <rect x="1" y="1" width="241" height="241" rx="9" fill="none"/>
+    </g>
+    <rect id="Rectangle_104" data-name="Rectangle 104" width="148" height="148" rx="10" transform="translate(713.932 1641.885)" fill="#f2f3fd"/>
+    <g id="Rectangle_105" data-name="Rectangle 105" transform="translate(666.932 1596.885)" fill="none" stroke="#6462fb" stroke-width="2" stroke-dasharray="5">
+      <rect width="243" height="243" rx="10" stroke="none"/>
+      <rect x="1" y="1" width="241" height="241" rx="9" fill="none"/>
+    </g>
+    <text id="CORE_BANKING" data-name="CORE
+BANKING" transform="translate(493.932 1716.679)" fill="#6462fb" font-size="18" font-family="DMSans-Bold, 'DM Sans \31 4pt'" font-weight="700"><tspan x="-24" y="0">CORE</tspan><tspan x="-40" y="20">BANKING</tspan></text>
+    <text id="LOAN_ORIGINATION" data-name="LOAN
+ORIGINATION" transform="translate(787.932 1711.885)" fill="#6462fb" font-size="18" font-family="DMSans-Bold, 'DM Sans \31 4pt'" font-weight="700"><tspan x="-24" y="0">LOAN</tspan><tspan x="-58" y="20">ORIGINATION</tspan></text>
+    <rect id="Rectangle_106" data-name="Rectangle 106" width="148" height="148" rx="10" transform="translate(125.432 1646.679)" fill="#f2f3fd"/>
+    <g id="Rectangle_107" data-name="Rectangle 107" transform="translate(78.432 1601.679)" fill="none" stroke="#6462fb" stroke-width="2" stroke-dasharray="5">
+      <rect width="243" height="243" rx="10" stroke="none"/>
+      <rect x="1" y="1" width="241" height="241" rx="9" fill="none"/>
+    </g>
+    <text id="DIGITAL_BANKING" data-name="DIGITAL
+BANKING" transform="translate(199.432 1716.679)" fill="#6462fb" font-size="18" font-family="DMSans-Bold, 'DM Sans \31 4pt'" font-weight="700"><tspan x="-34" y="0">DIGITAL</tspan><tspan x="-40" y="20">BANKING</tspan></text>
+    <text id="SECURITY" transform="translate(488.705 1520.82)" fill="#7978fb" font-size="18" font-family="SegoeUI-BoldItalic, Segoe UI" font-weight="700" font-style="italic"><tspan x="-41" y="0">SECURITY</tspan></text>
+    <text id="API" transform="translate(342.685 1552.663)" fill="#7978fb" font-size="18" font-family="SegoeUI-BoldItalic, Segoe UI" font-weight="700" font-style="italic"><tspan x="-14" y="0">API</tspan></text>
+    <text id="MOBILE_" data-name="MOBILE " transform="translate(160.432 1903.852)" fill="#7978fb" font-size="18" font-family="SegoeUI-BoldItalic, Segoe UI" font-weight="700" font-style="italic"><tspan x="0" y="0">MOBILE </tspan></text>
+    <text id="PRODUCTS" transform="translate(553.874 1901.068)" fill="#7978fb" font-size="18" font-family="SegoeUI-BoldItalic, Segoe UI" font-weight="700" font-style="italic"><tspan x="-94" y="0">PRODUCTS</tspan></text>
+    <text id="REPORTING" transform="translate(513.316 1948.473)" fill="#7978fb" font-size="18" font-family="SegoeUI-BoldItalic, Segoe UI" font-weight="700" font-style="italic"><tspan x="-50" y="0">REPORTING</tspan></text>
+    <text id="CUSTOMER_RELATIONSHIPS" data-name="CUSTOMER
+RELATIONSHIPS" transform="translate(453.932 1999.877)" fill="#7978fb" font-size="18" font-family="SegoeUI-BoldItalic, Segoe UI" font-weight="700" font-style="italic"><tspan x="0" y="0">CUSTOMER</tspan><tspan x="0" y="24">RELATIONSHIPS</tspan></text>
+    <text id="AUTOMATED_DISBURSER" data-name="AUTOMATED DISBURSER" transform="translate(987.432 1949.511)" fill="#7978fb" font-size="18" font-family="SegoeUI-BoldItalic, Segoe UI" font-weight="700" font-style="italic"><tspan x="-212" y="0">AUTOMATED DISBURSER</tspan></text>
+    <text id="LOAN_CUSTOMIZATION" data-name="LOAN CUSTOMIZATION" transform="translate(972.432 1899.852)" fill="#7978fb" font-size="18" font-family="SegoeUI-BoldItalic, Segoe UI" font-weight="700" font-style="italic"><tspan x="-202" y="0">LOAN CUSTOMIZATION</tspan></text>
+    <text id="LOAN_OPTIONS" data-name="LOAN OPTIONS" transform="translate(899.432 2044.464)" fill="#7978fb" font-size="18" font-family="SegoeUI-BoldItalic, Segoe UI" font-weight="700" font-style="italic"><tspan x="-133" y="0">LOAN OPTIONS</tspan></text>
+    <text id="POST_RECOUPMENT" data-name="POST RECOUPMENT" transform="translate(944.313 1999.17)" fill="#7978fb" font-size="18" font-family="SegoeUI-BoldItalic, Segoe UI" font-weight="700" font-style="italic"><tspan x="-170" y="0">POST RECOUPMENT</tspan></text>
+    <path id="Path_210" data-name="Path 210" d="M1007.125,5957.584v51.143" transform="translate(-514.295 -4424.852)" fill="none" stroke="#7978fb" stroke-width="2"/>
+    <path id="Path_211" data-name="Path 211" d="M1001.478,5938.5H778.46v74.3" transform="translate(-577.295 -4424.18)" fill="none" stroke="#7978fb" stroke-width="2"/>
+    <path id="Path_212" data-name="Path 212" d="M777.971,5938.5H984.407v61.806" transform="translate(-222.094 -4424.18)" fill="none" stroke="#7978fb" stroke-width="2"/>
+    <text id="INTERNET_BANKING_" data-name="INTERNET
+BANKING " transform="translate(162.874 1949.318)" fill="#7978fb" font-size="18" font-family="SegoeUI-BoldItalic, Segoe UI" font-weight="700" font-style="italic"><tspan x="0" y="0">INTERNET</tspan><tspan x="0" y="24">BANKING </tspan></text>
+    <g id="Group_154" data-name="Group 154" transform="translate(-493.295 320.716)">
+      <path id="Path_213" data-name="Path 213" d="M997.088,6314.463v32.39h24.088" transform="translate(-84 -4773)" fill="none" stroke="#7978fb" stroke-width="2"/>
+      <path id="Path_214" data-name="Path 214" d="M996.727,6298l.361,48.848h24.088" transform="translate(-84 -4724.152)" fill="none" stroke="#7978fb" stroke-width="2"/>
+      <path id="Path_215" data-name="Path 215" d="M996.727,6298l.361,48.848h24.088" transform="translate(-84 -4675.304)" fill="none" stroke="#7978fb" stroke-width="2"/>
+    </g>
+    <g id="Group_153" data-name="Group 153" transform="translate(-493.295 356.847)">
+      <path id="Path_216" data-name="Path 216" d="M997.088,6314.256v32.6h24.088" transform="translate(210.773 -4808.925)" fill="none" stroke="#7978fb" stroke-width="2"/>
+      <path id="Path_217" data-name="Path 217" d="M996.727,6298l.361,48.848h24.088" transform="translate(210.773 -4760.076)" fill="none" stroke="#7978fb" stroke-width="2"/>
+      <path id="Path_218" data-name="Path 218" d="M996.727,6298l.361,48.848h24.088" transform="translate(210.773 -4711.229)" fill="none" stroke="#7978fb" stroke-width="2"/>
+      <path id="Path_219" data-name="Path 219" d="M996.727,6298l.361,48.848h24.088" transform="translate(210.773 -4662.38)" fill="none" stroke="#7978fb" stroke-width="2"/>
+    </g>
+    <g id="Group_155" data-name="Group 155" transform="translate(-789.738 322.054)">
+      <path id="Path_213-2" data-name="Path 213" d="M997.088,6313.125v33.729h24.088" transform="translate(-84 -4773)" fill="none" stroke="#7978fb" stroke-width="2"/>
+      <path id="Path_214-2" data-name="Path 214" d="M996.727,6298l.361,48.848h24.088" transform="translate(-84 -4724.152)" fill="none" stroke="#7978fb" stroke-width="2"/>
+    </g>
+    <path id="Path_220" data-name="Path 220" d="M855.434,6070.284H827.007V6111.8" transform="translate(-545.042 -4524.121)" fill="none" stroke="#7978fb" stroke-width="2"/>
+    <path id="Path_221" data-name="Path 221" d="M827.007,6070.284h28.427v36.88" transform="translate(-448.322 -4524.121)" fill="none" stroke="#7978fb" stroke-width="2"/>
+  </g>
+</svg>

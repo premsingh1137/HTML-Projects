@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1109" viewBox="0 0 1920 1109">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.747" cy="0.217" r="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f8ffe7"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="0.899" cy="0.42" r="0.781" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#c1e9fe"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g id="Bg" transform="translate(0 0.5)">
+    <g id="Rectangle">
+      <rect id="Rectangle-2" data-name="Rectangle" width="1920" height="1108.5" fill="#fff"/>
+      <rect id="Rectangle-3" data-name="Rectangle" width="1920" height="1108.5" fill="url(#radial-gradient)"/>
+      <rect id="Rectangle-4" data-name="Rectangle" width="1920" height="1108.5" transform="translate(0 -0.5)" fill="url(#radial-gradient-2)"/>
+    </g>
+  </g>
+</svg>

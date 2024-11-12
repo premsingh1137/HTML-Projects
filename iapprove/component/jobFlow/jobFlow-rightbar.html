@@ -1,0 +1,248 @@
+<!-- <section class='image-library-rightbar job-rightbar'> -->
+    <section class='job-rightbar'>
+    <!-- Job Search Filter Section-->
+    <div class="job-result">
+        <p class='job-title mb-2'>Search</p>
+        <div class="row justify-content-between">
+            <div class="col-md-8">
+                <div class="row align-items-start">
+                    <div class="col-xxl-3 col-md-4">
+                        <div class="d-flex align-items-center">
+                            <input type="text" class="form-control" id="searchField" placeholder="Enter value">
+                            <span class="ps-3">or</span>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-5">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" id="EnterJob" placeholder="Enter Job No." aria-label="Search">
+                            <button class="btn btn-search" type="button" onclick="search()" title="Search">Search</button>
+                          </form>
+                    </div>
+                    <div class="col-xxl-2 col-md-3">  
+                        <button class="btn btn-reset" title="Advanced">Advanced</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 text-end">
+                <button class="btn btn-add" title="Create New job"><i class="fas fa-plus"></i> Create New job</button>
+            </div>
+            <div class="col-sm-12">
+               <div class="filter-section" style="display: none;">
+                    <span class="filter-section-heading">
+                        Filters:
+                    </span>
+                    <div class="display-key-word-section">
+                        <span class="display-key-word-box">Keyword</span>
+                        <span id="displayKeyWord"></span>
+                        <span class="click-reset" onclick="reset()">X</span>
+                    </div>
+
+                    <div class="display-key-word-section">
+                        <span class="display-key-word-box">Brand</span>
+                        <span id="displayBrand"></span>
+                        <span class="click-reset" onclick="reset()">X</span>
+                    </div>
+               </div> 
+            </div>
+        </div>
+    </div>
+    <!-- Job Search Filter Section end-->
+    <!-- Job Show Section-->
+    <div class="show-filter-section">
+        <div class="show-filter-top">
+            <div class="show-filter-top-left">
+                <div class="show-filter-top-show">
+                    <span class="label">Show:</span>
+                    <span class="tab-button">Mine</span>
+                    <span class="tab-button tab-button-active">All</span>
+                </div>                
+                <div class="show-filter-top-view">
+                    <span class="label">View:</span>
+                    <span class="tab-button tab-button-active" id="jobflowJobs">Jobs</span>
+                    <span class="tab-button " id="jobflowProjects"><i class="fas fa-folder-open"></i> Projects <i class="fas fa-filter"></i></span>
+
+                    <select id="framework" name="framework[]" multiple class="form-control" >
+                        <option value="Codeigniter">simon SHREDDIES, CPUK, Cereal</option>
+                        <option value="Codeigniter">1i00 - Upload Approvals - Contact Sheets</option>
+                        <option value="Codeigniter">Test Area - BH Empire Nescafe Mild Roast, z closed Panasonic, Smiths Photography</option>
+                        
+                       </select>
+                </div>
+            </div>
+            <div class="show-filter-top-right">
+                <div class="show-filter-top-icon">
+                    <span title="Print"><img src="https://htmlportfolio.siplsolutions.com/iapproveit/images/jobs/print-icon.png" /> </span>
+                    <span title="Xlsx"><img src="https://htmlportfolio.siplsolutions.com/iapproveit/images/jobs/xlsx-icon.png"/> </span>
+                </div>
+            </div>
+        </div>
+        <div class="show-filter-bottom" id="jobflowProjectsButtonCon">
+
+            <div class="project-filter-section">
+                <ul>
+                  <li class="active">
+                    <span class="status-icon active-job">Active (18)</span>
+                  </li>
+                  <li>
+                    <span class="status-icon hold-job">On Hold (9)</span>
+                  </li>
+                  <li>
+                    <span class="status-icon future-job">Future (12)</span>
+                  </li>
+                  <li>
+                    <span class="status-icon completed-job">Completed (18)</span>
+                  </li>
+                  <li>
+                    <span class="status-icon all-job">All (45)</span>
+                  </li>
+                </ul>
+               </div>
+               <div class="project-view-filter-section">
+                <ul>
+                    <li class="active" id="projectList">
+                        <span class="view-icon list-view-icon">List</span>
+                    </li>
+                    <li id="projectKanban">
+                        <span class="view-icon kanban-view-icon">Kanban</span>
+                    </li>
+                    <li id="projectGantt">
+                        <span class="view-icon gantt-view-icon">Gantt</span>
+                    </li>
+                    <li id="projectCalendar">
+                        <span class="view-icon calendar-view-icon">Calendar</span>
+                    </li>
+                </ul>
+               </div>  
+        </div>
+    </div>
+    <div class="jobflow-tabcontent-section">
+        <!-- Job Show Section End-->
+        <div class="jobs jobflow-tabcontainer" id="jobflowJobsContent">       
+            <div class='table-wrapper'>
+            <table cellspacing="0" cellpadding="0" width="100%" class="fold-table table">
+                <thead>
+                    <tr>
+                        <th><img src='https://htmlportfolio.siplsolutions.com/iapproveit/images/jobs/folder.png' /></th>
+                        <th>Job</th>
+                        <th width="22%">Job Description</th>
+                        <th>
+                            Type<br>
+                            Stage
+                        </th>
+                        <th width="20%">Identification</th>
+                        <th>Managed By </th>
+                        <th>Sitting With</th>
+                        <th>
+                            Start Date<br>
+                            Due Date
+                        </th>
+                    </tr>
+                </thead>        
+                <tbody id="job-table-body">
+                    <!-- Job data will be dynamically inserted here -->
+                </tbody>
+            </table>
+            </div>
+            
+        </div>
+        <div class="project-section jobflow-tabcontainer" id="jobflowProjectsContent">
+            <div class="project-views" id="projectListView"></div>
+            <div class="project-views" id="projectKanbanView"></div>
+            <div class="project-views" id="projectGanttView" style="height: 600px;"></div>
+            <div class="project-views" id="projectCalendarView">projectCalendarView</div>
+        </div>
+</div>
+
+</section>
+<!-- Include the Gantt chart library -->
+
+<script src="https://htmlportfolio.siplsolutions.com/iapproveit/js/dashBoardJobs.js"></script>
+<script src="https://htmlportfolio.siplsolutions.com/iapproveit/js/projectListView.js"></script>
+<script src="https://htmlportfolio.siplsolutions.com/iapproveit/js/projectKanbanView.js"></script>
+<script src="https://htmlportfolio.siplsolutions.com/iapproveit/js/projectGanttView.js"></script> 
+<script>  
+
+$(document).ready(function() { 
+    $('#framework').multiselect({
+        nonSelectedText: 'Select Framework',
+        enableFiltering: true,
+        enableCaseInsensitiveFiltering: true,
+    });
+    
+        $('.show-filter-top-view .tab-button:not(:first)').addClass('inactive');    
+        $('.jobflow-tabcontent-section .jobflow-tabcontainer').hide();
+        $('.show-filter-bottom').hide();
+        $('.jobflow-tabcontent-section .jobflow-tabcontainer:first').show();
+            
+        $('.show-filter-top-view .tab-button').click(function(){            
+            var t = $(this).attr('id');
+            if($(this).hasClass('inactive')){ //this is the start of our condition 
+            $('.show-filter-top-view .tab-button').addClass('inactive');           
+            $(this).removeClass('inactive');
+            $('.show-filter-top-view .tab-button').removeClass('tab-button-active');           
+            $(this).addClass('tab-button-active');
+            
+            $('.jobflow-tabcontent-section .jobflow-tabcontainer').hide();            
+            $('#'+ t + 'Content').fadeIn('slow');
+            $('.show-filter-bottom').hide();
+            $('#'+ t + 'ButtonCon').fadeIn('slow');
+        }
+        });
+
+    // List and other Views tab
+    $('.project-view-filter-section ul li:not(:first)').addClass('inactive');    
+        $('.jobflow-tabcontent-section .project-section .project-views').hide();
+        $('.jobflow-tabcontent-section .project-section .project-views:first').show();
+            
+        $('.project-view-filter-section ul li').click(function(){            
+            var t = $(this).attr('id');
+            if($(this).hasClass('inactive')){ //this is the start of our condition 
+            $('.project-view-filter-section ul li').addClass('inactive');           
+            $(this).removeClass('inactive');
+            $('.project-view-filter-section ul li').removeClass('active');           
+            $(this).addClass('active');
+            
+            $('.jobflow-tabcontent-section .project-section .project-views').hide();            
+            $('#'+ t + 'View').fadeIn('slow');
+        }
+        });
+    
+        
+    // Accordion section
+    $('.accordion .content').hide();
+    $('.accordion .accordion-hearder:first').addClass('active').next().slideDown('slow');
+    $('.accordion .accordion-hearder').click(function() {
+		//$(this).next().slideUp('slow');
+        if($(this).next().is(':hidden')) {
+            $('.accordion .accordion-hearder').removeClass('active').next().slideUp('slow');
+            $(this).toggleClass('active').next().slideDown('slow');
+
+			return false;
+        }
+    });
+ 
+    // Event delegation for click event on tab buttons
+    $(document).on('click', '.inner-tab-box .inner-tab-button', function() {
+        var target = $(this).data('target');
+        
+        // Remove active classes from all tab buttons
+        $('.inner-tab-button').removeClass('inner-tab-button-active');
+        
+        // Add active class to the clicked tab button
+        $(this).addClass('inner-tab-button-active');
+        
+        // Hide all tab content sections
+        $('.folder-view-sections').hide();
+        
+        // Show the corresponding tab content section based on data-target
+        $('.' + target).fadeIn('slow');
+    });
+
+    // Gantt View
+    var tasks = { data: data.list }; // Ensure 'data' variable is accessible here
+    gantt.config.xml_date = "%d-%m-%y %H:%i"; // Set the date format
+    gantt.init("projectGanttView"); // Initialize the Gantt chart in a specific container
+    gantt.parse(tasks);
+});
+</script>

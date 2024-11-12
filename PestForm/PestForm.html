@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <title>Document</title>
+  <style>
+    .header-bg {
+      position: relative;
+    }
+    .box-shadow {
+      box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.25);
+    }
+    .header-bg::before {
+      background: url("images/header-bg2.png") no-repeat right top;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      z-index: 0;
+    }
+    .header-bg:after {
+      background: url("images/header-bg.png") no-repeat right top;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 120px;
+      right: 50px;
+      z-index: 1;
+    }
+    
+    .pest-form-list li {
+      background: url("images/check-icon.png") no-repeat left 8px;
+      padding-left: 33px;
+      margin-bottom: 38px;
+    }
+    .pricr-show-box {
+      background: rgba(69, 130, 110, 0.1);
+    }
+    .pricr-show-box-white {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .custom-text-color {
+      color: rgb(69, 130, 110);
+    }
+    .package-info li {
+      background: url("images/check-icon.png") no-repeat left 8px;
+      padding-left: 25px;
+      margin-bottom: 5px;
+    }
+    .package-info-white li {
+      background: url("images/check-icon-white.png") no-repeat left 8px;
+      padding-left: 25px;
+      margin-bottom: 5px;
+    }
+    .price-box:hover .package-info li {
+      background: url("images/check-icon-white.png") no-repeat left 8px;
+    }
+    .price-box:hover .custom-text-color {
+      color: #fff;
+    }
+    .price-box:hover .pricr-show-box {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .toggle-checkbox:checked {
+      @apply: right-0 border-green-400;
+      right: 0;
+      border-color: #45826E;
+    }
+    .toggle-checkbox:checked + .toggle-label {
+      @apply: bg-green-400;
+      background-color: #fff;
+    }
+    .saves-slider-section .slider-slide{ padding-bottom: 7rem;}
+    .slick-arrow{
+      border: none; width: 74px; 
+        height: 74px;font-size: 0;top: inherit; bottom:-90px;
+        position: absolute;
+        
+    }
+    .slick-prev{
+        left: 0;background: url("images/slider-arrow-left.png") no-repeat; 
+        }
+    .slick-next{    
+        right: 0;
+        left: inherit;
+        background: url("images/slider-arrow-right.png") no-repeat;
+       }
+    
+    [type='checkbox'], [type='radio']{color:#45826E;}
+    .price-box:hover .bg-white,.bg-teal-800{ background: rgba(34, 102, 83, 1) !important;}
+    .text-teal-800{color: rgba(34, 102, 83, 1) !important;}
+    
+    </style>
+</head>
+<body>
+
+  
+    <!-- Header start -->
+    <div
+      class="bg-gray-100 font-semibold font-['Urbanist'] pt-11 header-bg overflow-hidden mb-[0] sm:mb-[20px] md:mb-[50px] xl:mb-[80px] pb-[100px] sm:pb-[120px] md:pb-[141px] sm:px-0 px-[20px]"
+    >
+      <div class="container mx-auto">
+        <!-- header-top section start -->
+        <div
+          class="header-top pb-[20px] md:pb-[118px] flex flex-wrap justify-between z-10 relative"
+        >
+          <div
+            class="logo w-[120px] h-[38px] sm:w-[150px] md:w-[175px] sm:h-auto mb-2"
+          >
+            <a href="#" class="block"
+              ><img src="images/logo.png" alt="logo"
+            /></a>
+          </div>
+          <div class="right-section flex flex-wrap mt-1">
+            <ul class="flex flex-wrap">
+              <li>
+                <a
+                  href="#"
+                  class="text-black text-[14px] md:text-[17px] block p-2 mr-3"
+                  >See What's</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-black text-[14px] md:text-[17px] block p-2 mr-3"
+                  >New Login</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-black text-[14px] md:text-[17px] block p-2 mr-3"
+                  >Product</a
+                >
+              </li>
+            </ul>
+            <button
+              class="text-white text-[14px] md:text-[17px] font-semibold font-['Urbanist'] w-[150px] h-[35px] md:w-[199px] md:h-[45px] bg-teal-800 rounded-md"
+              title="Try It For Free"
+            >
+              TRY IT FOR FREE
+            </button>
+          </div>
+        </div>
+        <!-- header-top section end  -->
+        <div
+          class="header-bottom grid grid-cols-1 md:grid-cols-2 place-items-center relative z-10"
+        >
+          <div class="left-section text-center md:text-left mb-6 md:mb-0">
+            <h1
+              class="text-black text-[30px] md:text-[45px] font-bold font-['Urbanist'] leading-[40px] md:leading-[50px] mb-3"
+            >
+              Do not create a large<br />back-end for a form.
+            </h1>
+            <p
+              class="text-black text-base md:text-xl font-medium font-['Urbanist'] mb-6"
+            >
+              PestForm provides form endpoints as a service, so<br />your static
+              sites can stay simple.
+            </p>
+            <button
+              class="text-white text-[14px] md:text-[17px] font-semibold font-['Urbanist'] w-[150px] h-[35px] md:w-[199px] md:h-[45px] bg-teal-800 rounded-md"
+              title="Try It For Free"
+            >
+              TRY IT FOR FREE
+            </button>
+          </div>
+          <div class="right-section flex justify-end">
+            <img
+              src="images/header-img.png"
+              alt="header-img"
+              class="w-full"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header end -->
+    <!-- Capturing section start -->
+    <div
+      class="capturing-form container mx-auto mb-[30px] sm:mb-[40px] md:mb-[60px] xl:mb-[95px] font-semibold font-['Urbanist']"
+    >
+      <div class="py-[20px] px-[20px] sm:py-[0] sm:px-[0]">
+        <h1
+          class="max-w-[640px] mx-auto text-center text-black text-[20px] leading-[25px] sm:text-[25px] sm:leading-[30px] md:text-[35px] md:leading-[45px] xl:text-[45px] xl:leading-[50px] font-bold font-['Urbanist'] m-[3rem]"
+        >
+          Capturing form submissions has never been this seamless.
+        </h1>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 place-content-between"
+        >
+          <!-- <div class=" bg-white rounded-xl box-shadow w-[410px]"> -->
+          <div
+            class="rounded-xl bg-[#FAFAFA] overflow-hidden border-[1px] border-gray-200 relative box-shadow"
+          >
+            <div class="p-8">
+              <div>
+                <img
+                  src="images/create&delive-icon.png"
+                  alt="capturing-img"
+                />
+              </div>
+              <div>
+                <h3
+                  class="text-black mt-2 text-[17px] leading-normal sm:text-[20px] md:text-[22px] xl:text-[22px] font-bold"
+                >
+                  Create your form your own way
+                </h3>
+                <p
+                  class="text-neutral-500 text-[14px] sm:text-[15px] md:text-[17px]"
+                >
+                  You already know HTML and CSS, so create your form exactly the
+                  way you want it. You can also use any front-end framework.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class=" bg-white rounded-xl box-shadow w-[410px]"> -->
+          <div
+            class="rounded-xl bg-[#FAFAFA] overflow-hidden border-[1px] border-gray-200 relative box-shadow"
+          >
+            <div class="p-8">
+              <div>
+                <img src="images/direct-icon.png" alt="capturing-img" />
+              </div>
+              <div>
+                <h3
+                  class="text-black mt-2 text-[17px] leading-normal sm:text-[20px] md:text-[22px] xl:text-[22px] font-bold"
+                >
+                  Direct your form to PestForm
+                </h3>
+                <p
+                  class="text-neutral-500 text-[14px] sm:text-[15px] md:text-[17px]"
+                >
+                  Create a new PestForm endpoint and we'll give you a unique URL
+                  to redirect your form. Add it as an action property of your form
+                  and that's it.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class=" bg-white rounded-xl box-shadow w-[410px]"> -->
+          <div
+            class="rounded-xl bg-[#FAFAFA] overflow-hidden border-[1px] border-gray-200 relative box-shadow"
+          >
+            <div class="p-8">
+              <div>
+                <img
+                  src="images/create&delive-icon.png"
+                  alt="capturing-img"
+                />
+              </div>
+              <div>
+                <h3
+                  class="text-black mt-2 text-[17px] leading-normal sm:text-[20px] md:text-[22px] xl:text-[22px] font-bold"
+                >
+                  Delivered to PestForm
+                </h3>
+                <p
+                  class="text-neutral-500 text-[14px] sm:text-[15px] md:text-[17px]"
+                >
+                  That's it. Your form submissions are now viewable in PestForm.
+                  Easily manage form submissions with Spam, Archive and detailed
+                  statistics.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- capturing section end -->
+    <!-- PestForm section start -->
+    <div
+      class="capturing-form container mx-auto mb-20 font-semibold font-['Urbanist']"
+    >
+      <div class="py-[20px] px-[20px] sm:py-[0] sm:px-[0]">
+        <h1
+          class="text-center text-black mx-auto text-[20px] leading-[25px] sm:text-[25px] sm:leading-[30px] md:text-[35px] md:leading-[45px] xl:text-[45px] xl:leading-[50px] font-bold font-['Urbanist'] mb-[25px]"
+        >
+          PestForm is a powerful and easy<br />way to manage your forms.
+        </h1>
+        <div
+          class="max-w-[808px] m-auto text-center text-neutral-500 text-[17px] font-medium font-['Urbanist'] leading-snug"
+        >
+          PestForm is a platform that makes it easy to manage your web forms and
+          posts. By creating an endpoint URL and HTML form tag, you can easily
+          integrate your forms with any framework or CMS.
+        </div>
+        <div class="bg-slate-100 rounded-[10px] mt-[74px]">
+          <div
+            class="grid grid-cols-1 py-[20px] px-[30px] md:grid-cols-2 md:py-[20px] md:px-[50px] xl:py-[40px] xl:px-[90px]"
+          >
+            <div class="text-left">
+              <h3
+                class="text-teal-800 text-3xl font-bold leading-[46px] text-left mb-[28px]"
+              >
+                PestForm is the ideal solution for:
+              </h3>
+              <ul class="pest-form-list m-0 list-none p-0">
+                <li
+                  class="text-zinc-600 text-[16px] md:text-[21px] font-medium font-['Urbanist'] leading-[25px]"
+                >
+                  Those who want to save time and<br />money managing forms.
+                </li>
+                <li
+                  class="text-zinc-600 text-[16px] md:text-[21px] font-medium font-['Urbanist'] leading-[25px]"
+                >
+                  Those who do not have a back-end<br />architecture to create and
+                  manage forms.
+                </li>
+                <li
+                  class="text-zinc-600 text-[16px] md:text-[21px] font-medium font-['Urbanist'] leading-[25px]"
+                >
+                  Those looking for a form management<br />solution with a rich
+                  feature set.
+                </li>
+              </ul>
+              <button
+                class="text-white text-[17px] uppercase w-[274px] h-[45px] bg-teal-800 rounded-md"
+                title="Click for All Features"
+              >
+                Click for All Features
+              </button>
+            </div>
+            <div class="mt-5 md:mt-0">
+              <img src="images/pestfrom-right-img.png" alt="pestform-img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- PestForm section end -->
+    <!-- PestForm saves section start -->
+    <div class="pestform-saves container mx-auto font-semibold font-['Urbanist']">
+      <div class="">
+        <div
+          class="md:flex md:justify-between md:items-center grid grid-cols-1 py-[20px] px-[20px] sm:py-[25px] sm:px-[25px] md:py-[30px] md:px-[40px] xl:py-[40px] xl:px-[90px]"
+        >
+          <div class="md:w-1/2 w-full md:mb-0 mb-5">
+            <img
+              src="images/desktop-screen.png"
+              alt="pestform-img"
+              class="m-auto md:pr-5"
+            />
+          </div>
+          <!-- saves-slider section start -->
+          <div class="saves-slider-section md:w-1/2 w-full xl:w-[570px]">
+            <div
+              class="slider-slide bg-white rounded-[45px] box-shadow text-center px-[34px] py-[45px]"
+            >
+            <div class="one-time">
+              <div>
+                <img
+                  src="images/saves-img.png"
+                  alt="saves-img"
+                  class="block m-auto"
+                />
+                <p
+                  class="text-center text-black text-[20px] leading-[30px] md:text-[22px] md:leading-[32px] xl:text-[26px] xl:leading-[35px] font-semibold font-['Urbanist'] mt-7 mb-4"
+                >
+                  PestForm saves you from hours of Back-End form creation. You
+                  can collect data from your forms and integrate it with many
+                  software tools and services.
+                </p>
+                <h4
+                  class="text-center text-teal-800 text-[18px] leading-[30px] md:text-[20px] md:leading-[32px] xl:text-2xl xl:leading-[37px] font-bold font-['Urbanist']"
+                >
+                  Serkan Yalçın, Founder of PestForm
+                </h4>
+                <!-- <div class="slider-btn flex justify-center mt-5">
+                  <img
+                    src="images/slider-arrow-left.png"
+                    alt="arrow-left"
+                  />
+                  <img
+                    src="images/slider-arrow-right.png"
+                    alt="arrow-right"
+                  />
+                </div> -->
+              </div>
+              <div>
+                <img
+                  src="images/saves-img.png"
+                  alt="saves-img"
+                  class="block m-auto"
+                />
+                <p
+                  class="text-center text-black text-[20px] leading-[30px] md:text-[22px] md:leading-[32px] xl:text-[26px] xl:leading-[35px] font-semibold font-['Urbanist'] mt-7 mb-4"
+                >
+                  PestForm saves you from hours of Back-End form creation. You
+                  can collect data from your forms and integrate it with many
+                  software tools and services.
+                </p>
+                <h4
+                  class="text-center text-teal-800 text-[18px] leading-[30px] md:text-[20px] md:leading-[32px] xl:text-2xl xl:leading-[37px] font-bold font-['Urbanist']"
+                >
+                  Serkan Yalçın, Founder of PestForm
+                </h4>
+                <!-- <div class="slider-btn flex justify-center mt-5">
+                  <img
+                    src="images/slider-arrow-left.png"
+                    alt="arrow-left"
+                  />
+                  <img
+                    src="images/slider-arrow-right.png"
+                    alt="arrow-right"
+                  />
+                </div> -->
+              </div>
+              <div>
+                <img
+                  src="images/saves-img.png"
+                  alt="saves-img"
+                  class="block m-auto"
+                />
+                <p
+                  class="text-center text-black text-[20px] leading-[30px] md:text-[22px] md:leading-[32px] xl:text-[26px] xl:leading-[35px] font-semibold font-['Urbanist'] mt-7 mb-4"
+                >
+                  PestForm saves you from hours of Back-End form creation. You
+                  can collect data from your forms and integrate it with many
+                  software tools and services.
+                </p>
+                <h4
+                  class="text-center text-teal-800 text-[18px] leading-[30px] md:text-[20px] md:leading-[32px] xl:text-2xl xl:leading-[37px] font-bold font-['Urbanist']"
+                >
+                  Serkan Yalçın, Founder of PestForm
+                </h4>
+                <!-- <div class="slider-btn flex justify-center mt-5">
+                  <img
+                    src="images/slider-arrow-left.png"
+                    alt="arrow-left"
+                  />
+                  <img
+                    src="images/slider-arrow-right.png"
+                    alt="arrow-right"
+                  />
+                </div> -->
+              </div>
+            </div>
+              
+              <!-- <div class="slider-btn flex justify-center mt-5 invisible">
+                      <img
+                        src="images/slider-arrow-left.png"
+                        alt="arrow-left"
+                      />
+                      <img
+                        src="images/slider-arrow-right.png"
+                        alt="arrow-right"
+                      />
+                    </div> -->
+            </div>
+          </div>
+          <!-- saves-slider section end -->
+        </div>
+      </div>
+    </div>
+    <!-- pestform saves section end -->
+    <!-- Simple Pricing section start  -->
+    <div class="simple-pricing bg-slate-100 pt-[78px] pb-[60px]">
+      <div
+        class="pestform-saves container mx-auto font-semibold font-['Urbanist']"
+      >
+        <h2
+          class="text-center text-black text-[20px] leading-[25px] sm:text-[25px] sm:leading-[30px] md:text-[35px] md:leading-[45px] xl:text-[45px] xl:leading-[50px] font-bold font-['Urbanist'] mb-3"
+        >
+          Simple Pricing
+        </h2>
+        <p
+          class="text-center text-neutral-500 text-[17px] font-medium font-['Urbanist'] leading-snug mb-6"
+        >
+          PestForm offers multiple plans tailored to your needs. Buy only the plan
+          you need and save.
+        </p>
+      </div>
+      <div class="flex justify-center mb-12">
+        <label
+          class="text-center text-black text-[17px] font-medium font-['Urbanist']"
+          >Monthly</label
+        >
+        <div>
+          <div class="flex items-center justify-center">
+            <div
+              class="relative inline-block w-12 ml-2 mr-2 align-middle select-none transition duration-200 ease-in"
+            >
+              <input
+                type="checkbox"
+                name="toggle"
+                id="toggle"
+                class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"
+              />
+              <label
+                for="toggle"
+                class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"
+              ></label>
+            </div>
+          </div>
+        </div>
+        <label
+          class="text-center text-black text-[17px] font-medium font-['Urbanist']"
+          >Annuall</label
+        >
+      </div>
+      <!-- Simple Pricing list section start -->
+      <div
+        class="pestform-saves container mx-auto font-semibold font-['Urbanist']"
+      >
+        <!--  -->
+        <div
+          class="flex-none sm:flex flex-wrap px-[20px] sm:px-[10px] sm:justify-between"
+        >
+          <!-- Single section start -->
+          <div class="w-full xl:w-[291px] sm:w-1/2 md:w-1/3 price-box">
+            <div
+              class="mb-5 xl:mb-0 sm:mr-5 bg-white rounded-lg box-shadow px-[27px] py-[35px] hover:bg-teal-800 hover:text-white"
+            >
+              <div class="pricing-top grid grid-cols-2 justify-between">
+                <h5 class="text-[17px] font-bold font-['Urbanist'] leading-snug">
+                  Single
+                </h5>
+                <p
+                  class="text-right text-base font-medium font-['Urbanist'] leading-snug"
+                >
+                  15 form
+                </p>
+              </div>
+              <p
+                class="text-[17px] font-medium font-['Urbanist'] leading-snug mt-[26px] mb-[20px]"
+              >
+                Good for personal projects and <br />start getform world
+              </p>
+              <div
+                class="w-[154px] rounded-[5px] pricr-show-box text-center px-1 py-2"
+              >
+                <span
+                  class="text-[17px] font-bold font-['Urbanist'] leading-snug opacity-100 custom-text-color"
+                  >₺50 / month</span
+                >
+              </div>
+              <ul class="package-info mt-[27px] mb-[37px]">
+                <li class="hover:text-white">1 endpoint</li>
+                <li class="hover:text-white">50 submissions/mo.</li>
+                <li class="hover:text-white">100MB file storage</li>
+                <li class="hover:text-white">Zapier</li>
+                <li class="hover:text-white">Getform branding</li>
+              </ul>
+  
+              <button
+                class="w-[199px] h-[45px] md:w-[150px] md:h-[40px] xl:w-[199px] xl:h-[45px] md:text-[14px] xl:text-[17px] bg-teal-800 rounded-md text-white text-[17px] font-semibold font-['Urbanist']"
+                title="Try It For Free"
+              >
+                TRY IT FOR FREE
+              </button>
+            </div>
+          </div>
+          <!-- Single section end -->
+          <!-- Freelancer section start -->
+          <div class="w-full xl:w-[291px] sm:w-1/2 md:w-1/3 price-box">
+            <div
+              class="mb-5 xl:mb-0 sm:mr-5 rounded-lg box-shadow px-[27px] py-[35px] bg-teal-800"
+            >
+              <div class="pricing-top grid grid-cols-2 justify-between">
+                <h5
+                  class="text-white text-[17px] font-bold font-['Urbanist'] leading-snug"
+                >
+                  Freelancer
+                </h5>
+                <p
+                  class="text-right text-white text-base font-medium font-['Urbanist'] leading-snug"
+                >
+                  5 form
+                </p>
+              </div>
+              <p
+                class="text-white text-[17px] font-medium font-['Urbanist'] leading-snug mt-[26px] mb-[20px]"
+              >
+                Good for personal projects and <br />start getform world
+              </p>
+              <div
+                class="w-[154px] rounded-[5px] pricr-show-box-white text-center px-1 py-2"
+              >
+                <span
+                  class="text-white text-[17px] font-bold font-['Urbanist'] leading-snug opacity-100"
+                  >₺220 / month</span
+                >
+              </div>
+              <ul class="package-info-white mt-[27px] mb-[37px]">
+                <li class="text-white">1 endpoint</li>
+                <li class="text-white">50 submissions/mo.</li>
+                <li class="text-white">100MB file storage</li>
+                <li class="text-white">Zapier</li>
+                <li class="text-white">Getform branding</li>
+              </ul>
+  
+              <button
+                class="w-[199px] h-[45px] md:w-[150px] md:h-[40px] xl:w-[199px] xl:h-[45px] md:text-[14px] xl:text-[17px] bg-teal-800 rounded-md text-white text-[17px] font-semibold font-['Urbanist']"
+                title="Try It For Free"
+              >
+                TRY IT FOR FREE
+              </button>
+            </div>
+          </div>
+          <!-- Freelancer section end -->
+          <!-- Studio section start -->
+          <div class="w-full xl:w-[291px] sm:w-1/2 md:w-1/3 price-box">
+            <div
+              class="mb-5 xl:mb-0 sm:mr-5 bg-white rounded-lg box-shadow px-[27px] py-[35px] hover:bg-teal-800 hover:text-white"
+            >
+              <div class="pricing-top grid grid-cols-2 justify-between">
+                <h5 class="text-[17px] font-bold font-['Urbanist'] leading-snug">
+                  Studio
+                </h5>
+                <p
+                  class="text-right text-base font-medium font-['Urbanist'] leading-snug"
+                >
+                  15 form
+                </p>
+              </div>
+              <p
+                class="text-[17px] font-medium font-['Urbanist'] leading-snug mt-[26px] mb-[20px]"
+              >
+                Good for personal projects and <br />start getform world
+              </p>
+              <div
+                class="w-[154px] rounded-[5px] pricr-show-box text-center px-1 py-2"
+              >
+                <span
+                  class="custom-text-color text-[17px] font-bold font-['Urbanist'] leading-snug opacity-100"
+                  >₺50 / month</span
+                >
+              </div>
+              <ul class="package-info mt-[27px] mb-[37px]">
+                <li>1 endpoint</li>
+                <li>50 submissions/mo.</li>
+                <li>100MB file storage</li>
+                <li>Zapier</li>
+                <li>Getform branding</li>
+              </ul>
+  
+              <button
+                class="w-[199px] h-[45px] md:w-[150px] md:h-[40px] xl:w-[199px] xl:h-[45px] md:text-[14px] xl:text-[17px] bg-teal-800 rounded-md text-white text-[17px] font-semibold font-['Urbanist']"
+                title="Try It For Free"
+              >
+                TRY IT FOR FREE
+              </button>
+            </div>
+          </div>
+          <!-- Studio section end -->
+          <!-- Agency section start -->
+          <div class="w-full xl:w-[291px] sm:w-1/2 md:w-1/3 price-box">
+            <div
+              class="mb-5 xl:mb-0 sm:mr-5 bg-white rounded-lg box-shadow px-[27px] py-[35px] hover:bg-teal-800 hover:text-white"
+            >
+              <div class="pricing-top grid grid-cols-2 justify-between">
+                <h5 class="text-[17px] font-bold font-['Urbanist'] leading-snug">
+                  Agency
+                </h5>
+                <p
+                  class="text-right text-base font-medium font-['Urbanist'] leading-snug"
+                >
+                  15 form
+                </p>
+              </div>
+              <p
+                class="text-[17px] font-medium font-['Urbanist'] leading-snug mt-[26px] mb-[20px]"
+              >
+                Good for personal projects and <br />start getform world
+              </p>
+              <div
+                class="w-[154px] rounded-[5px] pricr-show-box text-center px-1 py-2"
+              >
+                <span
+                  class="custom-text-color text-[17px] font-bold font-['Urbanist'] leading-snug opacity-100"
+                  >₺50 / month</span
+                >
+              </div>
+              <ul class="package-info mt-[27px] mb-[37px]">
+                <li>1 endpoint</li>
+                <li>50 submissions/mo.</li>
+                <li>100MB file storage</li>
+                <li>Zapier</li>
+                <li>Getform branding</li>
+              </ul>
+  
+              <button
+                class="w-[199px] h-[45px] md:w-[150px] md:h-[40px] xl:w-[199px] xl:h-[45px] md:text-[14px] xl:text-[17px] bg-teal-800 rounded-md text-white text-[17px] font-semibold font-['Urbanist']"
+                title="Try It For Free"
+              >
+                TRY IT FOR FREE
+              </button>
+            </div>
+          </div>
+          <!-- Agency section end -->
+        </div>
+        <div
+          class="text-black text-xl font-bold font-['Urbanist'] leading-normal text-center mt-10"
+        >
+          You can also check all other features on the Features Page .
+        </div>
+      </div>
+      <!-- Simple Pricing list section end -->
+    </div>
+    <!-- Simple Pricing section end   -->
+    <!-- footer section start -->
+    <footer class="bg-neutral-200 pt-[73px] pb-3 font-semibold font-['Urbanist']">
+      <div class="footer-logo text-center mb-7">
+        <img src="images/footer-logo.png" alt="" class="mx-auto block" />
+      </div>
+      <ul class="flex justify-center">
+        <li>
+          <a href="#" class="text-black text-[17px] block p-2 mr-3">See What's</a>
+        </li>
+        <li>
+          <a href="#" class="text-black text-[17px] block p-2 mr-3">New Login</a>
+        </li>
+        <li>
+          <a href="#" class="text-black text-[17px] block p-2 mr-3">Product</a>
+        </li>
+      </ul>
+      <div class="mt-4 pt-8 pb-4 border-t-[1px] border-neutral-400">
+        <div class="footer-copyright text-center container m-auto relative">
+          <div class="text-black text-[17px] font-semibold font-['Urbanist']">
+            Have a problem or need help? Send us an email. © 2023 PestForm |
+            <a href="#" class="text-block">Terms and Conditions</a>
+          </div>
+          <div
+            class="language-select flex xl:absolute xl:right-0 xl:top-[-12px] justify-center mt-5 xl:mt-0"
+          >
+            <a
+              href="javascript:void(0)"
+              class="flex justify-center items-center w-[54px] h-[52px] border bg-teal-800 border-teal-800 text-white text-[17px] font-semibold font-['Urbanist']"
+              >EN
+            </a>
+            <a
+              href="javascript:void(0)"
+              class="flex justify-center items-center w-[54px] h-[52px] border border-teal-800 text-teal-800 text-[17px] font-semibold font-['Urbanist'] hover:bg-teal-800 hover:text-white"
+              >TR</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer section end -->
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript">
+      $('.one-time').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  adaptiveHeight: true
+});
+    </script>
+</body>
+</html>

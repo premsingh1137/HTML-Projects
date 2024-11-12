@@ -1,0 +1,774 @@
+:root { 
+    --bsa-cyan-color:#16d7f1; 
+    --bsa-blue-color: #182A78; 
+    --bsa-yellow-color: #c4d600; 
+    --bsa-white-color: #ffffff; 
+    --bsa-grey-color:#4D5256; 
+    --weight-900: 900;
+    --weight-800: 800;
+    --weight-700: 700; 
+    --weight-600: 600;
+    --weight-400: 400;
+    --cyan-filter: invert(75%) sepia(51%) saturate(3911%) hue-rotate(146deg) brightness(106%) contrast(89%); 
+    --white-filter: brightness(0) invert(1); --blue-filter:invert(18%) sepia(15%) saturate(6101%) hue-rotate(205deg) brightness(98%) contrast(103%); 
+} 
+body { font-family: 'Inter', sans-serif; } 
+p { color: #333; } 
+/* Common CSS */
+body .btn.btn-green { background-color: var(--bsa-yellow-color) !important; border-color: var(--bsa-yellow-color) !important; color: #000 !important; } 
+.btn.btn-green:focus, body .btn.btn-green:hover { background-color: #d4e709 !important; border-color: #d4e709 !important; box-shadow: none; color: #000 !important; } 
+.navbar-toggler:focus { box-shadow: none; } 
+ol, ul { padding-left: 1rem; } 
+a { text-decoration: none; } 
+.form-control:focus, .form-select:focus { box-shadow: 0 0 0 1px var(--bsa-cyan-color); } 
+@media (min-width: 1400px){
+ .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl { max-width: 1164px; } 
+ }
+ .bsa-container { max-width: 957px; margin: 0 auto; padding-right:12px; padding-left:12px; } 
+/* Common CSS end*/
+/* Common Button classes start*/
+.btn { font-size: 13px; font-weight:var(--weight-700); padding: 5px 10px; min-height: 32px; } 
+.btn-primary { background-color: var(--bsa-blue-color); border-color: var(--bsa-blue-color); border-radius: 6px; transition: 0.2s ease-in-out; } 
+.btn-primary:hover, .btn-special:hover, .btn-primary:first-child:active { background-color: #ffb932; color: var(--bsa-blue-color); border-color: #ffb932; } 
+.bsa-search-btn img, .btn-outline-secondary img, .btn-primary img { filter: var(--white-filter); width: 10px; transition: 0.3s ease-in-out; margin-left: 5px; } 
+.btn-outline-secondary:hover img, .btn-primary:hover img, .btn-special:hover img { filter: none; transform: rotate(-45deg); } 
+.btn-outline-secondary { border-color: var(--bsa-blue-color); color: var(--bsa-blue-color); background-color: var(--bsa-white-color); } 
+.btn-outline-secondary:hover, .btn-outline-secondary:first-child:active { border-color: var(--bsa-blue-color); background: linear-gradient(103.24deg, var(--bsa-blue-color) 16.02%, #2149a4 93.92%); transition: 0.2s ease-in-out; } 
+.bsa-search-btn img, .btn-outline-secondary img { filter: none; } 
+.btn-outline-secondary:hover img { filter: var(--white-filter); } 
+.btn-special { background-color: var(--bsa-cyan-color); border-color: var(--bsa-cyan-color); color: var(--bsa-blue-color); } 
+/* Common Button classes ends */
+/* Navigation CSS start */
+.navbar .dropdown-toggle::after { content: none; } 
+.navbar-brand img { height: 59px; } 
+a { transition: 0.3s all ease-in-out; text-decoration: none; } 
+.navbar-light .navbar-toggler { border: 0; } 
+.bsa-navbar-two .container { position: relative; } 
+.navbar-light.bsa-navbar-two .navbar-toggler { padding: 0.25rem 0.45rem; background-color: var(--bsa-white-color); } 
+.bsa-navbar-one .navbar-nav .nav-link, .bsa-navbar-two .navbar-nav .nav-link { color: var(--bsa-blue-color); font-size: 13px; font-weight:var(--weight-700); padding: 0; } 
+.bsa-navbar-one .navbar-nav .nav-item { padding: 0; } 
+.bsa-navbar-two .navbar-nav .nav-item { padding: 21px 28px; } 
+.bsa-navbar-two .navbar-nav .nav-item.show, .bsa-navbar-two .navbar-nav .nav-item:hover { background-color: var(--bsa-cyan-color); } 
+.bsa-navbar-two .navbar-nav .nav-item a, .bsa-navbar-two .navbar-nav .nav-item.show a { border-bottom: 2px solid #66191900; padding-bottom: 2px; } 
+.bsa-navbar-two .navbar-nav .nav-item.show a, .bsa-navbar-two .navbar-nav .nav-item:hover a { border-color: var(--bsa-blue-color); } 
+.bsa-navbar-one .navbar-nav .nav-link { margin-right: 1px; } 
+.bsa-navbar-one .navbar-nav .bsa-icon-btn { position: relative; top: 18px; right: 30px; } 
+.bsa-navbar-one .navbar-nav .bsa-profile-menu .bsa-icon-btn { top: 0; right: -15px; } 
+.bsa-navbar-one .navbar-nav .bsa-profile-menu ul.dropdown-menu { width: 100%; top: 27px; } 
+.bsa-navbar-one .navbar-nav .nav-item:last-child .nav-link { margin-right: 0; } 
+.bsa-navbar-one .navbar-nav .nav-link img { margin-right: 12px; } 
+.bsa-navbar-one .navbar-nav .nav-link .user-img .online { width: 10px; height: 10px; background-color: #12b76a; position: absolute; border-radius: 50%; bottom: -11px; right: 18px; } 
+.bsa-navbar-one .navbar-nav .nav-link:hover { color: var(--bsa-blue-color); } 
+.bsa-navbar-one .dropdown-item.active, .bsa-navbar-one .dropdown-item:active, .bsa-navbar-two .dropdown-item.active, .bsa-navbar-two .dropdown-item:active { background-color: #e9ecef; color: #212529; } 
+.bsa-navbar-one .navbar-nav li.nav-item { margin-right: 14px; } 
+.bsa-navbar-one .navbar-nav li.nav-item:last-child { margin-right: 0; } 
+header .navbar-nav .dropdown-menu { border-radius: 0; padding: 0; } 
+header .navbar-nav .dropdown-menu .dropdown-item:hover { background: none; } 
+header .navbar-nav .dropdown-menu li:first-child .dropdown-item { border-top: 0; } 
+header .navbar-nav .dropdown-menu .dropdown-menu[data-bs-popper] { margin-top: 0.45rem; } 
+.bsa-navbar-two { padding-bottom: 0; padding-top: 0px; } 
+.bsa-navbar-one { padding: 0px; } 
+.bsa-navbar-one .navbar-brand { padding-top: 2px; padding-bottom: 7px; } 
+.bsa-navbar-one .nav-item.dropdown .dropdown-menu, .bsa-navbar-two .dropdown:hover .dropdown-menu, header .navbar-nav .bsa-profile-menu:hover .dropdown-menu { border: 0; padding: 8px 15px; } 
+.page-link:focus { box-shadow: 0 0 0 0.25rem rgba(196, 214, 0, 0.22); } 
+.navbar-light .navbar-toggler-icon, .navbar-light .navbar-toggler-icon svg * { fill: #000; } 
+.bsa-navbar-two .navbar-nav.justify-content-between { width: 100%; } 
+/* Navigation CSS ends */
+/* Mega menu */
+.bsa-mega-menu, .bsa-navbar-one .nav-item.dropdown .dropdown-menu, .bsa-navbar-two .dropdown:hover .dropdown-menu, header .navbar-nav .bsa-profile-menu:hover .dropdown-menu { box-shadow: 0 2px 27px 0 rgba(0, 0, 0, 0.15); border: 0; } 
+.bsa-navbar-two .bsa-inner-container { border-top: 1px solid var(--bsa-grey-color); width: 100%; } 
+.nav-item.dropdown-mega .dropdown-menu[data-bs-popper] { margin-top: 0.425rem; } 
+.bsa-navbar-two .navbar-nav .mega-content .bsa-submenus a { border: 0; text-transform: none; font-weight:var(--weight-700); font-size: 16px; color: var(--bsa-blue-color); position: relative; border-bottom: 1px solid transparent; display: table; } 
+.bsa-navbar-two .navbar-nav .mega-content .bsa-submenus h5 a::after { content: ""; position: relative; width: 14px; height: 14px; background: url(../images/megamenu-arrow.svg) no-repeat; top: 5px; margin-left: 9px; display: inline-block; } 
+.bsa-navbar-two .navbar-nav .mega-content .bsa-submenus:hover h5 a::after { filter: invert(65%) sepia(98%) saturate(1532%) hue-rotate(144deg) brightness(104%) contrast(89%); } 
+.bsa-navbar-two .navbar-nav .mega-content .bsa-submenus:hover h5 a { border-color: var(--bsa-cyan-color); } 
+.bsa-list-group p { white-space: normal; } 
+.mega-content { padding: 2.25rem; } 
+.bsa-submenus h5 a { font-size: 1rem; color: #222020; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid transparent; display: block; letter-spacing: 0.4px; } 
+.bsa-submenus .bsa-simple-link, header .navbar-nav .dropdown-menu .dropdown-item { color: #595959; font-size: 0.875rem; text-decoration: none; display: block; padding: 3px 0; margin: 3px 0; border-bottom: 1px solid transparent; } 
+.bsa-submenus .bsa-simple-link:hover, .bsa-submenus h5 a:hover, header .navbar-nav .dropdown-menu .dropdown-item:hover { color: #97a409; border-bottom: 1px solid rgba(151, 164, 9, 0.2); } 
+.bsa-submenus { margin-bottom: 25px; } 
+@keyframes fadeIn { 
+ from { opacity: 0; } 
+ to { opacity: 1; } 
+ }
+.dropdown-menu.show { -webkit-animation: fadeIn 0.3s alternate; /* Safari 4.0 - 8.0 */
+ animation: fadeIn 0.3s alternate; } 
+.nav-item.dropdown.dropdown-mega { position: static; } 
+.nav-item.dropdown.dropdown-mega .dropdown-menu { width: 100%; top: auto; left: 0; padding: 0; max-width: 1140px; margin: 1.3rem auto 0.4rem; right: 0; border-radius: 0 0 10px 10px; } 
+.navbar-toggler { border: none; padding: 0; outline: none; } 
+.navbar-toggler:focus { box-shadow: none; } 
+.navbar-toggler .hamburger-toggle { position: relative; display: inline-block; width: 40px; height: 40px; z-index: 11; } 
+.navbar-toggler .hamburger-toggle .hamburger { position: absolute; transform: translate(-50%, -50%) rotate(0); left: 50%; top: 50%; width: 70%; height: 50%; pointer-events: none; } 
+.navbar-toggler .hamburger-toggle .hamburger span { width: 100%; height: 0.15rem; position: absolute; background: #333; border-radius: 2px; z-index: 1; transition: transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), all 0.2s ease-in-out; left: 0; } 
+.navbar-toggler .hamburger-toggle .hamburger span:first-child { top: 10%; transform-origin: 50% 50%; transform: translate(0 -50%) !important; } 
+.navbar-toggler .hamburger-toggle .hamburger span:nth-child(2) { top: 50%; transform: translate(0, -50%); } 
+.navbar-toggler .hamburger-toggle .hamburger span:last-child { left: 0; top: auto; bottom: 10%; transform-origin: 50% 50%; } 
+.navbar-toggler .hamburger-toggle .hamburger.active span { position: absolute; margin: 0; } 
+.navbar-toggler .hamburger-toggle .hamburger.active span:first-child { top: 45%; transform: rotate(45deg); } 
+.navbar-toggler .hamburger-toggle .hamburger.active span:nth-child(2) { left: 50%; width: 0; } 
+.navbar-toggler .hamburger-toggle .hamburger.active span:last-child { top: 45%; transform: rotate(-45deg); } 
+.bsa-icon-btn { float: right; margin-top: -37px; margin-right: 17px; width: 30px; height: 36px; display: flex; align-items: center; justify-content: center; } 
+@media (min-width: 1365px){
+ .bsa-navbar-one .nav-item.dropdown:hover .dropdown-menu:before, .bsa-navbar-two .nav-item.dropdown:hover .dropdown-menu:before { content: ""; width: 100%; height: 15px; background-color: transparent; top: -12px; position: absolute; z-index: -1; } 
+ }
+.bsa-latest-policy-wrap { background-color: var(--bsa-blue-color); border-radius: 0 0 6px 6px; padding: 19px; } 
+.bsa-latest-policy-wrap .bsa-latest-txt { font-weight: var(--weight-900); font-size: 20px; line-height: 25px; color: var(--bsa-white-color); } 
+.bsa-latest-txt::after { content: url(../images/nav-arrow.svg); top: 3px; position: relative; padding-left: 11px; } 
+.bsa-latest-policy-wrap .bsa-latest-para { font-weight:var(--weight-400); font-size: 15px; line-height: 19px; color: var(--bsa-white-color); padding: 0 49px; white-space: normal; } 
+/* Mega Menu // */
+/* BSA Search Section Css Starts */
+.bsa-search-section .bsa-keyword-search { width: 100%; max-width: 657px; border-radius: 5px; border-radius: 5px; } 
+.bsa-search-section .bsa-policy-brief { max-width: 173px; width: 100%; border-radius: 5px; } 
+.bsa-search-section { background-color: var(--bsa-blue-color); padding: 36px 0; } 
+.bsa-search-section label { color: var(--bsa-white-color); font-weight: var(--weight-900); font-size: 17px; } 
+.cpd-container .badge-secondary { color: #0c0c0c; background-color: rgba(233, 233, 233, .92); } 
+.cpd-container .cpd-title { margin: 30px 0; } 
+/* ======================================== Latest section start =========================================*/
+.bsa-latest-section { background: url(../images/banner-bg.jpg) no-repeat; background-size: cover; margin-top: 2px; padding-bottom: 91px; } 
+.bsa-latest-card { box-shadow: 0 1px 7px rgb(0 0 0 / 20%); margin-bottom: 1.25rem; position: relative; padding-bottom: 3rem; border-radius: 5px; background-color: var(--bsa-white-color); min-height: 420px; margin-bottom: 0px; } 
+.bsa-card-description { padding: 14px 13px; } 
+.bsa-latest-card .bsa-imgcard-box img { object-fit: cover; max-height: 132px; width: 100%; min-height: 132px; border-radius: 5px; } 
+.bsa-latest-card h4 { font-size: 1.2rem; min-height: 50px; } 
+.bsa-latest-card h6 { font-size: 0.9rem; } 
+.bsa-footer-box { position: absolute; right: 14px; bottom: 14px; font-weight:var(--weight-600); font-size: 13px; line-height: 16px; color: var(--bsa-blue-color); } 
+.bsa-footer-box img{margin-right: 3px;}
+.slick-slide { padding-left: 12.5px; padding-right: 12.5px; } 
+.bsa-top-tags { display: flex; list-style: none; padding: 0; } 
+.bsa-top-tags li { padding-left: 7px; padding-right: 7px; font-weight:var(--weight-600); font-size: 13px; color:var(--bsa-grey-color); display: flex; align-items: center; border-right: 1px solid #2149a4; } 
+.bsa-top-tags li img { width: 20px; margin-right: 7px; } 
+.bsa-top-tags li:last-child { padding-right: 0; border: 0; } 
+.bsa-top-tags li:first-child { padding-left: 0; } 
+.bsa-card-description h2 { font-weight: var(--weight-900); font-size: 17px; color: var(--bsa-blue-color); line-height: 21px; } 
+.bsa-card-description p { font-weight:var(--weight-600); font-size: 15px; line-height: 19px; color:var(--bsa-grey-color); } 
+.form-control, .form-select { min-height: 32px; } 
+.bsa-keyword-search .form-control, .bsa-policy-brief select { font-weight:var(--weight-600); font-size: 11px; line-height: 14px; color: #828282; } 
+.bsa-keyword-search .form-control { color: var(--bsa-blue-color); border-radius: 5px; } 
+.bsa-yellow-brdr { border: 2px solid #FFB932 } 
+.bsa-cyan-brdr { border: 2px solid var(--bsa-cyan-color); } 
+.bsa-page-heading { font-weight: var(--weight-900); font-size: 36px; line-height: 45px; color: var(--bsa-white-color); text-align: center; padding: 30px 0 15px; } 
+.bsa-imgcard-box { position: relative; overflow: hidden; min-height: 32px;    border-radius: 3px 0 0 0;} 
+.bsa-img-tag { background-color: #FFB932; position: absolute; top: 0px; left: -10px; height: 28px; font-weight: var(--weight-900); font-size: 12px; line-height: 11px; color: var(--bsa-blue-color); padding: 8px 16px 6px 17px; margin: 0 auto; transform: skew(-40deg); -o-transform: skew(-40deg); -moz-transform: skew(-40deg); -webkit-transform: skew(-40deg); display: inline-block; } 
+.bsa-img-tag span { transform: skew(40deg); -o-transform: skew(40deg); -moz-transform: skew(40deg); -webkit-transform: skew(40deg); display: inline-block; } 
+.bsa-cards-slider .slick-arrow { background: url(../images/slider-arrow-icon.svg) no-repeat center rgba(255, 255, 255, 0.5); position: absolute; top: 0; left: 11px; font-size: 0; border: none; z-index: 99; box-shadow: 0px 1px 7px rgb(0 0 0 / 20%); height: 100%; width: 38px; cursor: pointer; border-radius: 0px; transition: 0.2s ease-in-out; } 
+.bsa-cards-slider .slick-arrow:hover { background: url(../images/slider-arrow-white.svg) no-repeat center var(--bsa-cyan-color); } 
+.bsa-cards-slider .slick-next { left: auto; right: 12px; transform: rotateY(180deg); -o-transform: rotateY(180deg); -webkit-transform: rotateY(180deg); -moz-transform: rotateY(180deg); } 
+.bsa-event-date, .bsa-event-time { display: block; } 
+.bsa-event-date { font-weight: var(--weight-900); font-size: 30px; line-height: 38px; color:var(--bsa-grey-color); margin-bottom: 5px; margin-top: 8px; } 
+.bsa-event-time { font-weight:var(--weight-600); font-size: 17px; line-height: 21px; color:var(--bsa-grey-color); } 
+.slick-dots { position: absolute; bottom: -42px; display: block; width: 100%; padding: 0; margin: 0; list-style: none; text-align: center; } 
+.slick-dots li { position: relative; display: inline-block; width: 20px; height: 20px; margin: 0 5px; padding: 0; cursor: pointer; background-color: #EDEDED; border-radius: 30px; } 
+.slick-dots li button { font-size: 0; line-height: 0; display: block; width: 20px; height: 20px; padding: 5px; cursor: pointer; color: transparent; border: 0; outline: none; background: transparent; } 
+.slick-dots li.slick-active { background-color: var(--bsa-cyan-color); } 
+/* ======================================== Latest section ends =========================================*/
+/* Hot Topic Css Starts */
+.bsa-hot-topics-section { background-color: #f9f9f9; padding: 64px 0; } 
+.bsa-topic-description { max-width: 324px; } 
+.bsa-hot-topics-section .bsa-inner-container { max-width: 957px; } 
+.bsa-hot-topics-section .bsa-hot-topics-heading { font-weight: var(--weight-900); font-size: 30px; color: var(--bsa-blue-color); } 
+.bsa-hot-topics-section .bsa-hot-topic-para { font-weight:var(--weight-600); font-size: 15px; line-height: 19px; color: var(--bsa-blue-color); } 
+.bsa-hot-topic-box { margin-right: 0 !important; min-height: 172px; position: relative; } 
+.bsa-hot-topic-box .bsa-hot-common-heading { font-weight: var(--weight-900); font-size: 24px; line-height: 30px; color: var(--bsa-white-color); } 
+.bsa-hot-topics-section .bsa-consumer-duty-box { padding-bottom: 40px; background: url(../images/dots-yellow-bg.jpg) no-repeat #ffb932; } 
+.bas-Xx-box, .bsa-hot-topics-section .bsa-uk-box, .bsa-track-box { background: url(../images/dots-blue-bg.jpg) no-repeat var(--bsa-blue-color); } 
+.bsa-hot-topics-section .bsa-consumer-box, .bsa-mortgage-box { background: url(../images/dots-grey-bg.jpg) no-repeat #9ea5a9; } 
+.bsa-hot-topics-section .bsa-consumer-duty-box, .bas-Xx-box, .bsa-hot-topics-section .bsa-uk-box, .bsa-track-box, .bsa-hot-topics-section .bsa-consumer-box, .bsa-mortgage-box { background-size: cover; } 
+.bsa-right-arrow-img.d-flex.justify-content-end { position: absolute; bottom: 10px; right: 15px; } 
+.bsa-right-arrow-img img { position: relative; } 
+/* Hot Topic Css Ends */
+/* Latest Events CSS Start */
+.bsa-latest-events-section { background-color: var(--bsa-white-color); padding: 64px 0; } 
+.bsa-latest-events-section .bsa-le-inner-container { max-width: 957px; } 
+.bsa-latest-events-section .bsa-le-inner-container .bsa-latest-card { margin-right: 25px; min-width: 263px; } 
+.bsa-latest-events-section .bsa-le-right-wrap { align-self: center; } 
+.bsa-latest-events-section .bsa-le-right-wrap .bsa-le-heading-txt { font-weight: var(--weight-900); font-size: 30px; line-height: 38px; color: var(--bsa-blue-color); } 
+.bsa-latest-events-section .bsa-le-right-wrap .bsa-le-para { font-weight:var(--weight-400); font-size: 15px; line-height: 19px; color:var(--bsa-grey-color); } 
+.bsa-location-icon img { width: 12px; height: 14px; } 
+/* Latest Events CSS Ends */
+/* Footer top section start */
+.bsa-footer-top { background-color: var(--bsa-blue-color); color: var(--bsa-white-color); padding: 36px 0 0; } 
+.bsa-footer-top .bsa-footer-content { margin: 0; padding: 0 0 15px; clear: both; width: 100%; text-align: left; } 
+.bsa-footer-top .bsa-footer-content ul { margin: 0 0 15px; padding: 0; clear: both; width: 100%; text-align: left; list-style: none; } 
+.bsa-footer-top .bsa-footer-content li { display: inline-block; margin-right: 36px; } 
+.bsa-footer-top .bsa-footer-content li a { font-weight: var(--weight-900); font-size: 17px; color: var(--bsa-white-color); transition: 0.5s; } 
+.bsa-footer-top .bsa-footer-content li a:hover { color: var(--bsa-cyan-color); } 
+.bsa-footer-top .bsa-footer-content .hr-rule { border: 1px solid #c7c7c7; margin: 0; margin-top: 23px; margin-bottom: 7px; } 
+.bsa-footer-top .bsa-footer-content .bsa-copyright p { font-weight:var(--weight-400); font-size: 11px; color: var(--bsa-white-color); margin: 0; } 
+/* ======================================== Footer bottom section start=========================================*/
+.bsa-footer-bottom { background-color: var(--bsa-white-color); padding: 0px 0 30px; } 
+.bsa-footer-bottom .bsa-footer-bottom-logo img { height: 59px; } 
+.bsa-footer-bottom .bsa-footer-bottom-brandsimg img { float: right; margin-top: 1px; } 
+/* ======================================== building Societies section start =========================================*/
+.building-section { padding: 24px 0; background-color: var(--bsa-white-color); } 
+.building-section .building-content h3 { font-weight: var(--weight-900); font-size: 30px; color: var(--bsa-blue-color); margin: 0; margin-bottom: 4px; } 
+.building-section .building-content p { font-weight:var(--weight-600); font-size: 15px; margin: 0; color:var(--bsa-grey-color); margin-bottom: 11px; } 
+.building-section .building-content .btn { margin-right: 7px; } 
+.building-section .building-keepintouch { margin: 0; padding: 0; clear: both; width: 100%; text-align: left; display: flex; justify-content: left; align-items: center; } 
+.building-section .building-keepintouch ul { list-style: none; vertical-align: middle; margin-bottom: 6px; } 
+.building-section .building-keepintouch ul li { display: inline-block; margin-right: 13px; } 
+.bsa-championing-box p { margin-bottom: 0; } 
+.bsa-championing-box h3, .bsa-support-box p { font-weight: var(--weight-900); font-size: 30px; line-height: 30px; color: var(--bsa-blue-color); margin-bottom: 0; } 
+.bsa-billion-box h3, .bsa-voice-box h3 { color: var(--bsa-white-color); } 
+.bsa-championing { position: relative; background: url(../images/bsa-championing-img.jpg) no-repeat; padding: 48px 0; background-size: cover; } 
+.bsa-championing-box, .bsa-hot-topic-box { padding: 15px; margin-right: 6.5px; flex: 0 0 auto; } 
+.bsa-championing-container .bsa-over-million { background-color: var(--bsa-white-color); text-align: center; } 
+.bsa-over-million .members-para { font-weight: var(--weight-900); font-size: 17px; color: var(--bsa-blue-color); } 
+.bsa-billion-box, .bsa-voice-box { background-color: var(--bsa-blue-color); text-align: center; } 
+.bsa-billion-box .builiding-society-para, .bsa-voice-box .bsa-uk-para { color: var(--bsa-white-color); font-weight: var(--weight-900); font-size: 17px; line-height: 20px; } 
+.six-saver-box { background-color: var(--bsa-white-color); text-align: center; } 
+.bsa-support-box { padding-left: 7px; } 
+.bsa-support-box p { color: var(--bsa-white-color); line-height: 38px; } 
+.bsa-support-box .btn { margin-top: 15px; } 
+/* Championing Css end */
+/* Meet Members Css start */
+.bsa-meet-section { background-color: #ececec; padding: 64px 0; } 
+.bsa-meet-section .bsa-meet-left-section { max-width: 174px; width: 100%; } 
+.meet-member-logo-wrap { margin-left: 10px; max-width: 744px; width: 100%; } 
+.bsa-meet-section .bsa-meet-left-section .btn { padding: 5px 7px; } 
+.bsa-meet-members-container { max-width: 935px; } 
+.bsa-meet-members-container .bsa-our-member-heading { font-weight: var(--weight-900); font-size: 30px; line-height: 38px; color: var(--bsa-blue-color); } 
+.bsa-meet-members-container .bsa-meet-para { font-weight:var(--weight-400); font-size: 15px; line-height: 19px; color:var(--bsa-grey-color); } 
+.bsa-member-box { background-color: var(--bsa-white-color); margin-bottom: 24px; min-width: 235px; min-height: 100px; align-items: center; justify-content: center; display: flex; } 
+/* Meet Members Css end*/
+/* Society matters Css Starts */
+.bsa-society-matters-section { background: linear-gradient(103.24deg, var(--bsa-blue-color) 16.02%, #2149a4 93.92%); padding: 67px 0 0; overflow: hidden; } 
+.bsa-society-img img { box-shadow: 3px 3px 10px rgb(0 0 0 / 33%); } 
+.bsa-society-matters-section .bsa-society-inner-container { max-width: 935px; } 
+.bsa-society-matters-section .bsa-society-inner-container .bsa-society-img { align-self: end; } 
+.bsa-society-right-wrap { padding-left: 50px; } 
+.bsa-society-right-wrap .bsa-society-para { font-weight:var(--weight-700); font-size: 13px; color: var(--bsa-cyan-color); line-height: 16px; } 
+.bsa-society-para img { margin-right: 5px; width: 20px; filter:var(--cyan-filter); } 
+.bsa-society-right-wrap .bsa-society-winter-txt { font-weight: var(--weight-900); font-size: 30px; line-height: 38px; color: var(--bsa-white-color); } 
+.bsa-society-right-wrap .bsa-society-digital { font-weight:var(--weight-400); font-size: 30px; line-height: 38px; color: var(--bsa-white-color); } 
+.bsa-society-right-wrap .bsa-society-long-para { font-weight:var(--weight-600); font-size: 15px; line-height: 19px; color: var(--bsa-white-color); } 
+/* Society matters Css ends */
+/* Home page search CSS start here */
+.bsa-search-nav { display: none; } 
+.bsa-login-box { display: flex; list-style: none; } 
+.bsa-navbar-one .navbar-nav li.nav-item.bsa-search-icon { margin-right: 0px; } 
+.bsa-navbar-one .navbar-nav li.nav-item.bsa-search-icon:hover img { transition: 0.3s all ease; } 
+.bsa-navbar-one .navbar-nav li.nav-item.bsa-search-icon:hover img { filter: invert(65%) sepia(98%) saturate(1532%) hue-rotate(144deg) brightness(104%) contrast(89%); } 
+.bsa-header-search-open .bsa-search-nav { display: block; list-style: none; min-width: 267px; } 
+.bsa-header-search-open .form-control { font-size: 11px; font-weight:var(--weight-600); } 
+.bsa-header-search-open .bsa-login-box { display: none; } 
+/* Home page search CSS ends here */
+/* Login section css starts */
+.bsa-login-section { background-image: url(../images/bsa-login-img.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; min-height: 959px; padding-top: 44px; } 
+.bsa-login-section .bsa-login-inner-container { max-width: 552px; background-color: #F8F8F8; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.33); border-radius: 6px; margin: 0 auto; padding: 41px 39px 29px; } 
+.bsa-login-inner-container .bsa-login-header-txt { font-weight: var(--weight-900); font-size: 36px; line-height: 45px; color: var(--bsa-blue-color); } 
+.bsa-login-inner-container .bsa-login-para { font-weight:var(--weight-400); font-size: 15px; line-height: 19px; color:var(--bsa-grey-color); margin-top: 31px; } 
+.bsa-login-inner-container .bsa-from .email-add-label, .email-add-label { font-weight: var(--weight-900); font-size: 15px; line-height: 19px; color: var(--bsa-blue-color); padding-bottom: 10px; } 
+.bsa-login-inner-container .bsa-from a { font-weight:var(--weight-600); font-size: 10px; color:var(--bsa-grey-color); text-decoration: underline; } 
+.bsa-login-inner-container .bsa-from a:hover { color: var(--bsa-blue-color) } 
+.bsa-login-inner-container .bsa-from .bsa-not-register-wrap a{color: var(--bsa-white-color);text-decoration: none;font-size: 13px;}
+.bsa-login-inner-container .bsa-from .bsa-not-register-wrap a:hover{color: var(--bsa-blue-color);}
+.bsa-from .bsa-not-register-wrap .bsa-not-register-txt { font-weight: var(--weight-900); font-size: 15px; color: var(--bsa-blue-color); } 
+.bsa-from .bsa-not-register-wrap { padding-bottom: 29px; } 
+.bsa-from .bsa-login-footer { background-color: #EAEAEA; padding: 25px 59px 25px 53px; border-radius: 5px; } 
+.bsa-from .bsa-login-footer p { font-weight:var(--weight-600); font-size: 13px; line-height: 16px; color:var(--bsa-grey-color); } 
+.bsa-from .bsa-login-hr, .bsa-login-section .form-control { border: 1px solid var(--bsa-blue-color); } 
+.bsa-from .bsa-login-hr { border-bottom: 0px; opacity: 1; margin-top: 2rem; } 
+.bsa-login-section .form-control:focus { border-color: var(--bsa-cyan-color); box-shadow: 0 0 0 1px var(--bsa-cyan-color); } 
+.input-group-icon { position: relative; } 
+.input-group-icon .input-group-text { position: absolute; right: 0; top: 0px;border: 0; background: none; } 
+.input-group-icon .form-control { padding-right: 50px; } 
+/* Login section css ends */
+/* My BSA Account Page CSS start */
+.bsa-my-account-from { max-width: 936px; } 
+.bsa-break { color: var(--bsa-blue-color); } 
+.bsa-my-account-from { margin: 0 auto; } 
+.bsa-account-txt { margin-top: 15px; font-weight: var(--weight-900); font-size: 36px; line-height: 45px; color: var(--bsa-blue-color); margin-bottom: 10px; } 
+.bsa-account-para { font-weight:var(--weight-400); font-size: 15px; line-height: 18px; padding-bottom: 5px; color:var(--bsa-grey-color); } 
+.bsa-account-link { text-decoration: underline; font-weight:var(--weight-600); font-size: 13px; line-height: 16px; text-decoration-line: underline; display: flex; justify-content: right; margin-right: 25px; color: var(--bsa-blue-color); } 
+body .accordion-item { padding: 15px 0; box-shadow: none; } 
+.bsa-section { padding-bottom: 60px; } 
+#bsaAccordion .accordion-item { border: 0; border-top: 1px solid var(--bsa-blue-color); border-radius: 0; box-shadow: none; } 
+#bsaAccordion .accordion-button::after { margin-top: 5px; } 
+.accordion-button { padding: 0; } 
+.accordion-button:not(.collapsed) { border: none; color: var(--bsa-blue-color); background-color: var(--bsa-white-color); box-shadow: none; } 
+.accordion-button:focus { border: none; box-shadow: none; } 
+.bsa-spacing { margin-top: 50px; } 
+.accordion-button::after { border: solid transparent; height: 0; width: 0; border-color: rgba(24, 42, 120, 0); border-bottom-color: var(--bsa-blue-color); border-width: 6px; transform: var(--bs-accordion-btn-icon-transform); } 
+.accordion-button:not(.collapsed)::after { background-image: var(--bs-accordion-btn-active-icon); transform: none; } 
+/* My BSA Account Page CSS end */
+/* Search Result css Starts */
+.bsa-search-reslt-section .bsa-search-section { background-color: var(--bsa-white-color); } 
+.bsa-search-reslt-section .bsa-search { font-weight: var(--weight-900); font-size: 36px; color: var(--bsa-blue-color); } 
+.bsa-search-section .bsa-latest-input { max-width: 166px; width: 100%; border-radius: 5px; } 
+.bsa-search-reslt-section .bsa-policy-brief label,.bsa-policy-brief-container .bsa-policy-brief label { white-space: nowrap; } 
+.bsa-showing-txt p { font-weight:var(--weight-600); font-size: 10px; color:var(--bsa-grey-color); } 
+.bsa-policy-brief label { font-weight:var(--weight-600); font-size: 13px; color:var(--bsa-grey-color); } 
+.bsa-showing-reslt { padding-top: 35px; } 
+.bsa-showing-reslt .bsa-latest-input { max-width: 166px; } 
+.bsa-press-release .bsa-top-tags li { display: block; } 
+.bsa-press-release, .bsa-bold-heading,.bsa-press-release a, .bsa-bold-heading a { font-weight: var(--weight-900); font-size: 17px; line-height: 21px; color: var(--bsa-blue-color); } 
+.bsa-press-release a:hover, .bsa-bold-heading a:hover{color:var(--bsa-cyan-color)}
+.bsa-press-release .bsa-para { font-weight:var(--weight-400); font-size: 15px; line-height: 19px; color:var(--bsa-grey-color); } 
+.bsa-search-horizontal-line { border-top: 1px solid var(--bsa-blue-color); opacity: 1; } 
+.bsa-left-wrap { padding-top: 41px; } 
+/* Sidebar CSS */
+.bsa-sidebar-filter ul { padding: 0; list-style: none; } 
+.bsa-sidebar-filter .accordion-item { border-bottom: 1px solid var(--bsa-blue-color); border-radius: 0px; padding: 0; } 
+.bsa-sidebar-filter .accordion-button { padding-top: 11px; padding-bottom: 11px; } 
+.bsa-sidebar-filter .accordion-body { padding: 0px; padding-bottom: 10px; } 
+.bsa-sidebar-filter .accordion-body input { margin-right: 6px; vertical-align: top; position: relative; top: 3px; } 
+.bsa-sidebar-filter .bas-filter-icon { max-width: 15px; margin-right: 10px; } 
+.bsa-sidebar-filter h3 { font-weight: var(--weight-900); font-size: 25px; color: var(--bsa-blue-color); } 
+.bsa-category-box, .bsa-type-box span { font-weight: var(--weight-900); font-size: 13px; color:var(--bsa-grey-color); } 
+.bsa-type-box img { margin-left: 8px; } 
+.bsa-type-box span, .bsa-category-box span { margin-left: 10px; } 
+.bsa-category-box span,.bsa-type-box span { max-width: calc(100% - 30px); display: inline-block; vertical-align: top;cursor:pointer;} 
+.bsa-category-box li, .bsa-type-box li { padding-top: 14px; } 
+.bsa-type-box select { max-width: 128px; height: 24px; font-weight:var(--weight-600); font-size: 11px; color:var(--bsa-grey-color); border: 0.5px solid var(--bsa-blue-color); border-radius: 5px; padding-right: 30px; } 
+.bsa-type-box option { background: #EDEDED; border: 0.5px solid var(--bsa-blue-color); border-radius: 5px; max-width: 98px } 
+.bsa-sidebar-filter { padding-top: 124px; } 
+.bsa-sidebar-filter .accordion-item { border: none; } 
+.bsa-sidebar-filter .category-label, .type-label, .date-range-label { font-weight: var(--weight-900); font-size: 14px; color: var(--bsa-blue-color); } 
+.date-accordion .date-range-label { padding-bottom: 9px } 
+/* Search Result css ends */
+/* Policy Brief listing Css Starts */
+.bsa-banner-section .bsa-prudential-heading,.bsa-banner-section .bsa-prudential-heading p { font-weight: var(--weight-900); font-size: 36px; color: var(--bsa-white-color); } 
+.bsa-banner-section .bsa-banner { padding: 30px 0 0px 0; } 
+.bsa-policy-brief-container .bsa-left-wrap { padding-top: 33px; } 
+.bsa-banner-section .bsa-prudential-para { font-weight: var(--weight-900); font-size: 17px; line-height: 21px; color: var(--bsa-white-color); max-width:645px; } 
+.bsa-policy-brief-cards .bsa-latest-card { margin-bottom: 24px; } 
+.bsa-sidebar-filter .bsa-filter-input { width: 100%; max-width: 201px; background: var(--bsa-white-color); border: 0.5px solid var(--bsa-blue-color); border-radius: 5px; font-weight:var(--weight-600); font-size: 13px; padding: 6px; } 
+.date-accordion .bsa-fliter-clear-txt { font-weight:var(--weight-600); font-size: 11px; text-decoration-line: underline; color: var(--bsa-blue-color); } 
+.bsa-list-useful-links .bsa-useful-link { font-weight:var(--weight-600); font-size: 17px; color: var(--bsa-white-color); } 
+.bsa-list-useful-links li { font-weight:var(--weight-600); font-size: 13px; line-height: 16px; color: var(--bsa-white-color); text-decoration: underline; } 
+.bsa-list-useful-links li a:hover { color: var(--bsa-cyan-color); } 
+.bsa-policy-list .bsa-share-icon { max-width: 32px; } 
+.bsa-prudential-heading img { width: 27px; } 
+.bsa-policy-brief-container, .bsa-quick-links-container { padding: 0; } 
+.bsa-policy-brief-container .bsa-banner-section,.bsa-mortgage-housing-section .bsa-banner-section,.bsa-banner-section { background:url(../images/policy-banner.jpg) no-repeat var(--bsa-blue-color); background-size:cover; } 
+.bsa-quick-links-container { border-top: 2px solid var(--bsa-white-color); } 
+.bsa-quick-links-container .bsa-banner { padding-top: 0; } 
+.bsa-prudential-para { padding-bottom: 44px; padding-top: 22px; } 
+.bsa-policy-brief-container .bsa-policy-brief label { padding-right: 6px; } 
+.bsa-policy-brief-container .bsa-sidebar-filter { padding-top: 30px; padding-bottom: 30px; } 
+.bsa-policy-listing-filter h3 { padding-bottom: 14px; } 
+.bsa-input-wrap { padding-bottom:22px; } 
+.bsa-fliter-clear-txt:hover { color:var(--bsa-cyan-color); } 
+.bsa-filter-icon { padding-right: 8px; } 
+.bsa-input-wrap img { transform: none; } 
+.bsa-input-wrap .btn.btn-primary span img { transform: rotate(-45deg); } 
+.bsa-input-wrap .btn.btn-primary:hover span img { filter:none; } 
+.bsa-filter-box label { width: 100%; display: flex; } 
+.bsa-quick-links-container { background-color: var(--bsa-blue-color); } 
+.bsa-policy-banner-right { padding-bottom: 53px; } 
+.bsa-type-box .bsa-type-box-span { margin-left: 5px !important; } 
+.bsa-policy-listing-filter .bsa-type-box span { margin-left: 0; max-width: calc(100% - 40px); cursor:pointer; } 
+.bsa-policy-listing-filter .bsa-type-box img { margin-left: 0px; margin-right: 5px; } 
+.bsa-policy-listing-filter .bsa-type-box span.bsa-checkbox-tick { margin-right: 8px; } 
+.bsa-policy-brief-cards { margin-top: 8px; } 
+.bsa-policy-wrap { padding-right: 30px; } 
+.bsa-policy-wrap .bsa-latest-card { box-shadow:3px 3px 10px rgba(0, 0, 0, 0.33) } 
+/* Checkbox Style "Common" */
+.bsa-checkbox-style { position: relative; } 
+.bsa-checkbox-style .bsa-checkbox-tick { width: 16px; height: 16px; border:1px solid #ADB5BD;; display:inline-block; min-width:16px; border-radius: 2px; } 
+.bsa-checkbox-style input[type="checkbox"] { position: absolute; visibility: hidden; } 
+.bsa-checkbox-style input[type="checkbox"]:checked + .bsa-checkbox-tick { background: url(../images/check-tick-icon.svg) var(--bsa-blue-color) no-repeat center; background-size:10px; border-color: var(--bsa-blue-color); } 
+.bsa-13-icon { width: 13px !important; min-height:inherit !important; } 
+.bsa-tag-dbl-line span strong { max-width: calc(100% - 40px); display:inline-block; line-height: 10px; position: relative; top: -3px; } 
+.bsa-tag-dbl-line img { vertical-align: top; margin-left: 10px; margin-right: 4px; } 
+.bsa-sidebar-filter .bsa-type-accordian { padding:0; } 
+.bsa-sidebar-filter .bsa-search-horizontal-line { margin: 0; } 
+
+/* Policy Brief listing Css ends */
+/* Policy Brief industry page css start */
+.bsa-banner { color: var(--bsa-white-color); padding: 30px 0 0px 0; } 
+a.bsa-policy-link { font-weight:var(--weight-400); font-size: 13px; line-height: 16px; } 
+.bsa-policy-list,.bsa-list-useful-links { list-style: none; margin: 0; font-weight:var(--weight-600); font-size: 17px; line-height: 16px; } 
+.bsa-policy-list { display: flex; font-size: 13px; padding: 0; padding-bottom:34px; flex-wrap: wrap; } 
+.bsa-quick-links-container .bsa-policy-list { padding-bottom: 0px; } 
+.bsa-policy-list-title { padding-left: 8px; padding-right: 8px; } 
+.bsa-policy-list img, .bsa-prudential-heading img { filter: var(--white-filter); padding-right: 6px; } 
+.bsa-list-border { border-left: 1px solid var(--bsa-white-color); border-right: 1px solid var(--bsa-white-color); } 
+.bsa-links { padding-top: 11px; font-weight:var(--weight-600); list-style:none; } 
+.bsa-back-to-policy-link { color: var(--bsa-white-color); font-weight:var(--weight-600); font-size: 13px; line-height: 16px; text-decoration: underline; } 
+.bsa-back-to-policy-link img { filter: var(--white-filter); margin-left: 5px; } 
+.bsa-back-to-policy-link:hover img { filter: var(--cyan-filter); } 
+.bsa-policy-main-wrapper { margin-top: 40px; } 
+.bsa-banner-heading { font-weight: var(--weight-900); font-size: 36px; line-height: 45px; margin-top: 25px; margin-bottom: 25px; } 
+.bsa-banner-para { font-weight: var(--weight-900); font-size: 17px; line-height: 21px; color: var(--bsa-white-color); padding-bottom: 30px; } 
+.bsa-banner-para-light { font-weight:var(--weight-400); text-decoration: underline; color: var(--bsa-white-color); } 
+.bsa-right-wrap-heading { color: var(--bsa-blue-color); margin-top: 35px; margin-bottom: 0; } 
+.bsa-list-icon a { font-weight:var(--weight-700); padding-top: 8px; padding-bottom: 8px; padding-right: 30px; display: inline-block; } 
+.bsa-policy-list-title a { color: var(--bsa-white-color); } 
+.bsa-view-updates-heading { font-weight: var(--weight-900); font-size: 26px; line-height: 26px; color: var(--bsa-blue-color); width: 140px; padding-top: 18px; padding-bottom: 18px; margin-right: 20px; padding-left: 20px } 
+.bsa-view-updates-heading img.bsa-arrow-icon { width: 24px; position: relative; left:10px; } 
+.bsa-policy-list-wrapper { border-top: 2px solid var(--bsa-white-color); } 
+.bsa-green-banner { background-color: var(--bsa-cyan-color); color: var(--bsa-blue-color); } 
+.bsa-updated-data-para { font-weight:var(--weight-600); font-size: 13px; line-height: 16px; color: var(--bsa-blue-color); margin: 0; padding-top: 17px; padding-bottom: 8px; } 
+.bsa-dark-para { font-weight: var(--weight-900); font-size: 17px; line-height: 21px; color: var(--bsa-blue-color); margin: 0; } 
+.bsa-light-para { font-weight:var(--weight-400); font-size: 15px; line-height: 19px; margin: 0; color: var(--bsa-blue-color); padding-bottom: 13px; padding-top: 6px; } 
+.bsa-content-heading { font-weight: var(--weight-900); font-size: 25px; line-height: 31px; color: var(--bsa-blue-color); } 
+.bsa-underlined-para { text-decoration: underline; font-weight:var(--weight-600); } 
+.bsa-dark-section-title { font-weight: var(--weight-700); font-size: 17px; line-height: 21px; color: var(--bsa-blue-color); display: block; margin-top: 23px; margin-bottom: 5px; } 
+a.bsa-policy-link { color:var(--bsa-grey-color); text-decoration: none; font-size: 13px; font-weight:var(--weight-400); } 
+.bsa-policy-main-wrapper .bsa-left-wrap { margin-left: auto; margin-right: auto; padding-left: 0; } 
+.bsa-quick-links { padding-top: 8px; } 
+.bsa-quick-links ul li a { text-decoration: none; color: var(--bsa-white-color); } 
+.bsa-policy-date-list { display: flex; padding-left: 0; } 
+.bsa-policy-date-link { list-style: none; border-right: 1px solid #9EA5A9; font-weight:var(--weight-400); font-size:13px; color:#4D5256; } 
+.bsa-policy-date-link:last-child { border: none; } 
+.bsa-quick-links-container .bsa-policy-list a:hover { color: var(--bsa-cyan-color); } 
+.bsa-quick-links-container .bsa-policy-list a img { margin-left: 8px; } 
+.bsa-quick-links-container .bsa-policy-list a:hover img { filter: var(--cyan-filter); } 
+.bsa-links a { color: var(--bsa-white-color); text-decoration: underline; } 
+.bsa-contents-heading { font-weight: var(--weight-900); font-size: 25px; line-height: 31px; color:var(--bsa-blue-color); border-bottom: 2px solid var(--bsa-blue-color); padding-bottom: 20px; } 
+.bsa-contents-heading img { padding-right: 10px; } 
+.bsa-left-sidebar-list { font-weight:var(--weight-600); font-size: 13px; line-height: 16px; list-style: none; color:var(--bsa-grey-color); border-top: 1px solid #BCBCBC; padding-top: 6px; padding-bottom: 6px; } 
+.bsa-left-sidebar-list:hover { background-color: #EDEDED; cursor: pointer; } 
+.bsa-policy-list img { padding-left: 6px; } 
+.bsa-policy-brief-industry-container .bsa-banner-section { background:linear-gradient(103.24deg, var(--bsa-blue-color) 16.02%, #2149A4 93.92%); } 
+.bsa-policy-brief-industry-container .bsa-left-wrap { padding: 0; } 
+.bsa-policy-brief-industry-container .bsa-left-sidebar { margin-top: -5px; } 
+.bsa-contents-heading img { min-height:27px; } 
+li.bsa-left-sidebar-list:last-child { border-bottom: 1px solid #BCBCBC; } 
+.bsa-overview-wrap p { font-weight:var(--weight-400); font-size: 15px; line-height: 19px; color:var(--bsa-grey-color); } 
+.bsa-sub-section-last p:nth-child(3) { border-bottom:1px solid #9EA5A9; padding-bottom: 26px; } 
+.bsa-sub-section-last p:nth-child(4) { font-weight:var(--weight-400); font-size: 13px; line-height: 16px; } 
+/* Member page */
+.bsa-searchby-alphabet { margin-top: 20px; margin-bottom: 40px; } 
+.bsa-searchby-alphabet a { font-size: 20px; font-weight:bold; display:inline-block; min-height:30px; min-width: 40px; margin-right:10px; } 
+.bsa-searchby-alphabet a:hover { background-color:#FFB932; color: var(--bsa-blue-color); } 
+.bsa-member-search-banner.bsa-banner-section .bsa-prudential-para { padding-bottom: 20px; padding-top:0px; } 
+.bsa-policy-banner-left .bsa-policy-list li { border-right: 1px solid var(--bsa-white-color); border-left:0px; } 
+.bsa-policy-banner-left .bsa-policy-list li:last-child { border-right: 0; } 
+.bsa-back-to-policy-link:hover { color: var(--bsa-cyan-color); } 
+.bsa-member-description h3,.bsa-member-description h3 a { font-weight: var(--weight-900); font-size: 17px; color:var(--bsa-blue-color) } 
+.bsa-member-logo { display: flex; align-items:center; } 
+.bsa-member-description p { font-weight:var(--weight-400); font-size: 15px; color:var(--bsa-grey-color); margin-bottom:5px; } 
+.bsa-member-description a { color: var(--bsa-blue-color); } 
+.bsa-member-description a:hover { color: var(--bsa-cyan-color); } 
+.bsa-member-description a img { width: 18px; } 
+.bsa-member-description a:hover img { filter:var(--cyan-filter) } 
+.bsa-member-details { margin-bottom: 25px; padding-bottom:25px; border-bottom:1px solid var(--bsa-blue-color); } 
+.bsa-member-wrapper { padding-right: 5%; } 
+.bsa-sidebar-filter .bsa-latest-card { margin-top: 25px; } 
+.bsa-member-wrapper { padding-bottom: 30px; } 
+/* Policy Brief industry page css end */
+
+/* Mortgage-Housing CSS Starts */
+.bsa-mortgage-middile-section .switch-label { font-weight:var(--weight-600); font-size: 13px; color: var(--bsa-blue-color); padding-right: 7px; padding-top: 3.5px; } 
+.bsa-mortgage-housing-section .bsa-mortgage-middile-section { padding-top: 45px; padding-bottom: 17px; } 
+.bsa-mortgage-table th,td { border: none; } 
+.bsa-mortgage-table th { background-color: var(--bsa-blue-color); color: #FFFFFF; white-space: nowrap; padding: 16px 41px 16px 20px; font-weight: var(--weight-700); font-size: 14px; } 
+.bsa-mortgage-table tr { background-color: #F9F9F9; } 
+.bsa-mortgage-table { border-collapse:separate; border-spacing:5px; } 
+.bsa-mortgage-table td { padding: 10px; } 
+tbody>tr>:nth-child(1) { font-weight: var(--weight-700); font-size: 14px; color:var(--bsa-grey-color); } 
+tbody>tr>:nth-child(2),tbody>tr>:nth-child(3),tbody>tr>:nth-child(4),tbody>tr>:nth-child(5) { font-size: 14px; font-weight:var(--weight-400); color:var(--bsa-grey-color); } 
+.bsa-mortgage-housing-section .accordion-body { padding-left:0; padding-right:0; margin-left:-5px; margin-right: -5px; } 
+.bsa-latest-card .bsa-footer-box-link { background-color: #EDEDED; margin-top: 68px; } 
+.bsa-footer-box-link p { font-weight: var(--weight-900); font-size: 10px; color: var(--bsa-blue-color); margin-left: -14px; } 
+.bsa-latest-card { padding-bottom: 0; } 
+.bsa-mortgage-housing-section .bsa-prudential-para .bsa-mortgage-span,.bsa-policy-brief-industry-container .bsa-mortgage-span { font-size: 17px; font-weight:var(--weight-400); color: #FFFFFF; text-decoration: underline; } 
+.bsa-mortgage-housing-section { padding-bottom: 50px; } 
+ .bsa-footer-box-link p,.bsa-footer-box-link,.bsa-footer-box-link ul { margin: 0; } 
+ .bsa-latest-card ul { list-style: none; padding: 0; } 
+ .bsa-footer-box-link { right: 0; bottom:0; width:100%; } 
+ .bsa-footer-box-link ul li { width: 32%; text-align:center; } 
+ .bsa-footer-box-link ul li span { display: block; color:var(--bsa-blue-color); white-space:normal; line-height: 13px; margin-top:5px; } 
+ .bsa-footer-box-link ul li:hover span { color: var(--bsa-cyan-color); } 
+ .bsa-footer-box-link ul li:hover .dropdown-toggle::after,.bsa-footer-box-link ul li:hover a img { filter: var(--cyan-filter); } 
+ .bsa-footer-box-link .dropdown-toggle::after { border: 0; background: url(../images/angle-right-icon.svg) no-repeat; width: 13px; height: 13px; transform: rotate(90deg); background-size: 6px; background-position: center; margin-top:5px; } 
+ .bsa-footer-box-link .dropdown-menu { text-align: center; } 
+ .bsa-footer-box-link .dropdown-menu li,.bsa-footer-box-link ul .dropdown a { width: 100%; } 
+ .bsa-footer-box-link ul li>a { padding-top:5px; display:inline-block; } 
+ .bsa-footer-box-link ul li:hover>a,.bsa-footer-box-link ul .dropdown a.show { background-color: var(--bsa-white-color); height:100%; } 
+ .bsa-footer-box-link ul.dropdown-menu { width: 100%; min-width: inherit; max-width: 100%; border:0px; border-radius:0px; box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25); } 
+ .bsa-footer-box-link ul.dropdown-menu::after { content: ""; width: 100%; height: 9px; background-color:var(--bsa-white-color); position: absolute; left: 0; } 
+ .bsa-footer-box-link ul.dropdown-menu a { font-size: 10px; padding:10px 5px; color:var(--bsa-blue-color); text-decoration:underline; } 
+ .bsa-footer-box-link ul.dropdown-menu li:hover a { background-color:#EDEDED; } 
+ .bsa-footer-box-link li.dropdown:hover:first-child a,.bsa-footer-box-link li.dropdown:first-child a.dropdown-toggle.show { border-radius: 0px 0px 0px 4px; } 
+ body .bsa-footer-box-link li.dropdown:hover:last-child a { border-radius: 0px 0px 4px 0px; } 
+ body .form-switch .form-check-input { margin-left: -2.3em; width: 2.35em; height: 24px; cursor:pointer; } 
+ body .form-switch .form-check-input:checked { background-color:var(--bsa-blue-color); border-color:var(--bsa-blue-color); } 
+ .bsa-mortgage-housing-section .accordion-item .accordion-button { padding-left: 10px; padding-right: 10px; } 
+ .bsa-mortgage-housing-section .accordion-item .accordion-button:hover,.bsa-mortgage-housing-section .accordion-item .accordion-button:hover:after { color: var(--bsa-cyan-color); border-bottom-color:var(--bsa-cyan-color); } 
+ .bsa-mortgage-housing-section .bsa-prudential-para .bsa-mortgage-span:hover { cursor: pointer; color: var(--bsa-cyan-color); } 
+/* Mortgage-Housing CSS Ends */
+
+
+/* Morgage Instruction page css start */
+.bsa-morgan-form-banner { background-image: url(../images/cyan-bg-with-dots.jpg); background-repeat: no-repeat; background-position:center; background-size: cover; margin-top: 50px; } 
+.bsa-blue-banner-faq { background-color: var(--bsa-blue-color); margin-top: 30px; padding-top:15px; padding-bottom:18px; } 
+.bsa-morgan-wrapper { margin: 0 auto; } 
+.bsa-help-image,.bsa-right-icon { filter: var(--white-filter); width: 38px; } 
+.bsa-morgan-form-label { font-size: 15px; font-weight:var(--weight-600); line-height: 24px; color: var(--bsa-blue-color); padding-bottom: 8px; } 
+ .bsa-common-input select,.bsa-common-input input { font-weight:var(--weight-600); font-size: 13px; line-height: 16px; color: var(--bsa-grey-color); padding: 1px 0px 1px 10px; max-width: 474px; padding-top: 6px; padding-bottom: 6px; margin-bottom: 8px; position: relative; } 
+ .bsa-common-input .bsa-norwich-select { margin-bottom: 14px; } 
+ .bsa-instruction-btn button { margin-top: 8px; } 
+.bsa-right-icon { width: 12px; } 
+.bsa-para-wrapper { padding-top: 35px; } 
+.bsa-morgan-dark-heading { font-weight: var(--weight-700); line-height: 21px; font-size: 17px; color:var(--bsa-grey-color) } 
+.bsa-morgan-form { padding-top: 21px; padding-left: 31px; } 
+.bsa-morgan-instruction { color: var(--bsa-blue-color); } 
+.bsa-morgan-light-para { font-weight:var(--weight-400); font-size: 14px; line-height: 18px; color:var(--bsa-grey-color); } 
+.bsa-morgan-light-para span { text-decoration: underline; cursor: pointer; } 
+.bsa-morgan-light-para span:hover { color: var(--bsa-cyan-color); } 
+.bsa-morgan-dark-para { font-weight:var(--weight-700); font-size: 17px; line-height: 21px; color:var(--bsa-grey-color); } 
+.bsa-morgan-banner-para { color: var(--bsa-white-color); font-weight: var(--weight-900); font-size: 17px; line-height: 21px; margin-bottom: 0; } 
+h3.bsa-faq-heading { color: var(--bsa-white-color); margin: 0 auto; } 
+.bsa-morgan-link { text-decoration: underline; color: var(--bsa-white-color); font-weight:var(--weight-400); } 
+.bsa-morgan-banner-link { font-weight:var(--weight-600); font-size: 13px; line-height: 16px; color: var(--bsa-white-color); } 
+
+.bsa-morgan-banner-list { list-style: none; border-right: 1px solid var(--bsa-white-color); padding-left: 7px; padding-right: 7px; } 
+li.bsa-morgan-banner-list:last-child { border-right: none; } 
+.bsa-morgan-banner-list-wrapper { padding: 0; } 
+li.bsa-morgan-banner-list:first-child { padding-left: 0; } 
+.bsa-morgan-link:hover , .bsa-morgan-banner-link:hover { color: var(--bsa-cyan-color); cursor: pointer; } 
+.bsa-banner-button { background-color: var(--bsa-white-color); color: var(--bsa-blue-color); } 
+.bsa-button-arrow { filter: var(--blue-filter) !important; } 
+.bsa-morgan-banner-icon { filter: var(--white-filter); padding-right: 6px; } 
+.bsa-morgan-banner-icon:hover { filter: var(--cyan-filter); } 
+.bsa-date-input input::after { content: ''; background-image: url(../images/calendar-icon.svg); background-repeat: no-repeat; display: block; background-position: right 0.75rem center; width: 36px; height: 22px; position: absolute; z-index: 99; right: -6px; background-color: white; cursor:pointer; pointer-events: none; } 
+.bsa-blue-banner-faq .bsa-faq-heading::after { content: url(../images/nav-arrow.svg); position: relative; left: 25px; } 
+.bsa-blue-banner-faq .bsa-faq-heading { padding-right: 60px; font-weight: var(--weight-900); font-size: 25px; color: var(--bsa-white-color); } 
+.bsa-blue-banner-faq .bsa-faq-heading img{margin-right: 8px;}
+.bsa-para-wrapper p:nth-child(5) { padding-bottom: 25px; } 
+.bsa-para-wrapper h6 { padding-bottom: 18px; } 
+ select.form-select { background: url(../images/bsa-down-arrow-icon.svg) no-repeat var(--bsa-white-color); background-position: right 0.75rem center;padding-right:30px;} 
+ .bsa-mortgage-instruction-section .bsa-card-container { padding-top: 40px; } 
+
+ /* Morgage Instruction page css Ends */
+
+/* Dropdown CSS */
+.bsa-quick-links .dropdown-menu { background-color: var(--bsa-cyan-color); padding:4px 11px 13px; box-shadow: 3px 3px 10px rgba(33, 37, 41, 0.33); } 
+.bsa-quick-links .dropdown-menu:after { bottom: 100%; left: 80%; border: solid transparent; content: ""; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(22, 215, 241, 0); border-bottom-color: #16d7f1; border-width: 10px; margin-left: -10px; } 
+.bsa-quick-links .dropdown-toggle::after { content: none; } 
+.bsa-dropdown-head { color: var(--bsa-blue-color); font-weight:var(--weight-900); font-size: 13px; } 
+.bsa-quick-links ul { list-style: none; padding-left:0px; } 
+.bsa-quick-links ul .dropdown-menu a { padding: 0px; margin-right:5px; } 
+.bsa-quick-links ul .dropdown-menu a img { filter: none; margin-left: 0; padding:0px; transition: 0.2s all ease-in-out; } 
+.bsa-quick-links ul .dropdown-menu li:hover a { background:none; } 
+.bsa-quick-links ul .dropdown-menu li:hover a img { filter:var(--white-filter); } 
+.bsa-quick-links ul .dropdown-menu li .btn { font-size: 13px; font-weight:var(--weight-700); padding: 5px 10px; min-height: 32px; white-space:nowrap; margin-right: 0; } 
+ .bsa-quick-links ul .dropdown-menu .btn:hover { background-color: #ffb932; color: var(--bsa-blue-color); border-color: #ffb932; } 
+ .bsa-quick-links ul .dropdown-menu .btn img { filter: var(--white-filter); width: 10px; transition: 0.3s ease-in-out; margin-left: 5px; padding: 0; } 
+ .bsa-quick-links ul .dropdown-menu .btn:hover img { filter: none; transform: rotate(-45deg); } 
+ .bsa-quick-links ul .dropdown-menu li:first-child a.btn { margin-right: 11px; } 
+ .bsa-quick-links ul .dropdown-menu .bsa-keyword-search .input-group input,
+ .bsa-quick-links ul .dropdown-menu .bsa-keyword-search .input-group .btn { border-radius: 5px !important; } 
+ .bsa-quick-links ul .dropdown-menu .bsa-keyword-search .input-group .btn { margin-left: 6px !important; }
+ 
+ /* Events Training Css Starts */
+ .bsa-time-location-wrap h2{font-weight: var(--weight-900);font-size: 60px;color: var(--bsa-blue-color);}
+ .bsa-container .bsa-what-next-para{font-weight: var(--weight-600);font-size: 17px;line-height: 21px;color:var(--bsa-grey-color);padding-top: 25px;}
+ .bsa-container .bsa-what-next-para{border-bottom: 1px solid var(--bsa-grey-color);padding-bottom: 10px;}
+ .bsa-time-location-wrap span,.bsa-tech-innovation-wrap .bsa-time-wrap span{font-weight: var(--weight-600);font-size: 17px;line-height: 21px;color: var(--bsa-grey-color);padding-left: 10px;max-width: calc(100% - 40px);display: inline-block;width:auto;}
+ .bsa-mortgage-housing span{font-weight:var(--weight-600);font-size: 13px;color: var(--bsa-grey-color);padding-left: 6px;}
+ .bsa-mortgage-housing h3{font-weight: var(--weight-900); font-size: 30px;line-height: 35px;color: var(--bsa-blue-color);padding-top: 6px;}
+ .bsa-tech-innovation-wrap{background-color: #EDEDED;}
+ .bsa-what-next-section{padding-top: 20px;padding-bottom:49px;}
+ .bsa-tech-innovation-wrap{padding-top: 75px;padding-bottom:32px;}
+ .bsa-tech-innovation-wrap .bsa-card-description{padding-top: 0;}
+ .bsa-tech-innovation-wrap .bsa-card-description .bsa-top-tags{margin-bottom: 4px;}
+ .bsa-tech-innovation-wrap .bsa-card-description h2{font-weight: var(--weight-900);font-size: 30px;line-height: 35px;color: var(--bsa-blue-color);}
+ .bsa-tech-innovation-wrap .bsa-card-description .bsa-event-date{font-weight: var(--weight-900);font-size: 40px;line-height: 49px;}
+ .bsa-tech-innovation-wrap .bsa-tech-img img{border-bottom: 10px solid #2149A4;max-width:100%}
+ .bsa-tech-img.bsa-imgcard-box .bsa-img-tag{background-color: var(--bsa-blue-color);color:var(--bsa-white-color);font-size: 20px;font-weight:var(--weight-900);height:40px;padding: 13px 36px 6px 38px;left: -20px;box-shadow: 3px 1px 6px 0px rgba(0,0,0,0.3);}
+ .bsa-time-location-wrap .bsa-icon-wrap,.bsa-tech-innovation-wrap .bsa-time-wrap .bsa-icon-wrap{display: inline-block;max-width: 25px;width: 100%;vertical-align: top;}
+ .bsa-location .bsa-icon-wrap,.bsa-tech-innovation-wrap .bsa-time-wrap .bsa-location .bsa-icon-wrap{max-width: 32px;}
+ .bsa-time-wrap button{margin-top: 5px;margin-left: 10px;}
+ .bsa-event-training img{margin-top: -6px;}
+ .bsa-tech-innovation-wrap .bsa-time-wrap{margin-left: -7px;}
+ .bsa-tech-img.bsa-imgcard-box{max-width: 550px;}
+ .bsa-img-tag .bsa-members-tag{background-color: var(--bsa-blue-color);color:var(--bsa-white-color);padding: 2px 3px 1px 10px;top: -8px;    position: relative;float: left;left: -30px;    transform: skew(-12deg);
+    -o-transform: skew(-12deg);
+    -moz-transform: skew(-12deg);
+    -webkit-transform: skew(-12deg);}
+    .bsa-img-tag .bsa-members-tag span{transform: skew(47deg);
+        -o-transform: skew(47deg);
+        -moz-transform: skew(47deg);
+        -webkit-transform: skew(47deg);    padding: 0px 5px 3px 25px;
+        position: relative;}
+        .bsa-img-tag .bsa-members-tag span img{float: left;}
+        .bsa-img-tag .bsa-members-tag span strong{display: block;}
+ .bsa-members-tag img{margin-right: 5px;filter: var(--white-filter);}
+ /* Events Training Css Ends */
+
+ /* Society Matters Css Starts */
+ .bsa-society-section .bsa-society-wrap{background-color: #EDEDED !important;background: none;}
+ .bsa-society-wrap .bsa-society-right-wrap .bsa-society-para{color: var(--bsa-grey-color);font-weight: 700;}
+ .bsa-society-wrap .bsa-society-right-wrap .bsa-society-winter-txt,.bsa-society-wrap .bsa-society-right-wrap .bsa-society-digital{color: var(--bsa-blue-color);}
+ .bsa-society-wrap .bsa-society-right-wrap .bsa-society-long-para{color: var(--bsa-grey-color);}
+ .bsa-society-wrap .bsa-society-para img{filter: none;}
+ .bsa-society-section .bsa-society-matters-search .bsa-sidebar-filter {padding-top: 40px;}
+ .bsa-prudential-heading .bsa-magazine-img{width:34px;}
+ 
+  /* Society Matters Css Ends */
+
+  /* Event with Image Css Starts */
+  .bsa-event-top-banner {background: linear-gradient(103.24deg, #182A78 16.02%, #2149A4 93.92%)}
+  .bsa-top-banner-left-wrap .bsa-policy-banner-left h3{font-size: 36px;line-height: 45px;color: var(--bsa-white-color);}
+  .bsa-date-wrap h3{width: 20px;font-size: 43px;line-height: 51px;color:#FFB932;}
+  /* Event with Image Css Ends */
+
+/* Track and Lost page */
+.bsa-card-full{padding-top:14px;padding-bottom:35px;border-top: 1px solid var(--bsa-blue-color);}
+.bsa-card-full h4, .bsa-card-full h4 a{font-weight: var(--weight-800);font-size: 25px;color:var(--bsa-blue-color);}
+.bsa-card-full p{font-size: 14px;color:#4D5256;}
+.bsa-card-full a{margin-top: 0px;}
+.bsa-search-btm{background-color: #F9F9F9;padding:17px 21px;}
+.bsa-search-btm tbody>tr>td{font-weight: normal;color: var(--bsa-blue-color);padding-bottom:30px;}
+.bsa-search-btm tbody>tr>th{font-weight:var(--weight-600);font-size: 11px;border:0px;color:var(--bsa-blue-color)}
+.bsa-search-btm tbody>tr>:nth-child(1){max-width: 140px;padding-right: 10%;padding-left:0px;}
+.bsa-search-btm table thead th{border: 0;font-weight:var(--weight-600);font-size: 11px;}
+.bsa-search-btm h4{font-size: 17px;font-weight:var(--weight-800);color:var(--bsa-blue-color);}
+.bsa-search-btm table thead *{border: 0;}
+.bsa-search-btm .table-bordered>:not(caption)>*{border-color: var(--bsa-blue-color);border-top:0px;}
+@media(max-width:767px){
+.bsa-search-btm table{display: block;overflow-x: auto;}
+.bsa-search-btm tbody>tr td{min-width: 160px;}
+.bsa-search-btm tbody>tr>:nth-child(1){padding-right: 20px;}
+.bsa-search-btm{padding: 15px 11px;}
+.bsa-card-full h4{font-size: 22px;}
+.col.bsa-keyword-search{padding-right: 0;}
+}
+/* ======================================== media query start=========================================*/
+@media(min-width:1365px){
+ .bsa-navbar-two .dropdown:hover .dropdown-menu, header .navbar-nav .bsa-profile-menu:hover .dropdown-menu { display: block; } 
+ .bsa-championing-box, .bsa-hot-topic-box { width: 180px; } 
+ .bsa-hot-topic-box { width: 184px; } 
+ .bsa-championing-box:last-child { margin-right: 0; } 
+ .bsa-hot-topics-section .bsa-inner-container { padding-right: 20px; } 
+ }
+@media(max-width:1366px){
+ .bsa-navbar-two .navbar-nav .nav-item { padding: 21px 10px; } 
+ }
+@media screen and (max-width: 1365px){
+ .bsa-footer-bottom .bsa-footer-bottom-brandsimg img { width: 100%; } 
+ .bsa-footer-bottom .bsa-footer-bottom-logo img { height: 24px; } 
+ .bsa-championing-container .bsa-championing-inner-container { flex-wrap: wrap; } 
+ .navbar.bsa-navbar-one .navbar-collapse.collapse.show { max-width: 100%; } 
+ .nav-item.dropdown.dropdown-mega .dropdown-menu { max-width: 937px; } 
+ .bsa-navbar-one ul.navbar-nav.align-items-center { display: flex; flex-direction: row; } 
+ .bsa-championing-box, .bsa-hot-topic-box { width: calc(50% - 8px); } 
+ .bsa-championing-box { min-width: 170px; } 
+ .bsa-championing-container .bsa-championing-box { margin-bottom: 10px; } 
+ .bsa-search-section .bsa-keyword-search { max-width: 490px; } 
+ .bsa-navbar-one ul.navbar-nav { margin-bottom: 20px; } 
+ .bsa-sidebar-filter h3,.bsa-contents-heading { font-size: 22px; } 
+ .bsa-sidebar-filter .bsa-filter-input { margin-right: 10px; } 
+ .bsa-latest-card { margin-bottom: 15px; } 
+ .bsa-latest-update { padding-left: 15px; padding-right:15px; padding-bottom:20px; } 
+ .bsa-view-updates-heading { width: 100%; padding-bottom: 0; } 
+ .bsa-view-updates-heading img.bsa-arrow-icon { width: 11px; } 
+ .bsa-updated-data-para { padding-top: 6px; } 
+ .bsa-right-wrap-heading { font-size: 28px; } 
+ .bsa-morgan-banner-para{margin: 15px 0;}
+ }
+ 
+@media screen and (max-width: 990px){
+ .bsa-latest-policy-wrap { flex-direction: column; } 
+ .bsa-latest-policy-wrap .bsa-latest-para { padding-left: 0px; } 
+ .bsa-le-inner-container .bsa-latest-card { width: 50%; } 
+ .bsa-le-right-wrap { width: 100%; } 
+ .bsa-latest-events-section .bsa-le-inner-container .bsa-yellow-brdr { margin-left: 0px; } 
+ .bsa-latest-events-section .bsa-le-inner-container { flex-wrap: wrap; } 
+ .bsa-latest-events-section .bsa-le-inner-container .bsa-latest-card:last-child { margin-right: 0px; } 
+ .bsa-hot-topic-box .bsa-hot-common-heading { font-size: 20px; } 
+ .bsa-latest-events-section .bsa-le-right-wrap { margin-top: 25px; } 
+ .bsa-championing-box:last-child { margin-right: 6.5px; } 
+ .bsa-championing-container .bsa-championing-box { margin-bottom: 12px; } 
+ .bsa-society-right-wrap { margin-bottom: 25px; } 
+ .bsa-society-matters-section { padding-top: 35px; } 
+ .bsa-navbar-two .bsa-inner-container { border: 0; } 
+ .bsa-login-section { min-height: inherit; padding: 20px 15px; } 
+ .bsa-login-section .bsa-login-inner-container { padding: 21px 19px 9px; } 
+ .bsa-login-inner-container .bsa-login-header-txt { font-size: 28px; line-height: 1.2; } 
+ .bsa-login-inner-container .bsa-login-para { margin-top: 11px; } 
+ .bsa-account-txt { font-size: 24px; } 
+ .bsa-account-para { font-size: 13px; } 
+ .bsa-my-account-from { padding: 0 15px; } 
+ .bsa-sidebar-filter h3 { font-size: 20px; } 
+ .bsa-tech-innovation-wrap .bsa-card-description .bsa-top-tags{margin-top: 15px;}
+ .bsa-tech-img.bsa-imgcard-box{margin: 0 auto;}
+ .bsa-time-location-wrap h2{font-size: 40px;padding-left:10px;}
+ .bsa-what-next-section .bsa-mortgage-housing h3,.bsa-tech-innovation-wrap .bsa-card-description .bsa-event-date{font-size: 20px;line-height: 1.2;padding-left: 10px;padding-right: 10px;}
+ .bsa-tech-innovation-wrap .bsa-card-description h2{font-size: 22px;line-height:1.2;}
+ .bsa-container .bsa-what-next-para,.bsa-tech-innovation-wrap{padding-left: 15px;padding-right:15px;}
+ .bsa-tech-innovation-wrap .bsa-card-description{padding-left: 0px;padding-right: 0px;}
+ .bsa-tech-img.bsa-imgcard-box .bsa-img-tag{font-size: 16px;}
+ }
+ @media screen and (max-width: 768px){
+ .bsa-card-container .bsa-latest-card { margin-bottom: 20px; } 
+ .bsa-container .bsa-time-location-wrap,.bsa-container .bsa-mortgage-housing,.bsa-container .bsa-event-img{text-align: center;}
+  .bsa-container .bsa-event-img{padding-top: 40px;}
+  .bsa-tech-innovation-wrap .bsa-card-description .bsa-event-date{padding-left: 0;}
+ }
+
+@media screen and (max-width: 767px){
+ .bsa-footer-bottom .col-sm-3 { margin-bottom: 20px; } 
+ .bsa-meet-members-container { flex-direction: column; } 
+ .bsa-meet-section .bsa-meet-left-section, .meet-member-logo-wrap { max-width: 100%; } 
+ .bsa-topic-description { max-width: 100%; margin-bottom: 25px; } 
+ .bsa-championing-container .bsa-championing-inner-container { width: 100%; } 
+ .bsa-hot-topics-section .bsa-inner-container { padding-left: 25px; padding-right: 25px; } 
+ .bsa-hot-topics-section, .bsa-latest-events-section, .bsa-meet-section { padding: 24px 0; } 
+ .bsa-meet-section .bsa-meet-left-section { margin-bottom: 25px; padding: 0 15px; } 
+ .meet-member-logo-wrap { margin-left: 0px; } 
+ .bsa-society-right-wrap { margin-bottom: 25px; padding-left: 5px; } 
+ .container, .container-sm { max-width: 96%; } 
+ .bsa-society-img img { max-width: 100%; } 
+ .bsa-society-right-wrap .bsa-society-digital { font-size: 22px; line-height: 1.2; } 
+ .bsa-society-matters-section { padding-top: 20px; } 
+ .bsa-society-right-wrap .bsa-society-long-para { font-size: 14px; } 
+ .building-section .building-content { margin-bottom: 25px; } 
+ .bsa-footer-top .bsa-footer-content li a { font-size: 14px; } 
+ .bsa-footer-top { padding-top: 16px } 
+ .bsa-page-heading { font-size: 28px; } 
+ .bsa-event-date, .bsa-hot-topics-section .bsa-hot-topics-heading, .bsa-society-right-wrap .bsa-society-winter-txt, .building-section .building-content h3, .bsa-latest-events-section .bsa-le-right-wrap .bsa-le-heading-txt, .bsa-championing-box h3, .bsa-support-box p, .bsa-meet-members-container .bsa-our-member-heading { font-size: 24px; } 
+ .slick-dots li { width: 15px; height: 15px; } 
+ .bsa-hot-topic-box { width: 33.33333%; } 
+ .bsa-search-section .bsa-keyword-search { flex: 1 0 90%; margin-top: 8px; max-width: inherit } 
+ .bsa-search-section .bsa-policy-brief { flex: 1 0 46%; max-width: inherit; } 
+ .bsa-search-section { padding: 15px 0 25px; } 
+ .bsa-from .bsa-not-register-wrap .bsa-not-register-txt { max-width: calc(100% - 110px); } 
+ .bsa-not-register-wrap .btn { align-self: flex-start; } 
+ .bsa-login-section .bsa-login-inner-container { margin-top: 10px; } 
+ .bsa-searchby-alphabet .btn { margin-bottom: 15px; font-size: 16px; margin-right: 2px; } 
+ .bsa-list-useful-links { padding-left: 0; } 
+ .bsa-searchby-alphabet { margin-bottom: 10px; } 
+ .bsa-banner-section .bsa-prudential-heading { font-size: 28px; } 
+ .bsa-policy-banner-left .bsa-policy-list { padding-bottom: 4px; } 
+ .bsa-policy-banner-top-right { margin-bottom: 10px; } 
+ .bsa-policy-banner-right { padding-bottom: 30px; } 
+ .bsa-policy-brief-container .bsa-sidebar-filter { padding: 0; padding-top: 30px; } 
+ .bsa-member-search-banner.bsa-banner-section .bsa-prudential-para { margin-bottom: 0px; } 
+ .bsa-list-icon { padding-right: 10px; } 
+ .bsa-quick-links ul li a { font-size: 12px; } 
+ .bsa-quick-links ul li a.dropdown-toggle,.bsa-dropdown-head.text-nowrap{white-space:normal !important;}
+ .bsa-sidebar-filter .bsa-filter-input { margin-right: 15px; max-width:inherit; } 
+ .bsa-policy-listing-filter { padding-top: 30px; } 
+ .bsa-morgan-form{padding-left: 15px;padding-right:15px;}
+ .bsa-card-container .bsa-banner-heading{margin-top: 0;}
+ .container.bsa-card-container{padding-left:0;padding-right: 0;}
+ .bsa-policy-wrap{padding-right: 0;}
+ .bsa-sidebar-filter{padding-top: 40px;}
+ .bsa-what-next-section .bsa-mortgage-housing{padding-top: 35px;}
+ .bsa-card-description .bsa-time-wrap{padding-top: 10px;}
+ .bsa-card-description .bsa-time-wrap button{margin-top: 25px;}
+ .bsa-tech-innovation-wrap{padding-top: 25px;padding-bottom: 12px}
+ .bsa-container .bsa-event-img{padding-top:0px;}
+ }
+@media screen and (max-width: 575px){
+ .bsa-footer-top .bsa-footer-content li { margin-right: 10px; } 
+ .bsa-le-inner-container .bsa-latest-card { width: 100%; } 
+ .bsa-latest-events-section .bsa-le-inner-container .bsa-latest-card { margin-right: 0px; margin-bottom: 25px; } 
+ .bsa-inner-container { padding-left: 0; padding-right: 0; } 
+ .bsa-topic-description { margin-bottom: 25px; } 
+ .bsa-latest-events-section .bsa-le-inner-container .bsa-le-left-wrap { flex-wrap: wrap; } 
+ .building-section .col-sm-6 { margin-bottom: 20px; } 
+ .bsa-society-matters-section .bsa-society-inner-container .bsa-society-img { margin-bottom: 25px; text-align: center; } 
+ .bsa-mortgage-housing-section .bsa-prudential-heading { font-size: 20px; } 
+ .bsa-card-container .bsa-banner-heading { font-size: 18px; } 
+ }
+@media screen and (max-width: 480px){
+ .bsa-hot-topic-box { width: 50%; } 
+ .bsa-search-section .bsa-policy-brief { flex: 1 0 34%; } 
+ .bsa-championing-box { min-width: 165px; } 
+ }

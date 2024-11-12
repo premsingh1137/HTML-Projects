@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
+  <g id="Group_18972" data-name="Group 18972" transform="translate(-731 -1756)">
+    <g id="Group_18949" data-name="Group 18949" transform="translate(488 -132)">
+      <g id="Group_18947" data-name="Group 18947" transform="translate(-488 246)">
+        <rect id="Rectangle_17937" data-name="Rectangle 17937" width="72" height="72" rx="5" transform="translate(731 1642)" fill="#ffd400"/>
+      </g>
+    </g>
+    <g id="fi-rr-shield-check" transform="translate(750.834 1775)">
+      <path id="Path_18579" data-name="Path 18579" d="M25.489,3.032,16.614.072a1.417,1.417,0,0,0-.9,0L6.844,3.032A7.073,7.073,0,0,0,2,9.751V17C2,27.714,15.033,33.631,15.591,33.878a1.417,1.417,0,0,0,1.15,0C17.3,33.631,30.333,27.714,30.333,17V9.751a7.073,7.073,0,0,0-4.844-6.719ZM27.5,17c0,7.728-8.952,12.8-11.333,14.009C13.782,29.8,4.833,24.747,4.833,17V9.751A4.25,4.25,0,0,1,7.74,5.719L16.166,2.91l8.426,2.809A4.25,4.25,0,0,1,27.5,9.751Z"/>
+      <path id="Path_18580" data-name="Path 18580" d="M18.7,8.422l-5.933,5.95L9.592,11.057a1.417,1.417,0,1,0-2.041,1.963l3.267,3.4a2.652,2.652,0,0,0,1.905.85h.047a2.653,2.653,0,0,0,1.891-.783l6.052-6.052A1.422,1.422,0,1,0,18.7,8.422Z" transform="translate(2.137 3.336)"/>
+    </g>
+  </g>
+</svg>

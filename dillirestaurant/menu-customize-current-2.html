@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+    <title>Dilli Restaurant</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+        <!-- Header section -->
+        <section class="dl-header-section dl-inner-page fixed-top">
+            <nav class="dl-top-bar-section">
+                <div class="d-flex flex-wrap">
+                    <ul class="nav me-auto dl-left-bar">
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-toggle" type="button" id="dropdownMenu2"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="https://www.tutorialrepublic.com/examples/images/avatar/3.jpg"
+                                        class="rounded-circle dl-header-profile-user" alt="Avatar">KSA</a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <li><a class="dropdown-item" href="#"><img src="./images/united-arab-emirates.svg"
+                                                width="25" alt="">
+                                            &nbsp; UAE</a></li>
+                                    <li><a class="dropdown-item" href="#"><img src="./images/india.svg" width="25"
+                                                alt=""> &nbsp;
+                                            India</a></li>
+                                    <li><a class="dropdown-item" href="#"><img src="./images/usa.svg" width="25" alt="">
+                                            &nbsp;
+                                            USA</a></li>
+                                    <li><a class="dropdown-item" href="#"><img src="./images/canada.svg" width="25"
+                                                alt=""> &nbsp;
+                                            Canada</a></li>
+                                    <li><a class="dropdown-item" href="#"><img src="./images/mexico.svg" width="25"
+                                                alt=""> &nbsp;
+                                            Mexico</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-toggle" type="button" id="dropdownMenu2"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    العربية
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <li><a href='#'>English</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="#" class="dl-sign-in"><img src="./images/user-icon.svg" /> Sign in
+                                /
+                                Register</a></li>
+                    </ul>
+                    <ul class="nav dl-right-nav">
+                        <li><a href="#"><img src="images/search.svg" alt="search" /></a></li>
+                        <li><a href="#"><img src="images/bell.svg" alt="bell" /><span
+                                    class="position-absolute topbar-badge cartitem-badge fs-10 translate-middle badge rounded-pill">0</span></a>
+                        </li>
+                        <li><a href="#"><img src="images/shopping-bag.svg" alt="shopping-bag" /><span
+                                    class="position-absolute topbar-badge cartitem-badge fs-10 translate-middle badge rounded-pill">0</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <header class="d-flex justify-content-md-between flex-wrap">
+                <a href="index.html"
+                    class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none dl-logo order-1">
+                    <img src="images/Logo.svg" alt="Logo" />
+                </a>
+                <div class="dl-main-nav navbar-light order-3 order-md-2">
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <ul class="dl-mid-nav nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 collapse navbar-collapse"
+                        id="navbarCollapse">
+                        <li class="nav-item"><a href="index.html" class="nav-link text-white active">Home</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-white">Menu</a></li>
+                        <li class="nav-item"><a href="about-us.html" class="nav-link text-white">About us</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-white">Rewards</a></li>
+                        <li class="nav-item"><a href="contact-us.html" class="nav-link text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 text-end start-btn order-2 order-md-3">
+                    <button type="button" class="btn dl-order-btn">START ORDERING</button>
+                </div>
+            </header>
+        </section>
+
+        <!-- content section -->
+        <div class="dl-top-menu-section dl-menu-custom-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Menu</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Turkish Coffee</li>
+                        </ol>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-between">
+                        <div class="dl-cart-inputs dl-menu-cart input-group">
+                            <span class="input-group-text border-0 p-0"><button class="btn btn-outline-secondary"
+                                    type="button">−</button></span>
+                            <input type="number" class="form-control dl-menu-cart-value" placeholder="1">
+                            <span class="input-group-text border-0 p-0"><button class="btn btn-outline-secondary"
+                                    type="button">+</button></span>
+                        </div>
+                        <a class="btn dl-dark-btn">ADD TO CART</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Middle section -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2 dl-selected-item">
+                    <h2 class="pt-4">Dairy</h2>
+                    <div class="d-flex justify-content-between align-items-center dl-selected-item-wrapper">
+                        <span class="">Skim Milk</span>
+                        <a href="#"><img src="images/object-delete.svg" alt="Delete" /></a>
+                    </div>
+                    <h2 class="pt-4">Flavor</h2>
+                    <div class="d-flex justify-content-between align-items-center dl-selected-item-wrapper  ">
+                        <span class="">Mocha Swirl</span>
+                        <a href="#"><img src="images/object-delete.svg" alt="Delete" /></a>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 dl-menu-left-wrapper">
+                    <div class=" d-flex flex-wrap flex-sm-nowrap gap-3">
+                        <div class="dl-ar-content dl-menu-item">
+                            <div class="dl-left-ar">
+                                <h2 class="dl-ar-title mb-0">DD - Ar Rayyan</h2>
+                                <span>5202 Ar Rayyan, Dammam 32256, …</span>
+                            </div>
+                            <a href="#" class="dl-edit-btn"><img src="images/edit-icon.svg" width="15" alt="Edit"></a>
+                        </div>
+                        <div class="dl-ar-content dl-menu-item">
+                            <div class="dl-left-ar">
+                                <h2 class="dl-ar-title mb-0">Pickup Time</h2>
+                                <span>Today at 16:15 - 16:30</span>
+                            </div>
+                            <a href="#" class="dl-edit-btn"><img src="images/edit-icon.svg" width="15" alt="Edit"></a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="d-flex justify-content-between">
+                            <h2 class="text-dark">Coffee (Medium)</h2>
+                            <h3>SAR 7<sup>00</sup> / 175 Cal</h3>
+                        </div>
+                        <p class="dl-items-v">Our famous Hot Coffee is made from high-quality 100% Arabica beans and is
+                            freshly
+                            ground
+                            and brewed continually throughout the day.</p>
+                    </div>
+                    <h3 class="">Customization</h3>
+                    <div class="accordion dl-accordion dl-accordion-menu" id="accordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#accordion-collapseOne" aria-expanded="false"
+                                    aria-controls="accordion-collapseOne">
+                                    DAIRY
+                                </button>
+                            </h2>
+                            <div id="accordion-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordion">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <a href="#"
+                                                class=" p-3 mb-4 dl-coffee-option dl-milk-select d-flex position-relative">
+                                                <img src="images/allergens-none.svg" alt="None" width="22">
+                                                <div class="ps-2">
+                                                    <span>None</span>
+                                                    <h6>0 Cal</h6>
+                                                    <img src="images/check.svg" alt="Selected Item"
+                                                        class="dl-selected-menu" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a href="#"
+                                                class=" p-3 mb-4 dl-coffee-option dl-milk-select d-flex position-relative active">
+                                                <img src="images/milk.svg" alt="Milk">
+                                                <div class="ps-2">
+                                                    <span>Coconut Milk</span>
+                                                    <h6>20 Cal</h6>
+                                                    <img src="images/check.svg" alt="Selected Item"
+                                                        class="dl-selected-menu" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a href="#"
+                                                class=" p-3 mb-4 dl-coffee-option dl-milk-select d-flex position-relative">
+                                                <img src="images/milk.svg" alt="Milk">
+                                                <div class="ps-2">
+                                                    <span>Oat Milk</span>
+                                                    <h6>55 Cal</h6>
+                                                    <img src="images/check.svg" alt="Selected Item"
+                                                        class="dl-selected-menu" />
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <a href="#"
+                                                class=" p-3 mb-4 dl-coffee-option dl-milk-select d-flex position-relative">
+                                                <img src="images/milk.svg" alt="Milk">
+                                                <div class="ps-2">
+                                                    <span>Whole Milk</span>
+                                                    <h6>45 Cal</h6>
+                                                    <img src="images/check.svg" alt="Selected Item"
+                                                        class="dl-selected-menu" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a href="#"
+                                                class=" p-3 mb-4 dl-coffee-option dl-milk-select d-flex position-relative">
+                                                <img src="images/milk.svg" alt="Milk">
+                                                <div class="ps-2">
+                                                    <span>Skim Milk</span>
+                                                    <h6>25 Cal</h6>
+                                                    <img src="images/check.svg" alt="Selected Item"
+                                                        class="dl-selected-menu" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a href="#"
+                                                class=" p-3 mb-4 dl-coffee-option dl-milk-select d-flex position-relative">
+                                                <img src="images/milk.svg" alt="Milk">
+                                                <div class="ps-2">
+                                                    <span>Almond Milk</span>
+                                                    <h6>40 Cal</h6>
+                                                    <img src="images/check.svg" alt="Selected Item"
+                                                        class="dl-selected-menu" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a href="#"
+                                                class=" p-3 mb-4 dl-coffee-option dl-milk-select d-flex position-relative">
+                                                <img src="images/milk.svg" alt="Milk">
+                                                <div class="ps-2">
+                                                    <span>Cream</span>
+                                                    <h6>145 Cal</h6>
+                                                    <img src="images/check.svg" alt="Selected Item"
+                                                        class="dl-selected-menu" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#accordian-collapseTwo" aria-expanded="false"
+                                    aria-controls="accordian-collapseTwo">
+                                    FLAVOR
+                                </button>
+                            </h2>
+                            <div id="accordian-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordion">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <a href="#"
+                                                class="p-3 mb-4 dl-coffee-option dl-milk-select dl-cup-select d-flex position-relative">
+                                                <img src="images/allergens-none.svg" alt="None" width="22">
+                                                <div class="ps-2">
+                                                    <span>None</span>
+                                                    <h6>0 Cal</h6>
+                                                    <img src="images/check.svg" alt="Selected Item"
+                                                        class="dl-selected-menu" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a href="#"
+                                                class="p-3 mb-4 dl-coffee-option dl-milk-select dl-cup-select d-flex position-relative active">
+                                                <img src="images/icon-feather-coffee.svg" alt="Feather Coffee">
+                                                <div class="ps-2">
+                                                    <span>Irish Crème Swirl</span>
+                                                    <h6>155 Cal</h6>
+                                                    <img src="images/check.svg" alt="Selected Item"
+                                                        class="dl-selected-menu" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a href="#"
+                                                class="p-3 mb-4 dl-coffee-option dl-milk-select dl-cup-select d-flex position-relative ">
+                                                <img src="images/icon-feather-coffee.svg" alt="Feather Coffee">
+                                                <div class="ps-2">
+                                                    <span>Caramel Swirl</span>
+                                                    <h6>165 Cal</h6>
+                                                    <img src="images/check.svg" alt="Selected Item"
+                                                        class="dl-selected-menu" />
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <a href="#"
+                                                class="p-3 mb-4 dl-coffee-option dl-milk-select dl-cup-select d-flex position-relative">
+                                                <img src="images/icon-feather-coffee.svg" alt="Feather Coffee">
+                                                <div class="ps-2">
+                                                    <span>French Vanilla Swirl</span>
+                                                    <h6>165 Cal</h6>
+                                                    <img src="images/check.svg" alt="Selected Item"
+                                                        class="dl-selected-menu" />
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <a href="#"
+                                                class="p-3 mb-4 dl-coffee-option dl-milk-select dl-cup-select d-flex position-relative">
+                                                <img src="images/icon-feather-coffee.svg" alt="Feather Coffee">
+                                                <div class="ps-2">
+                                                    <span>Mocha Swirl</span>
+                                                    <h6>155 Cal</h6>
+                                                    <img src="images/check.svg" alt="Selected Item"
+                                                        class="dl-selected-menu" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <a class="btn dl-dark-btn  mt-3">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 p-0 dl-menu-right-wrapper">
+                    <img src="images/coffee-img.jpg" class="img-fluid w-100" alt="Coffee Cup" />
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Footer section -->
+    <footer class="footer mt-auto bg-light">
+        <section class="dl-quick-link">
+            <div class="container">
+                <h5 class="dl-great-heading">Quick Links</h5>
+                <div class="row">
+                    <div class="row">
+                        <div class="col-md-4 col-xl-5 col-sm-4">
+                            <ul class="dl-quick-list">
+                                <li><a href="#">Menu</a></li>
+                                <li><a href="#">Rewards</a></li>
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="#">Franchising</a></li>
+                                <li><a href="#">Careers</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-xl-4 col-sm-4">
+                            <ul class="dl-quick-list">
+                                <li><a href="#">History</a></li>
+                                <li><a href="#">Foundation</a></li>
+                                <li><a href="terms-of-use.html">Terms & Conditions</a></li>
+                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                <li><a href="#">Feedback</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-xl-3 col-sm-4">
+                            <ul class="dl-quick-list">
+                                <li><a href="faq.html">FAQs</a></li>
+                                <li><a href="#">Offers</a></li>
+                                <li><a href="#">Ad & Cookie Policy</a></li>
+                                <li><a href="#">Accessibility</a></li>
+                                <li><a href="#">Do Not Sell My Info</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="dl-footer-middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-3 col-md-4 col-sm-6 col-12">
+                        <a href="index.html"><img src="./images/footer-logo.svg" alt="footer-logo.svg" /></a>
+                        <p class="pt-4 text-white">Dilli Restaurant is our attempt to share the<br> finest of Indian
+                            cuisine with
+                            the connoisseurs<br> of fine food in Saudi Arabia. <a href="#" class="text-white">Read More
+                                ></a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="dl-great-heading text-white">Working Hours</h3>
+                        <div class="dl-timeing">
+                            <img src="./images/feather-clock.svg" alt="feather-clock" />
+                            <span class="right-text">Sunday - Wednesday <i class="dl-time text-white">12:30Pm -
+                                    12:00Am</i></span>
+                        </div>
+                        <div class="dl-timeing">
+                            <img src="./images/feather-clock.svg" alt="feather-clock" />
+                            <span class="right-text">Thursday - Friday <i class="dl-time text-white">12:30Pm -
+                                    01:00Am</i></span>
+                        </div>
+                        <div class="dl-timeing">
+                            <img src="./images/feather-clock.svg" alt="feather-clock" />
+                            <span class="right-text">Saturday <i class="dl-time text-white">12:30Pm - 12:00Am</i></span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <h3 class="dl-great-heading text-white">Contact Us</h3>
+                        <div class="dl-timeing">
+                            <img src="./images/phone-icon.png" alt="phone-icon" />
+                            <span class="right-text">Phone Number: <a href="tel:+966-11-415-8877"
+                                    class="dl-time text-white text-decoration-none">+966 11 415 8877</a> <a
+                                    href="tel:+966-11-293-3231" class="dl-time text-white text-decoration-none">+966 11
+                                    293 3231</a></span>
+                        </div>
+                        <div class="dl-timeing">
+                            <img src="./images/email-icon.png" alt="email-icon" />
+                            <span class="right-text">Email Address: <a href="mailto:tasteofdilli@gmail.com"
+                                    class="dl-time text-white text-decoration-none">tasteofdilli@gmail.com</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-copy-right-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="dl-social_footer_ul mb-0">
+                                <li><a href="#"><img src="./images/fb.svg" alt="fb" /></a></li>
+                                <li><a href="#"><img src="./images/tw.svg" alt="tw" /></a></li>
+                                <li><a href="#"><img src="./images/ig.svg" alt="ig" /></a></li>
+                                <li><a href="#"><img src="./images/yt.svg" alt="yt" /></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 text-align-right">
+                            <p class="dl-copy-right text-white">Dilli Restaurant All Rights Reserved © 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- //Footer section -->
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</html>

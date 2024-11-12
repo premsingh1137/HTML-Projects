@@ -1,0 +1,8 @@
+<svg id="t-shirt" xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+  <path id="Path_18688" data-name="Path 18688" d="M240.965,250.965h1.992v1.992h-1.992Z" transform="translate(-224.963 -234.299)"/>
+  <path id="Path_18689" data-name="Path 18689" d="M270.966,192.957h1.992v1.992h1.992v-3.984h-3.984Z" transform="translate(-252.972 -178.284)"/>
+  <path id="Path_18690" data-name="Path 18690" d="M182.958,192.957h1.992v-1.992h-3.984v3.984h1.992Z" transform="translate(-168.949 -178.284)"/>
+  <path id="Path_18691" data-name="Path 18691" d="M182.958,280.965h-1.992v3.984h3.984v-1.992h-1.992Z" transform="translate(-168.949 -262.307)"/>
+  <path id="Path_18692" data-name="Path 18692" d="M272.958,282.957h-1.992v1.992h3.984v-3.984h-1.992Z" transform="translate(-252.972 -262.307)"/>
+  <path id="Path_18693" data-name="Path 18693" d="M34,8.965A8.975,8.975,0,0,0,25.035,0H8.965A8.975,8.975,0,0,0,0,8.965V18.75H6.377V34H27.623V18.75H34ZM21.31,1.992a4.426,4.426,0,0,1-8.625,0Zm10.7,14.765H27.623V9.763H25.631V32.008H8.369V9.763H6.377v6.995H1.992V8.965A6.981,6.981,0,0,1,8.965,1.992h1.691a6.42,6.42,0,0,0,12.684,0h1.7a6.981,6.981,0,0,1,6.973,6.973Z"/>
+</svg>
